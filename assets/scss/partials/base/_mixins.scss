@@ -1,0 +1,46 @@
+// Base styles
+%base-style {
+     color: $base-color;
+     font-family: $font-stack-main;
+     font-size: 16px;
+     line-height: 1.6;
+     font-weight: 400;
+     letter-spacing: 0.35px;
+     height: auto;
+     min-height: auto;
+}
+
+%button-styles {
+     border: 2px solid $primary-color;
+     background: $primary-color;
+     color: $white;
+     cursor: pointer;
+     padding: 10px 15px;
+     display: inline-block;
+     height: auto;
+     border-radius: 15px;
+
+     &:hover,
+     &:focus {
+          border-color: $primary-color-hover;
+          background: $primary-color-hover;
+          color: $white;
+          text-decoration: none;
+     }
+
+     &.button--inverse {
+          background-color: transparent;
+          color: $primary-color;
+
+          &:hover,
+          &:focus {
+               background-color: $primary-color;
+               color: $white;
+               border-color: $primary-color;
+          }
+     }
+}
+
+%transition {
+     transition: all 0.2s ease-in-out;
+}

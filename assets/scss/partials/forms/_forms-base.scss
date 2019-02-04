@@ -1,0 +1,41 @@
+/* ----- Basic Form Layout -------------------- */
+input {
+	line-height: normal;
+}
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus {
+	outline: thin dotted;
+	outline-offset: -4px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+	background: $white;
+	border: 1px solid $grey-medium;
+	color: $grey-dark;
+	padding: 10px;
+	width: 100%;
+     border-radius: 0;
+     line-height: 1.15;
+
+     &:focus {
+          background-color: $white;
+          border-color: #007acc;
+          color: $grey-dark;
+          outline: 0;
+     }
+}

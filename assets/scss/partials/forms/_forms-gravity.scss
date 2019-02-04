@@ -1,0 +1,321 @@
+ul.gform_fields {
+     list-style-type: none;
+     padding-left: 0;
+
+     label {
+          font-weight: 600;
+          font-size: 13px;
+     }
+
+     .ginput_complex label,
+     .gfield_description {
+          float: left;
+          width: 100%;
+          font-size: 12px;
+          font-weight: 400;
+          margin-bottom: 12px;
+     }
+}
+
+.gform_wrapper {
+	float: left;
+	width: 100%;
+	margin-bottom: 20px;
+
+     ul {
+          margin: 0;
+
+          li {
+               float: left;
+          	width: 100%;
+          	list-style-type: none;
+          	margin-left: 0;
+          	margin-bottom: 20px;
+
+               &.left-side,
+               .name_first,
+               .ginput_left,
+               .ginput_card_expiration,
+               .ginput_cardinfo_left, {
+                    float: left;
+                    width: 48%;
+               }
+
+               &.right-side,
+               .name_last,
+               .ginput_right,
+               .ginput_cardinfo_right,
+               .ginput_card_expiration.ginput_card_expiration_year {
+                    float: right;
+                    width: 48%;
+               }
+
+               &.gform_hidden {
+                    padding: 0;
+                    margin: 0;
+               }
+
+               &.field_admin_only {
+                    margin: 0;
+               }
+
+               .ginput_container_date {
+                    float: left;
+                    width: 100%;
+                    position: relative;
+
+                    img.ui-datepicker-trigger {
+                         position: absolute;
+                         top: 50%;
+                         right: 10px;
+                         transform: translateY(-50%);
+                    }
+               }
+          }
+
+          &.gfield_checkbox,
+          &.gfield_radio {
+               padding-left: 0;
+          }
+
+          .gform_card_icon_container {
+               margin: 8px 0 6px;
+               height: 32px;
+
+               div.gform_card_icon {
+                    margin-right: 4px;
+                    text-indent: -9000px;
+                    background-image: url(../images/gf-creditcard-icons.png);
+                    background-repeat: no-repeat;
+                    width: 36px;
+                    height: 32px;
+                    float: left;
+
+                    &.gform_card_icon_amex {
+                         background-position: -72px 0;
+                    }
+
+                    &.gform_card_icon_discover {
+                         background-position: -108px 0;
+                    }
+
+                    &.gform_card_icon_mastercard {
+                         background-position: -36px 0;
+                    }
+
+                    &.gform_card_icon_visa {
+                         background-position: 0 0;
+                    }
+               }
+          }
+
+     }
+
+     span.ginput_quantity_label {
+          margin-left: 10px;
+          margin-right: 2px;
+     }
+
+     input.ginput_quantity {
+          width: 3rem;
+     }
+
+     span.ginput_product_price {
+          color: #900;
+     }
+
+     span.ginput_total {
+          color: #060;
+     }
+
+     span.ginput_card_security_code_icon {
+          display: none;
+     }
+
+     .gfield_password_strength {
+          border: 1px solid #DDD;
+          line-height: 1.8;
+          padding: 10px 5px;
+          text-align: center;
+          background-color: #EEE;
+          border-bottom: 3px solid #DDD;
+          float: left;
+          width: 100%;
+
+          &.mismatch,
+          &.short {
+               background-color: #FFA0A0;
+               border-color: #f04040;
+               border-bottom: 3px solid #f04040;
+          }
+
+          &.bad {
+               background-color: #FFB78C;
+               border-color: #FF853C;
+               border-bottom: 3px solid #FF853C;
+          }
+
+          &.good {
+               background-color: #FFEC8b;
+               border-color: #FC0;
+               border-bottom: 3px solid #FC0;
+          }
+
+          &.strong {
+               background-color: #C3FF88;
+               border-color: #8DFF1C;
+               border-bottom: 3px solid #8DFF1C;
+          }
+     }
+}
+
+form {
+
+     .gfield_checkbox label,
+     .gfield_radio label {
+     	float: none;
+     	width: auto;
+          margin-left: 2px;
+     }
+     .gfield_radio label {
+          margin-left: 5px;
+     }
+     .gfield_checkbox li,
+     .gfield_radio li {
+     	margin: 6px 0 0 0;
+     }
+
+     select {
+          background-color: #fff;
+     }
+}
+
+.validation_message {
+     text-transform: uppercase;
+     font-weight: 600;
+     font-size: 12px;
+     font-size: 1.2rem;
+     margin-top: 5px;
+     margin-bottom: 0;
+}
+
+.validation_message {
+     color: #b54040;
+     display: none;
+}
+
+.validation_error {
+     float: left;
+     width: 100%;
+     margin-bottom: 25px;
+     border: 2px solid #b54040;
+     padding: 15px;
+     font-size: 16px;
+     border-radius: 5px;
+     text-align: center;
+     background-color: #ffe7e7;
+}
+
+.hidden_label .gfield_label {
+	clip: rect(1px,1px,1px,1px);
+     position: absolute!important;
+     height: 1px;
+     width: 1px;
+     overflow: hidden;
+}
+
+.gfield_error {
+
+     input[type="email"],
+     input[type="text"],
+     input[type="tel"],
+     input[type="url"],
+     textarea,
+     select {
+          border: 2px solid #b54040;
+          background-color: #ffe7e7;
+     }
+}
+
+.gform_validation_container,
+.gform_wrapper .gform_validation_container,
+body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body .gform_wrapper li.gform_validation_container,
+body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
+     display: none!important;
+     position: absolute!important;
+     left: -9000px;
+}
+
+.ginput_container_time {
+     float: left;
+     width: 30%;
+     margin-right: 5%;
+
+     i,
+     label {
+          display: none;
+     }
+}
+
+.gfield_time_ampm.ginput_container_time {
+     margin-right: 0;
+}
+
+.ginput_container_checkbox,
+.ginput_container_radio,
+.ginput_container_post_image,
+.ginput_container_fileupload {
+     float: left;
+     width: 100%;
+     border-radius: 5px;
+     background-color: #fff;
+}
+
+ul.gfield_checkbox,
+ul.gfield_radio {
+
+     li {
+          font-size: 13px;
+          line-height: 22px;
+          margin: 0;
+          position: relative;
+          word-wrap: break-word;
+          padding: 0;
+
+          input[type="checkbox"],
+          input[type="radio"] {
+               margin: -1px 4px 0 0;
+               vertical-align: middle;
+          }
+
+          span,
+          label {
+               float: none;
+               font-weight: 400;
+          }
+     }
+}
+
+table.gfield_list {
+     td {
+          border: none;
+          padding: 0 10px 5px 0;
+     }
+}
+
+/* ----- Login / Password Reset -------------------- */
+#gform_fields_login {
+
+     .ginput_container_checkbox {
+          border: none;
+          padding: 0;
+     }
+}
+
+.gf_login_links a {
+     font-weight: 600;
+     font-size: 13px;
+}
+
+.ui-datepicker{background-color:#ccc;width:216px;height:auto;margin:5px auto 0;font:9pt Arial,sans-serif;-webkit-box-shadow:0 0 10px 0 rgba(0,0,0,.5);-moz-box-shadow:0 0 10px 0 rgba(0,0,0,.5);box-shadow:0 0 10px 0 rgba(0,0,0,.5)}.ui-datepicker a{text-decoration:none}.ui-datepicker table{width:100%;border-collapse:collapse}.ui-datepicker-header{background-color:#666;color:#e0e0e0;font-weight:700;-webkit-box-shadow:inset 0 1px 1px 0 rgba(250,250,250,.2);-moz-box-shadow:inset 0 1px 1px 0 rgba(250,250,250,.2);box-shadow:inset 0 1px 1px 0 rgba(250,250,250,.2);text-shadow:1px -1px 0 #000;filter:dropshadow(color=#000, offx=1, offy=-1);line-height:30px;min-height:30px!important;border-width:1px 0 0;border-style:solid;border-color:#666}.ui-datepicker tbody tr,.ui-datepicker thead{border-bottom:1px solid #bbb}.ui-datepicker-title{text-align:center;display:flex;justify-content: space-between;padding: 2px 0 0;}.ui-datepicker-title select{margin-top:2.5%;border:none;padding: 0;border-radius: 2px;font-size: 12px;width: 48%;}.ui-datepicker-next,.ui-datepicker-prev{display:inline-block;width:30px;height:30px;text-align:center;cursor:pointer;background-image:url(../images/arrow.png);background-repeat:no-repeat;line-height:600%;overflow:hidden}.ui-datepicker-prev{float:left;background-position:center -30px}.ui-datepicker-next{float:right;background-position:center 0}.ui-datepicker thead{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWYxZjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-moz-linear-gradient(top,#f7f7f7 0,#f1f1f1 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#f7f7f7),color-stop(100%,#f1f1f1));background:-webkit-linear-gradient(top,#f7f7f7 0,#f1f1f1 100%);background:-o-linear-gradient(top,#f7f7f7 0,#f1f1f1 100%);background:-ms-linear-gradient(top,#f7f7f7 0,#f1f1f1 100%);background:linear-gradient(to bottom,#f7f7f7 0,#f1f1f1 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1', GradientType=0 )}.ui-datepicker th{text-transform:uppercase;text-align:center;font-size:6pt;padding:5px 0;color:#666;text-shadow:1px 0 0 #fff;filter:dropshadow(color=#fff, offx=1, offy=0)}.ui-datepicker tbody td{padding:0;border-top:1px solid #bbb;border-right:1px solid #bbb}.ui-datepicker tbody td:last-child{border-right:0}.ui-datepicker tbody tr:last-child{border-bottom:0}.ui-datepicker td a,.ui-datepicker td span{display:inline-block;font-weight:700;text-align:center;width:30px;height:30px;line-height:30px;color:#666;text-shadow:1px 1px 0 #fff;filter:dropshadow(color=#fff, offx=1, offy=1)}.ui-datepicker-calendar .ui-state-default{background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWRlZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);background:-moz-linear-gradient(top,#ededed 0,#dedede 100%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#ededed),color-stop(100%,#dedede));background:-webkit-linear-gradient(top,#ededed 0,#dedede 100%);background:-o-linear-gradient(top,#ededed 0,#dedede 100%);background:-ms-linear-gradient(top,#ededed 0,#dedede 100%);background:linear-gradient(to bottom,#ededed 0,#dedede 100%);filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede', GradientType=0 );-webkit-box-shadow:inset 1px 1px 0 0 rgba(250,250,250,.5);-moz-box-shadow:inset 1px 1px 0 0 rgba(250,250,250,.5);box-shadow:inset 1px 1px 0 0 rgba(250,250,250,.5)}.ui-datepicker-calendar .ui-state-hover{background:#f7f7f7}.ui-datepicker-calendar .ui-state-active{background:#FFF2AA;border:1px solid #c19163;color:#666;-webkit-box-shadow:inset 0 0 10px 0 rgba(0,0,0,.1);-moz-box-shadow:inset 0 0 10px 0 rgba(0,0,0,.1);box-shadow:inset 0 0 10px 0 rgba(0,0,0,.1);text-shadow:0 1px 0 #FFF;filter:dropshadow(color=#FFF, offx=0, offy=1);position:relative;margin:-1px}.ui-datepicker-unselectable .ui-state-default{background:#f4f4f4;color:#b4b3b3}.ui-datepicker-calendar td:first-child .ui-state-active{width:29px;margin-left:0}.ui-datepicker-calendar td:last-child .ui-state-active{width:29px;margin-right:0}.ui-datepicker-calendar tr:last-child .ui-state-active{height:29px;margin-bottom:0}td.ui-datepicker-unselectable.ui-state-disabled{background-color:#d7d7d7}table.ui-datepicker-calendar{margin:0!important}body div#ui-datepicker-div[style]{z-index:9999!important}.ginput_container_date{position:relative;}img.ui-datepicker-trigger{position:absolute;bottom:16px;right:16px;}

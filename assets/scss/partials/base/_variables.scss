@@ -1,0 +1,38 @@
+// Fonts
+$font-stack-main: 'Roboto', sans-serif;
+$font-stack-secondary: 'Roboto', sans-serif;
+
+// Base Colors
+$base-color: #373737;
+$white: #fff;
+$black: #000;
+$grey-light: #fafafa;
+$grey-medium: #e0e0e0;
+$grey-dark: #424242;
+
+// Site Colors
+// Match to Color Palette in /functions/gutenberg.php & ACF Color Palette if used
+$primary-color: #007991;
+$primary-color-hover: darken( $primary-color, 10% );
+$secondary-color: #439a86;
+$secondary-color-hover: darken( $secondary-color, 10% );
+$accent-color1: #e9d985;
+$accent-color1-hover: darken( $accent-color1, 10% );
+
+// Interior Widths
+$content-width: 67%;
+$sidebar-width: 30%;
+$base-margin: 20px;
+$base-width: 1200px;
+$margin-large: $base-margin * 1.5;
+$margin-small: $base-margin * 0.5;
+$thin-width: 800px;
+
+// Blocks
+$block-margin: 20px;
+
+// Block Coloring
+// Match names to Color Palette in /functions/gutenberg.php
+$colors: ( primary-color, $primary-color ),
+	    ( secondary-color, $secondary-color ),
+	    ( accent-color1, $accent-color1 );

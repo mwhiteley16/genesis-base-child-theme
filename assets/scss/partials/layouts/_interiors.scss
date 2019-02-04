@@ -1,0 +1,31 @@
+/* ----- Interior Layouts -------------------- */
+.site-inner {
+
+     width: 100%;
+     overflow: hidden;
+
+     .content {
+          float: left;
+          padding: 75px 0;
+          width: $content-width;
+     }
+
+     .sidebar {
+          float: right;
+          padding: 75px 0;
+          width: $sidebar-width;
+     }
+
+}
+
+.sidebar-content .site-inner .wrap .content {
+     float: right;
+}
+
+.sidebar-content .site-inner .wrap .sidebar-primary {
+     float: left;
+}
+
+.full-width-content .content {
+     width: 100%;
+}

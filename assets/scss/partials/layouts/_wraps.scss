@@ -1,0 +1,9 @@
+/* ----- Site Wraps -------------------- */
+.wrap {
+     max-width: $base-width;
+     margin: 0 auto;
+}
+
+.thin-page .site-inner .wrap {
+     max-width: $thin-width;
+}

@@ -1,0 +1,14 @@
+/* ----- Site Header -------------------- */
+.site-header {
+     width: 100%;
+     padding: 25px;
+
+     &__logo {
+          float: left;
+
+          img {
+               width: auto;
+               max-height: 125px;
+          }
+     }
+}
