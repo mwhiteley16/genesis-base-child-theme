@@ -138,7 +138,11 @@ remove_action( 'genesis_meta', 'genesis_load_stylesheet' );
 add_action( 'wp_enqueue_scripts', 'wd_enqueue_scripts' );
 function wd_enqueue_scripts() {
 
-	//Google Fonts
+	/*
+      * Enqueue Google Fonts
+      *
+      * Make sure to also enqueue same fonts in /functions/gutenberg.php so they display on the back end block editor
+      */
 	wp_enqueue_style(
           'google-fonts',
           '//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i',
@@ -146,9 +150,13 @@ function wd_enqueue_scripts() {
           CHILD_THEME_VERSION
      );
 
-     // NEED TO FIX THIS NEED TO FIX THIS
-     //Scripts file concatenated with CodeKit
-     wp_register_script( 'wd-scripts', get_stylesheet_directory_uri() . '/js/main-js.js' );
+     /*
+      * Enqueue main JS file from Codekit
+      *
+      * Alter /assets/js/main-js.js to concatenate proper JS files in to one minified file
+      * then uncomment the script below
+      */
+     //wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
 
      //Enqueue proper stylesheet with datestamp of last edit appended to flush cache
      $version = defined( 'CHILD_THEME_VERSION' ) && CHILD_THEME_VERSION ? CHILD_THEME_VERSION : PARENT_THEME_VERSION;

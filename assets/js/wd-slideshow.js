@@ -112,6 +112,6 @@
 jQuery(function(){
   jQuery('.slideshow').easyFader({
     slideDur: 6000,
-    fadeDur: 800
+    fadeDur: 1000
   });
 });

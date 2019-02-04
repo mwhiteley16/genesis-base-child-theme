@@ -14,6 +14,7 @@ function wd_admin_gutenfonts() {
 add_theme_support( 'align-wide' );
 
 // Customize Gutenberg color palette
+// Match these colors to the variables set up in /assets/scss/partials/base/variables.scss
 add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Primary Color', CHILD_THEME_SLUG ),

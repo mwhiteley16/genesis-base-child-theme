@@ -65,6 +65,7 @@ function wd_acf_block_render_callback( $block ) {
  * ACF Color Palette
  *
  * Add default color palatte to ACF color picker for branding
+ * Match these colors to colors in /functions.php & /assets/scss/partials/base/variables.scss
  *
 */
 function wd_acf_color_palette() { ?>
