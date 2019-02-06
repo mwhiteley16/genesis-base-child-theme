@@ -62,9 +62,76 @@
 }
 
 /* ----- Buttons -------------------- */
-.is-preview a.button,
 .wp-block-button__link {
-     @extend %button-styles;
+	@extend %button-styles;
+
+
+	&:not(.has-text-color) {
+		color: white;
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	&:not(.has-background) {
+		$default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
+		background-color: $default;
+
+		&:hover,
+		&:focus {
+			background-color: darken( $default, 20% );
+		}
+	}
+
+	@each $name, $color in $colors {
+
+		&.has-#{$name}-color:hover,
+		&.has-#{$name}-color:focus {
+			color: $color;
+		}
+
+          &.has-#{$name}-background-color,
+		&.has-#{$name}-background-color {
+			background-color: $color;
+               border: 2px solid $color;
+
+               &:hover,
+               &:focus {
+                    background-color: darken( $color, 20% );
+                    border: 2px solid darken( $color, 20% );
+               }
+		}
+	}
+
+}
+
+.button--inverse .wp-block-button__link {
+
+     @each $name, $color in $colors {
+
+          &.has-#{$name}-color,
+          &.has-#{$name}-color {
+               color: $color;
+
+               &:hover,
+               &:focus {
+                    color: $white;
+               }
+          }
+
+          &.has-#{$name}-background-color,
+          &.has-#{$name}-background-color {
+               background-color: transparent !important; // need important to override gutenberg inline styles
+               border: 2px solid $color;
+
+               &:hover,
+               &:focus {
+                    background-color: $color;
+                    border: 2px solid $color;
+               }
+          }
+     }
 }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */

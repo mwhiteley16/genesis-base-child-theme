@@ -16,8 +16,8 @@ $primary-color: #007991;
 $primary-color-hover: darken( $primary-color, 10% );
 $secondary-color: #439a86;
 $secondary-color-hover: darken( $secondary-color, 10% );
-$accent-color1: #e9d985;
-$accent-color1-hover: darken( $accent-color1, 10% );
+$accent-color-1: #e9d985;
+$accent-color-1-hover: darken( $accent-color-1, 10% );
 
 // Interior Widths
 $content-width: 67%;
@@ -35,4 +35,4 @@ $block-margin: 20px;
 // Match names to Color Palette in /functions/gutenberg.php
 $colors: ( primary-color, $primary-color ),
 	    ( secondary-color, $secondary-color ),
-	    ( accent-color1, $accent-color1 );
+	    ( accent-color-1, $accent-color-1 );

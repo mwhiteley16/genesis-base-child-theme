@@ -28,7 +28,7 @@ add_theme_support( 'editor-color-palette', array(
 	),
 	array(
 		'name'  => __( 'Accent Color 1', CHILD_THEME_SLUG ),
-		'slug'  => 'accent-color1',
+		'slug'  => 'accent-color-1',
 		'color' => '#e9d985',
        ),
 ) );
