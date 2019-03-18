@@ -34,6 +34,7 @@ add_theme_support( 'editor-color-palette', array(
 ) );
 
 //Customize Gutenberg font sizes
+//Match with /assets/scss/partials/blocks/blocks-base.scss
 add_theme_support( 'editor-font-sizes', array(
 	array(
 		'name'      => __( 'Small', CHILD_THEME_SLUG ),
