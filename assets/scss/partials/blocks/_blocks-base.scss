@@ -62,7 +62,8 @@
 }
 
 /* ----- Buttons -------------------- */
-.wp-block-button__link {
+.wp-block-button__link,
+a.button {
 	@extend %button-styles;
 
 
