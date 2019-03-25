@@ -10,6 +10,19 @@ h6 {
      margin: 0 0 $base-margin 0;
      line-height: 1.6;
      font-weight: 600;
+
+     a {
+		color: $base-color;
+
+		&:hover {
+			color: $primary-color;
+			text-decoration: none;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
 }
 
 h1 {
@@ -37,6 +50,30 @@ h6 {
 }
 
 /* ----- Typographical Elements --------------- */
+p { // Match these sizes to the font sizes in functions/gutenberg.php
+	margin: 0 0 $base-margin;
+	padding: 0;
+
+     &.larger,
+     &.has-larger-font-size {
+          font-size: 24px;
+     }
+
+	&.large,
+	&.has-large-font-size {
+         	font-size: 20px;
+	}
+
+	&.has-regular-font-size {
+		font-size: 16px;
+	}
+
+	&.small,
+	&.has-small-font-size {
+	    font-size: 12px;
+	}
+}
+
 button,
 input:focus,
 input[type="button"],

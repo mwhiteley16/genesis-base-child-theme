@@ -62,9 +62,9 @@
 }
 
 /* ----- Buttons -------------------- */
-.wp-block-button__link {
+.wp-block-button__link,
+a.wd-button {
 	@extend %button-styles;
-
 
 	&:not(.has-text-color) {
 		color: white;
@@ -80,7 +80,8 @@
 
 		&:hover,
 		&:focus {
-			background-color: darken( $default, 20% );
+			background-color: darken( $default, 10% );
+               border: 2px solid darken( $default, 10% );
 		}
 	}
 
@@ -98,15 +99,36 @@
 
                &:hover,
                &:focus {
-                    background-color: darken( $color, 20% );
-                    border: 2px solid darken( $color, 20% );
+                    background-color: darken( $color, 10% );
+                    border: 2px solid darken( $color, 10% );
                }
 		}
 	}
 
 }
 
-.button--inverse .wp-block-button__link {
+.is-style-inverse .wp-block-button__link,
+a.wd-button--inverse {
+
+     &:not(.has-text-color) {
+          $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
+          color: $default;
+
+          &:hover {
+               color: white;
+          }
+     }
+
+     &:not(.has-background) {
+          $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
+          background-color: transparent;
+
+          &:hover,
+          &:focus {
+               background-color: darken( $default, 10% );
+               border: 2px solid darken( $default, 10% );
+          }
+     }
 
      @each $name, $color in $colors {
 
@@ -116,7 +138,7 @@
 
                &:hover,
                &:focus {
-                    color: $white;
+                    color: $white !important;
                }
           }
 
@@ -127,7 +149,7 @@
 
                &:hover,
                &:focus {
-                    background-color: $color;
+                    background-color: $color !important;
                     border: 2px solid $color;
                }
           }

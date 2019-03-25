@@ -2,12 +2,22 @@
 // Enqueue Gutenberg admin fonts
 add_action( 'enqueue_block_editor_assets', 'wd_admin_gutenfonts' );
 function wd_admin_gutenfonts() {
-	wp_enqueue_style(
+
+     wp_enqueue_style(
 		'wd-gutenberg-fonts',
 		'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i',
 		array(),
 		CHILD_THEME_VERSION
 	);
+
+     wp_enqueue_script(
+          'wd-editor',
+          get_stylesheet_directory_uri() . '/assets/js/editor.js',
+          array( 'wp-blocks', 'wp-dom' ),
+          filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ),
+          true
+     );
+
 }
 
 // Add support for wide blocks
