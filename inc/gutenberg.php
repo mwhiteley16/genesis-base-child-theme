@@ -1,27 +1,24 @@
 <?php
-// Enqueue Gutenberg admin fonts
-add_action( 'enqueue_block_editor_assets', 'wd_admin_gutenfonts' );
-function wd_admin_gutenfonts() {
-
-     wp_enqueue_style(
-		'wd-gutenberg-fonts',
-		'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i',
-		array(),
-		CHILD_THEME_VERSION
-	);
-
-     wp_enqueue_script(
-          'wd-editor',
-          get_stylesheet_directory_uri() . '/assets/js/editor.js',
-          array( 'wp-blocks', 'wp-dom' ),
-          filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ),
-          true
-     );
-
-}
+/**
+ * Gutenberg
+ *
+ * @author       Matt Whiteley
+ * @since        1.0.0
+ * @license      GPL-2.0+
+**/
 
 // Add support for wide blocks
 add_theme_support( 'align-wide' );
+
+// Enable block editor styles
+add_editor_style( 'assets/css/editor-style.css' );
+add_theme_support( 'editor-styles' );
+
+// Disable Custom Colors
+add_theme_support( 'disable-custom-colors' );
+
+// Responsive embeds
+add_theme_support( 'responsive-embeds' );
 
 // Customize Gutenberg color palette
 // Match these colors to the variables set up in /assets/scss/partials/base/variables.scss

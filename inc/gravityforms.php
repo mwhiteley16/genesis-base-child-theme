@@ -1,5 +1,13 @@
 <?php
 /**
+ * Gravity Forms
+ *
+ * @author       Matt Whiteley
+ * @since        1.0.0
+ * @license      GPL-2.0+
+**/
+
+/**
  * Gravity Forms Domain
  *
  * Adds a notice at the end of admin email notifications

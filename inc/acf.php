@@ -1,4 +1,12 @@
 <?php
+/**
+ * Advanced Custom  Fields
+ *
+ * @author       Matt Whiteley
+ * @since        1.0.0
+ * @license      GPL-2.0+
+**/
+
 // Add Theme Options tab
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
