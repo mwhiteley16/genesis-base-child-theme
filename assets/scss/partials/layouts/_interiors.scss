@@ -1,8 +1,8 @@
 /* ----- Interior Layouts -------------------- */
 .site-inner {
-
      width: 100%;
      overflow: hidden;
+     padding: 0 $block-margin;
 
      .content {
           float: left;

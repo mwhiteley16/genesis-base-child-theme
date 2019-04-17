@@ -1,6 +1,9 @@
 /* ----- Primary Navigation -------------------- */
 .nav-primary {
-     float: right;
+
+     @media(max-width:1000px) {
+          display: none;
+     }
 
      .wrap {
           max-width: 100%;
@@ -74,5 +77,61 @@
 			margin: -54px 0 0 199px;
 		}
 	}
+}
 
+/* ----- Mobile Nav Icon -------------------- */
+.mobile-navigation-icon {
+     display: none;
+     position: absolute;
+     top: 30px;
+     right: 30px;
+     width: 24px;
+     height: 24px;
+     cursor: pointer;
+
+     @extend %transition;
+
+     span {
+          width: 32px;
+          height: 3px;
+          background-color: $grey-dark;
+          border-radius: 10px;
+          position: absolute;
+          top: 0;
+
+          @extend %transition;
+
+          &:nth-child(1) {
+
+          }
+          &:nth-child(2) {
+               top: 10px;
+          }
+          &:nth-child(3) {
+               top: 20px;
+          }
+     }
+
+     &.open span {
+
+          &:nth-child(1) {
+               transform: rotate(45deg);
+               top: 10px;
+               width: 33.94px;
+               left: 0;
+          }
+          &:nth-child(2) {
+               opacity: 0;
+          }
+          &:nth-child(3) {
+               transform: rotate(-45deg);
+               top: 10px;
+               width: 33.94px;
+               left: 0;
+          }
+     }
+
+     @media(max-width:1000px) {
+          display: block;
+     }
 }
