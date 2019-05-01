@@ -1,4 +1,10 @@
-/* ----- Typographical Elements --------------- */
+/**
+ * /assets/scss/partials/base/typography.scss
+ *
+ * Let's define our global typography styles
+ *
+ */
+
 p { // Match these sizes to the font sizes in functions/gutenberg.php
 	margin: 0 0 $base-margin;
 	padding: 0;

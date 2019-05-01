@@ -301,6 +301,12 @@ template {
 [hidden] {
   display: none; }
 
+/**
+ * /assets/scss/partials/base/mixins.scss
+ *
+ * Let's define our universal mixins for use throughout the theme
+ *
+ */
 body,
 p,
 select,
@@ -390,6 +396,18 @@ textarea:focus,
 .gallery img, a, .mobile-navigation-icon, .mobile-navigation-icon span {
   transition: all 0.2s ease-in-out; }
 
+/**
+ * /assets/scss/partials/base/universal.scss
+ *
+ * Let's define our universal styles
+ *
+ * - Site Wide Settings
+ * - Box Sizing
+ * - Common Classes
+ * - Accessibility
+ * - Lists
+ *
+ */
 /* ----- Universal ---------------------- */
 svg:not(:root) {
   overflow: hidden; }
@@ -500,7 +518,12 @@ img.aligncenter,
     .entry-content ol li:last-child {
       padding-bottom: 0; }
 
-/* ----- Typographical Elements --------------- */
+/**
+ * /assets/scss/partials/base/typography.scss
+ *
+ * Let's define our global typography styles
+ *
+ */
 p {
   margin: 0 0 20px;
   padding: 0; }
@@ -588,12 +611,22 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word; }
 
-/* ----- Buttons -------------------- */
+/**
+ * /assets/scss/partials/base/buttons.scss
+ *
+ * Let's define our button styles
+ *
+ */
 .widget_search input[type="submit"] {
   display: none; }
 
 /* for block button coloring see /scss/partials/blocks/_blocks-base.scss */
-/* ----- Tables -------------------- */
+/**
+ * /assets/scss/partials/base/tables.scss
+ *
+ * Let's define our table styles
+ *
+ */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -610,13 +643,20 @@ table {
     padding: 10px;
     position: relative; }
 
-/* ----- Headings -------------------- */
+/**
+ * /assets/scss/partials/base/headings.scss
+ *
+ * Let's define our heading styles
+ * We'll port this to the main stylesheet and the editor stylesheet for use in the block editor
+ *
+ */
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.editor-post-title__block .editor-post-title__input {
   color: #373737;
   font-family: "Roboto", sans-serif;
   margin: 0 0 20px 0;
@@ -627,14 +667,16 @@ h6 {
   h3 a,
   h4 a,
   h5 a,
-  h6 a {
+  h6 a,
+  .editor-post-title__block .editor-post-title__input a {
     color: #373737; }
     h1 a:hover,
     h2 a:hover,
     h3 a:hover,
     h4 a:hover,
     h5 a:hover,
-    h6 a:hover {
+    h6 a:hover,
+    .editor-post-title__block .editor-post-title__input a:hover {
       color: #007991;
       text-decoration: none; }
   h1:focus,
@@ -642,10 +684,12 @@ h6 {
   h3:focus,
   h4:focus,
   h5:focus,
-  h6:focus {
+  h6:focus,
+  .editor-post-title__block .editor-post-title__input:focus {
     outline: none; }
 
-h1 {
+h1,
+.editor-post-title__block .editor-post-title__input {
   font-size: 32px; }
 
 h2 {
@@ -664,7 +708,13 @@ h6 {
   font-size: 12px; }
 
 /* Layouts */
-/* ----- Interior Layouts -------------------- */
+/**
+ * /assets/scss/partials/layouts/interios.scss
+ *
+ * Let's define our interior wrapper styles
+ *
+ *
+ */
 .site-inner {
   width: 100%;
   overflow: hidden;
@@ -687,7 +737,18 @@ h6 {
 .full-width-content .content {
   width: 100%; }
 
-/* ----- Widgets -------------------- */
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/**
+ * /assets/scss/partials/layouts/widgets.scss
+ *
+ * Let's define our base widget styles
+ *
+ *
+ */
 .widget,
 .widget {
   margin-bottom: 40px; }
@@ -697,12 +758,15 @@ h6 {
   .widget ol {
     list-style-type: none; }
 
-/* ----- Site Wraps -------------------- */
-.wrap {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto; }
-
+/**
+ * /assets/scss/partials/layouts/navigation.scss
+ *
+ * Let's define our navigation styles
+ *
+ * - Primary Navigation
+ * - Mobile Navigation Icon
+ *
+ */
 /* ----- Primary Navigation -------------------- */
 @media (max-width: 1000px) {
   .nav-primary {
@@ -797,6 +861,15 @@ h6 {
     .mobile-navigation-icon {
       display: block; } }
 
+/**
+ * /assets/scss/partials/layouts/footer.scss
+ *
+ * Let's define our footer styles
+ *
+ * - Main Footer Area
+ * - Footer Widgets
+ *
+ */
 /* ----- Main Footer -------------------- */
 .site-footer {
   width: 100%;
@@ -812,7 +885,13 @@ h6 {
     .footer-widgets .wrap .widget-area {
       width: 33.33%; }
 
-/* ----- Site Header -------------------- */
+/**
+ * /assets/scss/partials/layouts/header.scss
+ *
+ * Let's define our header styles
+ *
+ *
+ */
 .site-header {
   width: 100%;
   padding: 30px;
@@ -825,7 +904,13 @@ h6 {
     max-height: 125px; }
 
 /* Forms */
-/* ----- Basic Form Layout -------------------- */
+/**
+ * /assets/scss/partials/forms/forms-base.scss
+ *
+ * Let's define our base form styles
+ *
+ *
+ */
 input {
   line-height: normal; }
 
@@ -876,6 +961,13 @@ select {
     color: #424242;
     outline: 0; }
 
+/**
+ * /assets/scss/partials/forms/forms-gravity.scss
+ *
+ * Let's define styles for Gravity Forms
+ *
+ *
+ */
 ul.gform_fields {
   list-style-type: none;
   padding-left: 0; }
@@ -1352,20 +1444,29 @@ img.ui-datepicker-trigger {
   right: 16px; }
 
 /* Blocks */
+/**
+ * /assets/scss/partials/blocks/blocks-base.scss
+ *
+ * Let's define our basic block styles
+ *
+ * - Block layouts
+ * - Block Wrappers
+ * - Common Block Edits
+ * - Buttons
+ * - Color Palette
+ * - Font Sizes
+ *
+ */
 /* ----- Block Layout Styles -------------------- */
 .entry-content > * {
-  margin: 30px 0;
+  margin: 0 0 30px 0;
   max-width: 100%; }
-  .entry-content > * > *:first-child {
-    margin-top: 0; }
-  .entry-content > * > *:last-child {
-    margin-bottom: 0; }
   .entry-content > *.alignwide {
-    margin: 30px calc(25% - 25vw);
+    margin: 0 calc(25% - 25vw);
     max-width: 100vw;
     width: auto; }
   .entry-content > *.alignfull {
-    margin: 30px calc(50% - 50vw);
+    margin: 0 calc(50% - 50vw);
     max-width: 100vw;
     width: 100vw; }
 
@@ -1376,91 +1477,110 @@ img.ui-datepicker-trigger {
   max-width: 100%;
   width: auto; }
 
-/* Post title width */
-.editor-post-title__block.wp-block {
-  max-width: 1200px;
-  /* Post title styling */ }
-
-/* Main column width */
 .wp-block {
-  max-width: 1200px;
-  /* Wide column width */
-  /* Full column width */ }
+  max-width: 1200px; }
   .wp-block[data-align="wide"] {
     max-width: none; }
   .wp-block[data-align="full"] {
     max-width: none; }
 
+.editor-post-title__block.wp-block {
+  max-width: 1200px; }
+  .editor-post-title__block.wp-block .editor-post-title__input {
+    font-family: "Roboto", sans-serif; }
+
+.acf-block-component .block-wrapper {
+  padding: 100px 43px; }
+
+/* ----- Block Wrappers (Used with AB Containers & Simple Block Wrapper) -------------------- */
+.block-wrapper,
+.entry-content .block-wrapper {
+  padding: 100px 20px; }
+
+.block-container {
+  padding: 0 calc(50vw - 462.5px); }
+  @media (max-width: 985px) {
+    .block-container {
+      padding: 0 30px; } }
+
+/* ----- Common Block Customizations -------------------- */
+.wp-block-spacer,
+.entry-content .wp-block-spacer {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0; }
+
+.wp-block-media-text.has-media-on-the-left .wp-block-media-text__content {
+  padding-right: 0; }
+
 /* ----- Buttons -------------------- */
-.wp-block-button__link:not(.has-text-color),
-a.wd-button:not(.has-text-color) {
-  color: white; }
-  .wp-block-button__link:not(.has-text-color):hover,
-  a.wd-button:not(.has-text-color):hover {
+.wp-block-button__link,
+a.wd-button {
+  text-decoration: none; }
+  .wp-block-button__link:not(.has-text-color),
+  a.wd-button:not(.has-text-color) {
     color: white; }
-
-.wp-block-button__link:not(.has-background),
-a.wd-button:not(.has-background) {
-  background-color: #007991; }
-  .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus,
-  a.wd-button:not(.has-background):hover,
-  a.wd-button:not(.has-background):focus {
-    background-color: #004e5e;
-    border: 2px solid #004e5e; }
-
-.wp-block-button__link.has-primary-color-color:hover, .wp-block-button__link.has-primary-color-color:focus,
-a.wd-button.has-primary-color-color:hover,
-a.wd-button.has-primary-color-color:focus {
-  color: #007991; }
-
-.wp-block-button__link.has-primary-color-background-color, .wp-block-button__link.has-primary-color-background-color,
-a.wd-button.has-primary-color-background-color,
-a.wd-button.has-primary-color-background-color {
-  background-color: #007991;
-  border: 2px solid #007991; }
-  .wp-block-button__link.has-primary-color-background-color:hover, .wp-block-button__link.has-primary-color-background-color:focus, .wp-block-button__link.has-primary-color-background-color:hover, .wp-block-button__link.has-primary-color-background-color:focus,
-  a.wd-button.has-primary-color-background-color:hover,
-  a.wd-button.has-primary-color-background-color:focus,
-  a.wd-button.has-primary-color-background-color:hover,
-  a.wd-button.has-primary-color-background-color:focus {
-    background-color: #004e5e;
-    border: 2px solid #004e5e; }
-
-.wp-block-button__link.has-secondary-color-color:hover, .wp-block-button__link.has-secondary-color-color:focus,
-a.wd-button.has-secondary-color-color:hover,
-a.wd-button.has-secondary-color-color:focus {
-  color: #439a86; }
-
-.wp-block-button__link.has-secondary-color-background-color, .wp-block-button__link.has-secondary-color-background-color,
-a.wd-button.has-secondary-color-background-color,
-a.wd-button.has-secondary-color-background-color {
-  background-color: #439a86;
-  border: 2px solid #439a86; }
-  .wp-block-button__link.has-secondary-color-background-color:hover, .wp-block-button__link.has-secondary-color-background-color:focus, .wp-block-button__link.has-secondary-color-background-color:hover, .wp-block-button__link.has-secondary-color-background-color:focus,
-  a.wd-button.has-secondary-color-background-color:hover,
-  a.wd-button.has-secondary-color-background-color:focus,
-  a.wd-button.has-secondary-color-background-color:hover,
-  a.wd-button.has-secondary-color-background-color:focus {
-    background-color: #347667;
-    border: 2px solid #347667; }
-
-.wp-block-button__link.has-accent-color-1-color:hover, .wp-block-button__link.has-accent-color-1-color:focus,
-a.wd-button.has-accent-color-1-color:hover,
-a.wd-button.has-accent-color-1-color:focus {
-  color: #e9d985; }
-
-.wp-block-button__link.has-accent-color-1-background-color, .wp-block-button__link.has-accent-color-1-background-color,
-a.wd-button.has-accent-color-1-background-color,
-a.wd-button.has-accent-color-1-background-color {
-  background-color: #e9d985;
-  border: 2px solid #e9d985; }
-  .wp-block-button__link.has-accent-color-1-background-color:hover, .wp-block-button__link.has-accent-color-1-background-color:focus, .wp-block-button__link.has-accent-color-1-background-color:hover, .wp-block-button__link.has-accent-color-1-background-color:focus,
-  a.wd-button.has-accent-color-1-background-color:hover,
-  a.wd-button.has-accent-color-1-background-color:focus,
-  a.wd-button.has-accent-color-1-background-color:hover,
-  a.wd-button.has-accent-color-1-background-color:focus {
-    background-color: #e1cc5a;
-    border: 2px solid #e1cc5a; }
+    .wp-block-button__link:not(.has-text-color):hover,
+    a.wd-button:not(.has-text-color):hover {
+      color: white; }
+  .wp-block-button__link:not(.has-background),
+  a.wd-button:not(.has-background) {
+    background-color: #007991; }
+    .wp-block-button__link:not(.has-background):hover, .wp-block-button__link:not(.has-background):focus,
+    a.wd-button:not(.has-background):hover,
+    a.wd-button:not(.has-background):focus {
+      background-color: #004e5e;
+      border: 2px solid #004e5e; }
+  .wp-block-button__link.has-primary-color-color:hover, .wp-block-button__link.has-primary-color-color:focus,
+  a.wd-button.has-primary-color-color:hover,
+  a.wd-button.has-primary-color-color:focus {
+    color: #007991; }
+  .wp-block-button__link.has-primary-color-background-color, .wp-block-button__link.has-primary-color-background-color,
+  a.wd-button.has-primary-color-background-color,
+  a.wd-button.has-primary-color-background-color {
+    background-color: #007991;
+    border: 2px solid #007991; }
+    .wp-block-button__link.has-primary-color-background-color:hover, .wp-block-button__link.has-primary-color-background-color:focus, .wp-block-button__link.has-primary-color-background-color:hover, .wp-block-button__link.has-primary-color-background-color:focus,
+    a.wd-button.has-primary-color-background-color:hover,
+    a.wd-button.has-primary-color-background-color:focus,
+    a.wd-button.has-primary-color-background-color:hover,
+    a.wd-button.has-primary-color-background-color:focus {
+      background-color: #004e5e;
+      border: 2px solid #004e5e; }
+  .wp-block-button__link.has-secondary-color-color:hover, .wp-block-button__link.has-secondary-color-color:focus,
+  a.wd-button.has-secondary-color-color:hover,
+  a.wd-button.has-secondary-color-color:focus {
+    color: #439a86; }
+  .wp-block-button__link.has-secondary-color-background-color, .wp-block-button__link.has-secondary-color-background-color,
+  a.wd-button.has-secondary-color-background-color,
+  a.wd-button.has-secondary-color-background-color {
+    background-color: #439a86;
+    border: 2px solid #439a86; }
+    .wp-block-button__link.has-secondary-color-background-color:hover, .wp-block-button__link.has-secondary-color-background-color:focus, .wp-block-button__link.has-secondary-color-background-color:hover, .wp-block-button__link.has-secondary-color-background-color:focus,
+    a.wd-button.has-secondary-color-background-color:hover,
+    a.wd-button.has-secondary-color-background-color:focus,
+    a.wd-button.has-secondary-color-background-color:hover,
+    a.wd-button.has-secondary-color-background-color:focus {
+      background-color: #347667;
+      border: 2px solid #347667; }
+  .wp-block-button__link.has-accent-color-1-color:hover, .wp-block-button__link.has-accent-color-1-color:focus,
+  a.wd-button.has-accent-color-1-color:hover,
+  a.wd-button.has-accent-color-1-color:focus {
+    color: #e9d985; }
+  .wp-block-button__link.has-accent-color-1-background-color, .wp-block-button__link.has-accent-color-1-background-color,
+  a.wd-button.has-accent-color-1-background-color,
+  a.wd-button.has-accent-color-1-background-color {
+    background-color: #e9d985;
+    border: 2px solid #e9d985; }
+    .wp-block-button__link.has-accent-color-1-background-color:hover, .wp-block-button__link.has-accent-color-1-background-color:focus, .wp-block-button__link.has-accent-color-1-background-color:hover, .wp-block-button__link.has-accent-color-1-background-color:focus,
+    a.wd-button.has-accent-color-1-background-color:hover,
+    a.wd-button.has-accent-color-1-background-color:focus,
+    a.wd-button.has-accent-color-1-background-color:hover,
+    a.wd-button.has-accent-color-1-background-color:focus {
+      background-color: #e1cc5a;
+      border: 2px solid #e1cc5a; }
 
 .is-style-inverse .wp-block-button__link:not(.has-text-color),
 a.wd-button--inverse:not(.has-text-color) {
@@ -1579,7 +1699,13 @@ a.wd-button--inverse.has-accent-color-1-background-color {
 .has-larger-font-size {
   font-size: 24px; }
 
-/* ----- Team Member Block -------------------- */
+/**
+ * /assets/scss/partials/blocks/blocks-team.scss
+ *
+ * Let's define our team block styles
+ *
+ *
+ */
 .team-member {
   width: 100%;
   display: flex; }

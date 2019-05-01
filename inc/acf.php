@@ -42,14 +42,15 @@ add_action( 'acf/init', 'wd_acf_init' );
 function wd_acf_init() {
  	if( function_exists( 'acf_register_block' ) ) {
  		acf_register_block(array(
- 			'name'			=> 'acf-team-member',
- 			'title'			=> __( 'Team Member' ),
- 			'description'		=> __( 'A Team Member block.' ),
+ 			'name'			=> 'acf-hero-block',
+ 			'title'			=> __( 'Hero Block' ),
+ 			'description'		=> __( 'A Hero Block.' ),
  			'render_callback'	=> 'wd_acf_block_render_callback',
  			'category'		=> 'formatting',
- 			'icon'			=> 'businessman',
+ 			'icon'			=> 'star-filled',
                'mode'              => 'preview',
- 			'keywords'		=> array( 'team, headshot, acf' ),
+ 			'keywords'		=> array( 'hero, wd, acf' ),
+               //'enqueue_script'    => get_template_directory_uri() . '/blocks/js/hero.js',
  		));
  	}
 }
@@ -64,8 +65,8 @@ function wd_acf_block_render_callback( $block ) {
 	// convert name into path friendly slug
 	$slug = str_replace('acf/', '', $block['name']);
 	// include a template part from within the "template-parts/blocks" folder
-	if( file_exists(STYLESHEETPATH . "/blocks/content-{$slug}.php") ) {
-		include( STYLESHEETPATH . "/blocks/content-{$slug}.php" );
+	if( file_exists(STYLESHEETPATH . "/blocks/templates/content-{$slug}.php") ) {
+		include( STYLESHEETPATH . "/blocks/templates/content-{$slug}.php" );
 	}
 }
 

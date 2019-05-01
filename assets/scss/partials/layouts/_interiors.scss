@@ -1,4 +1,11 @@
-/* ----- Interior Layouts -------------------- */
+/**
+ * /assets/scss/partials/layouts/interios.scss
+ *
+ * Let's define our interior wrapper styles
+ *
+ *
+ */
+
 .site-inner {
      width: 100%;
      overflow: hidden;
@@ -28,4 +35,10 @@
 
 .full-width-content .content {
      width: 100%;
+}
+
+.wrap {
+     width: 100%;
+     max-width: $base-width;
+     margin: 0 auto;
 }

@@ -1,4 +1,10 @@
-// Base styles
+/**
+ * /assets/scss/partials/base/mixins.scss
+ *
+ * Let's define our universal mixins for use throughout the theme
+ *
+ */
+
 %base-style {
      color: $base-color;
      font-family: $font-stack-main;
