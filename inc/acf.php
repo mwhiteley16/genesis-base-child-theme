@@ -45,12 +45,14 @@ function wd_acf_init() {
  			'name'			=> 'acf-hero-block',
  			'title'			=> __( 'Hero Block' ),
  			'description'		=> __( 'A Hero Block.' ),
- 			'render_callback'	=> 'wd_acf_block_render_callback',
  			'category'		=> 'formatting',
  			'icon'			=> 'star-filled',
                'mode'              => 'preview',
  			'keywords'		=> array( 'hero, wd, acf' ),
+               'post_type'         => array( 'post', 'page' ),
+               'render_callback'	=> 'wd_acf_block_render_callback',
                //'enqueue_script'    => get_template_directory_uri() . '/blocks/js/hero.js',
+               //'enqeue_style'      => get_template_directory_uri() . '',
  		));
  	}
 }
