@@ -26,8 +26,16 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
  * Set up variable with theme Google fonts
  *
  */
-if( ! isset( $wd_fonts ) )
-     $wd_fonts = '//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i';
+function wd_theme_fonts() {
+	$font_families = apply_filters( 'ea_theme_fonts', array( 'Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' ) );
+	$query_args = array(
+		'family' => implode( '|', $font_families ),
+		'subset' => 'latin,latin-ext',
+	);
+	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	return esc_url_raw( $fonts_url );
+}
+
 /**
  * Global enqueues
  *
@@ -37,7 +45,7 @@ if( ! isset( $wd_fonts ) )
 function wd_global_enqueues() {
 
      // fonts
-     wp_enqueue_style( 'wd-fonts', $wd_fonts );
+     wp_enqueue_style( 'wd-fonts', wd_theme_fonts() );
 
      // javascript
      //wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
@@ -57,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'wd_global_enqueues' );
  *
  */
 function wd_admin_gutenfonts() {
-     wp_enqueue_style( 'wd-fonts', $wd_fonts );
+     wp_enqueue_style( 'wd-fonts', wd_theme_fonts() );
      wp_enqueue_script('wd-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'wd_admin_gutenfonts' );
