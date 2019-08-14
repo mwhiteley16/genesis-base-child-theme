@@ -27,6 +27,17 @@ $base-width: 1200px;
 $margin-large: $base-margin * 1.5;
 $margin-small: $base-margin * 0.5;
 
+// Form variables
+$form-spacing: 30px;
+$form-spacing-half: $form-spacing * 0.5;
+$form-padding: 15px;
+$form-border-color: $grey-medium;
+$form-border-color-focus: $primary-color;
+$form-text-color: $base-color;
+$form-required-color: red;
+$form-error: red;
+$form-border-radius: 5px;
+
 // Blocks
 $block-margin: 30px;
 

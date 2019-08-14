@@ -32,17 +32,17 @@ input[type="number"],
 textarea,
 select {
 	background: $white;
-	border: 1px solid $grey-medium;
-	color: $grey-dark;
-	padding: 10px;
+	border: 1px solid $form-border-color;
+	color: $form-text-color;
+	padding: $form-padding;
 	width: 100%;
-     border-radius: 0;
+     border-radius: $form-border-radius;
      line-height: 1.15;
 
      &:focus {
           background-color: $white;
-          border-color: #007acc;
-          color: $grey-dark;
+          border-color: $form-border-color-focus;
+          color: $form-text-color;
           outline: 0;
      }
 }

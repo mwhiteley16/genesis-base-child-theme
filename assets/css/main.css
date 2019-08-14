@@ -317,7 +317,6 @@ input {
   font-size: 16px;
   line-height: 1.6;
   font-weight: 400;
-  letter-spacing: 0.35px;
   height: auto;
   min-height: auto; }
 
@@ -342,19 +341,19 @@ input[type="submit"][disabled]:focus,
   height: auto;
   border-radius: 3px; }
   a.wd-button:hover,
-  input:hover[type="button"],
-  input:hover[type="button"][disabled],
-  input:hover[type="reset"],
-  input:hover[type="reset"][disabled],
-  input:hover[type="submit"],
-  input:hover[type="submit"][disabled],
+  input[type="button"]:hover,
+  input[type="button"][disabled]:hover,
+  input[type="reset"]:hover,
+  input[type="reset"][disabled]:hover,
+  input[type="submit"]:hover,
+  input[type="submit"][disabled]:hover,
   .claim-search button:hover, .wp-block-button__link:hover, a.wd-button:focus,
-  input:focus[type="button"],
-  input:focus[type="button"][disabled],
-  input:focus[type="reset"],
-  input:focus[type="reset"][disabled],
-  input:focus[type="submit"],
-  input:focus[type="submit"][disabled],
+  input[type="button"]:focus,
+  input[type="button"][disabled]:focus,
+  input[type="reset"]:focus,
+  input[type="reset"][disabled]:focus,
+  input[type="submit"]:focus,
+  input[type="submit"][disabled]:focus,
   .claim-search button:focus, .wp-block-button__link:focus {
     border-color: #004e5e;
     background: #004e5e;
@@ -374,13 +373,13 @@ input[type="submit"][disabled]:focus,
     background-color: transparent;
     color: #007991; }
     a.button--inverse.wd-button:hover,
-    input.button--inverse:hover[type="button"],
-    input.button--inverse:hover[type="reset"],
-    input.button--inverse:hover[type="submit"],
+    input.button--inverse[type="button"]:hover,
+    input.button--inverse[type="reset"]:hover,
+    input.button--inverse[type="submit"]:hover,
     .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:focus,
-    input.button--inverse:focus[type="button"],
-    input.button--inverse:focus[type="reset"],
-    input.button--inverse:focus[type="submit"],
+    input.button--inverse[type="button"]:focus,
+    input.button--inverse[type="reset"]:focus,
+    input.button--inverse[type="submit"]:focus,
     .claim-search button.button--inverse:focus, .button--inverse.wp-block-button__link:focus {
       background-color: #007991;
       color: #fff;
@@ -937,10 +936,10 @@ textarea,
 select {
   background: #fff;
   border: 1px solid #e0e0e0;
-  color: #424242;
-  padding: 10px;
+  color: #373737;
+  padding: 15px;
   width: 100%;
-  border-radius: 0;
+  border-radius: 5px;
   line-height: 1.15; }
   input[type="date"]:focus,
   input[type="time"]:focus,
@@ -957,321 +956,195 @@ select {
   textarea:focus,
   select:focus {
     background-color: #fff;
-    border-color: #007acc;
-    color: #424242;
+    border-color: #007991;
+    color: #373737;
     outline: 0; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity.scss
  *
- * Let's define styles for Gravity Forms
+ * Let's define base styles for Gravity Forms
  *
  *
  */
+.gform_wrapper {
+  width: 100%;
+  margin-bottom: 30px; }
+  .gform_wrapper form,
+  .gform_wrapper .gform_body,
+  .gform_wrapper .gform_footer {
+    width: 100%; }
+
 ul.gform_fields {
   list-style-type: none;
-  padding-left: 0; }
-  ul.gform_fields label {
-    font-weight: 600;
-    font-size: 13px; }
-  ul.gform_fields .ginput_complex label,
-  ul.gform_fields .gfield_description {
-    float: left;
-    width: 100%;
-    font-size: 12px;
-    font-weight: 400;
-    margin-bottom: 12px; }
-
-.gform_wrapper {
-  float: left;
-  width: 100%;
-  margin-bottom: 20px; }
-  .gform_wrapper ul {
-    margin: 0; }
-    .gform_wrapper ul li {
-      float: left;
-      width: 100%;
-      list-style-type: none;
-      margin-left: 0;
-      margin-bottom: 20px; }
-      .gform_wrapper ul li.left-side,
-      .gform_wrapper ul li .name_first,
-      .gform_wrapper ul li .ginput_left,
-      .gform_wrapper ul li .ginput_card_expiration,
-      .gform_wrapper ul li .ginput_cardinfo_left {
-        float: left;
-        width: 48%; }
-      .gform_wrapper ul li.right-side,
-      .gform_wrapper ul li .name_last,
-      .gform_wrapper ul li .ginput_right,
-      .gform_wrapper ul li .ginput_cardinfo_right,
-      .gform_wrapper ul li .ginput_card_expiration.ginput_card_expiration_year {
-        float: right;
-        width: 48%; }
-      .gform_wrapper ul li.gform_hidden {
-        padding: 0;
-        margin: 0; }
-      .gform_wrapper ul li.field_admin_only {
-        margin: 0; }
-      .gform_wrapper ul li .ginput_container_date {
-        float: left;
-        width: 100%;
-        position: relative; }
-        .gform_wrapper ul li .ginput_container_date img.ui-datepicker-trigger {
-          position: absolute;
-          top: 50%;
-          right: 10px;
-          transform: translateY(-50%); }
-    .gform_wrapper ul.gfield_checkbox, .gform_wrapper ul.gfield_radio {
-      padding-left: 0; }
-    .gform_wrapper ul .gform_card_icon_container {
-      margin: 8px 0 6px;
-      height: 32px; }
-      .gform_wrapper ul .gform_card_icon_container div.gform_card_icon {
-        margin-right: 4px;
-        text-indent: -9000px;
-        background-image: url(../images/gf-creditcard-icons.png);
-        background-repeat: no-repeat;
-        width: 36px;
-        height: 32px;
-        float: left; }
-        .gform_wrapper ul .gform_card_icon_container div.gform_card_icon.gform_card_icon_amex {
-          background-position: -72px 0; }
-        .gform_wrapper ul .gform_card_icon_container div.gform_card_icon.gform_card_icon_discover {
-          background-position: -108px 0; }
-        .gform_wrapper ul .gform_card_icon_container div.gform_card_icon.gform_card_icon_mastercard {
-          background-position: -36px 0; }
-        .gform_wrapper ul .gform_card_icon_container div.gform_card_icon.gform_card_icon_visa {
-          background-position: 0 0; }
-  .gform_wrapper span.ginput_quantity_label {
-    margin-left: 10px;
-    margin-right: 2px; }
-  .gform_wrapper input.ginput_quantity {
-    width: 3rem; }
-  .gform_wrapper span.ginput_product_price {
-    color: #900; }
-  .gform_wrapper span.ginput_total {
-    color: #060; }
-  .gform_wrapper span.ginput_card_security_code_icon {
-    display: none; }
-  .gform_wrapper .gfield_password_strength {
-    border: 1px solid #DDD;
-    line-height: 1.8;
-    padding: 10px 5px;
-    text-align: center;
-    background-color: #EEE;
-    border-bottom: 3px solid #DDD;
-    float: left;
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  ul.gform_fields > li {
+    margin-bottom: 30px;
     width: 100%; }
-    .gform_wrapper .gfield_password_strength.mismatch, .gform_wrapper .gfield_password_strength.short {
-      background-color: #FFA0A0;
-      border-color: #f04040;
-      border-bottom: 3px solid #f04040; }
-    .gform_wrapper .gfield_password_strength.bad {
-      background-color: #FFB78C;
-      border-color: #FF853C;
-      border-bottom: 3px solid #FF853C; }
-    .gform_wrapper .gfield_password_strength.good {
-      background-color: #FFEC8b;
-      border-color: #FC0;
-      border-bottom: 3px solid #FC0; }
-    .gform_wrapper .gfield_password_strength.strong {
-      background-color: #C3FF88;
-      border-color: #8DFF1C;
-      border-bottom: 3px solid #8DFF1C; }
+    ul.gform_fields > li.gf_left_half, ul.gform_fields > li.left-side, ul.gform_fields > li.gf_right_half, ul.gform_fields > li.right-side {
+      width: 49%; }
+    ul.gform_fields > li.gf_left_third, ul.gform_fields > li.gf_middle_third, ul.gform_fields > li.gf_right_third, ul.gform_fields > li.left-third, ul.gform_fields > li.middle-third, ul.gform_fields > li.right-third {
+      width: 32%; }
+    ul.gform_fields > li > label {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+      font-weight: 600; }
+      ul.gform_fields > li > label .gfield_required {
+        color: red;
+        padding-left: 4px; }
 
-form .gfield_checkbox label,
-form .gfield_radio label {
-  float: none;
-  width: auto;
-  margin-left: 2px; }
+/**
+ * /assets/scss/partials/forms/forms-gravity-address.scss
+ *
+ * Let's define styles for Gravity Forms Address Fields
+ *
+ *
+ */
+.ginput_container_address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .ginput_container_address span {
+    margin-bottom: 15px;
+    width: 100%; }
+    .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
+      width: 32%;
+      margin-left: 2%; }
+      @media (max-width: 700px) {
+        .ginput_container_address span.address_state, .ginput_container_address span.address_zip {
+          width: 49%; } }
+    @media (max-width: 700px) {
+      .ginput_container_address span.address_state {
+        margin-left: 0; } }
+    @media (min-width: 700px) {
+      .ginput_container_address span.address_city {
+        width: 32%;
+        margin-left: 0; } }
+    .ginput_container_address span label {
+      font-size: 14px; }
 
-form .gfield_radio label {
-  margin-left: 5px; }
+/**
+ * /assets/scss/partials/forms/forms-gravity-checkboxradio.scss
+ *
+ * Let's define styles for Gravity Forms checkboxes and radios
+ *
+ *
+ */
+.ginput_container_radio ul,
+.ginput_container_checkbox ul {
+  list-style-type: none;
+  padding-left: 0; }
+  .ginput_container_radio ul li,
+  .ginput_container_checkbox ul li {
+    display: flex;
+    align-items: center; }
+    .ginput_container_radio ul li input,
+    .ginput_container_checkbox ul li input {
+      margin-right: 5px; }
 
-form .gfield_checkbox li,
-form .gfield_radio li {
-  margin: 6px 0 0 0; }
+.gf_list_2col .gfield_radio,
+.gf_list_2col .gfield_checkbox,
+.two-column .gfield_radio,
+.two-column .gfield_checkbox,
+.gf_list_3col .gfield_radio,
+.gf_list_3col .gfield_checkbox,
+.three-column .gfield_radio,
+.three-column .gfield_checkbox,
+.gf_list_4col .gfield_radio,
+.gf_list_4col .gfield_checkbox,
+.four-column .gfield_radio,
+.four-column .gfield_checkbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .gf_list_2col .gfield_radio li,
+  .gf_list_2col .gfield_checkbox li,
+  .two-column .gfield_radio li,
+  .two-column .gfield_checkbox li,
+  .gf_list_3col .gfield_radio li,
+  .gf_list_3col .gfield_checkbox li,
+  .three-column .gfield_radio li,
+  .three-column .gfield_checkbox li,
+  .gf_list_4col .gfield_radio li,
+  .gf_list_4col .gfield_checkbox li,
+  .four-column .gfield_radio li,
+  .four-column .gfield_checkbox li {
+    width: 49%;
+    padding: 0 10px 0 0; }
+    @media (max-width: 500px) {
+      .gf_list_2col .gfield_radio li,
+      .gf_list_2col .gfield_checkbox li,
+      .two-column .gfield_radio li,
+      .two-column .gfield_checkbox li,
+      .gf_list_3col .gfield_radio li,
+      .gf_list_3col .gfield_checkbox li,
+      .three-column .gfield_radio li,
+      .three-column .gfield_checkbox li,
+      .gf_list_4col .gfield_radio li,
+      .gf_list_4col .gfield_checkbox li,
+      .four-column .gfield_radio li,
+      .four-column .gfield_checkbox li {
+        width: 100%; } }
 
-form select {
-  background-color: #fff; }
+.gf_list_3col .gfield_radio li,
+.gf_list_3col .gfield_checkbox li,
+.three-column .gfield_radio li,
+.three-column .gfield_checkbox li {
+  width: 32%; }
+  @media (max-width: 700px) {
+    .gf_list_3col .gfield_radio li,
+    .gf_list_3col .gfield_checkbox li,
+    .three-column .gfield_radio li,
+    .three-column .gfield_checkbox li {
+      width: 49%; } }
+  @media (max-width: 500px) {
+    .gf_list_3col .gfield_radio li,
+    .gf_list_3col .gfield_checkbox li,
+    .three-column .gfield_radio li,
+    .three-column .gfield_checkbox li {
+      width: 100%; } }
 
-.validation_message {
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 12px;
-  font-size: 1.2rem;
-  margin-top: 5px;
-  margin-bottom: 0; }
+.gf_list_4col .gfield_radio li,
+.gf_list_4col .gfield_checkbox li,
+.four-column .gfield_radio li,
+.four-column .gfield_checkbox li {
+  width: 23.5%; }
+  @media (max-width: 900px) {
+    .gf_list_4col .gfield_radio li,
+    .gf_list_4col .gfield_checkbox li,
+    .four-column .gfield_radio li,
+    .four-column .gfield_checkbox li {
+      width: 32%; } }
+  @media (max-width: 700px) {
+    .gf_list_4col .gfield_radio li,
+    .gf_list_4col .gfield_checkbox li,
+    .four-column .gfield_radio li,
+    .four-column .gfield_checkbox li {
+      width: 49%; } }
+  @media (max-width: 500px) {
+    .gf_list_4col .gfield_radio li,
+    .gf_list_4col .gfield_checkbox li,
+    .four-column .gfield_radio li,
+    .four-column .gfield_checkbox li {
+      width: 100%; } }
 
-.validation_message {
-  color: #b54040;
-  display: none; }
-
-.validation_error {
-  float: left;
-  width: 100%;
-  margin-bottom: 25px;
-  border: 2px solid #b54040;
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #ffe7e7; }
-
-.hidden_label .gfield_label {
-  clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden; }
-
-.gfield_error input[type="email"],
-.gfield_error input[type="text"],
-.gfield_error input[type="tel"],
-.gfield_error input[type="url"],
-.gfield_error textarea,
-.gfield_error select {
-  border: 2px solid #b54040;
-  background-color: #ffe7e7; }
-
-.gform_validation_container,
-.gform_wrapper .gform_validation_container,
-body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
-body .gform_wrapper li.gform_validation_container,
-body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
-  display: none !important;
-  position: absolute !important;
-  left: -9000px; }
-
-.ginput_container_time {
-  float: left;
-  width: 30%;
-  margin-right: 5%; }
-  .ginput_container_time i,
-  .ginput_container_time label {
-    display: none; }
-
-.gfield_time_ampm.ginput_container_time {
-  margin-right: 0; }
-
-.ginput_container_checkbox,
-.ginput_container_radio,
-.ginput_container_post_image,
-.ginput_container_fileupload {
-  float: left;
-  width: 100%;
-  border-radius: 5px;
-  background-color: #fff; }
-
-ul.gfield_checkbox li,
-ul.gfield_radio li {
-  font-size: 13px;
-  line-height: 22px;
-  margin: 0;
+/**
+ * /assets/scss/partials/forms/forms-gravity-datepicker.scss
+ *
+ * Let's define styles for Gravity Forms datepicker
+ *
+ *
+ */
+.ginput_container_date input {
   position: relative;
-  word-wrap: break-word;
-  padding: 0; }
-  ul.gfield_checkbox li input[type="checkbox"],
-  ul.gfield_checkbox li input[type="radio"],
-  ul.gfield_radio li input[type="checkbox"],
-  ul.gfield_radio li input[type="radio"] {
-    margin: -1px 4px 0 0;
-    vertical-align: middle; }
-  ul.gfield_checkbox li span,
-  ul.gfield_checkbox li label,
-  ul.gfield_radio li span,
-  ul.gfield_radio li label {
-    float: none;
-    font-weight: 400; }
-
-table.gfield_list td {
-  border: none;
-  padding: 0 10px 5px 0; }
-
-/* ----- Progress Bar -------------------- */
-.gform_wrapper .gf_progressbar_wrapper {
-  clear: both;
-  width: 100%;
-  margin: 0 0 16px;
-  padding: 0 0 16px; }
-  .gform_wrapper .gf_progressbar_wrapper h3.gf_progressbar_title {
-    font-size: .813em;
-    line-height: 1 !important;
-    margin: 10px 0;
-    padding: 0 !important;
-    clear: both;
-    filter: alpha(opacity=60);
-    -moz-opacity: .6;
-    -khtml-opacity: .6;
-    opacity: .6; }
-
-.gform_wrapper .gf_progressbar {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.1);
-  -moz-border-radius: 25px;
-  -webkit-border-radius: 25px;
-  border-radius: 25px;
-  -webkit-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
-  -moz-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
-  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.05);
-  width: 100%;
-  z-index: -3; }
-  @media only screen and (min-width: 641px) {
-    .gform_wrapper .gf_progressbar {
-      width: calc(100% - 16px); } }
-
-.gform_wrapper .gf_progressbar_percentage {
-  height: 24px;
-  text-align: right;
-  font-family: helvetica,arial,sans-serif;
-  font-size: 0.813em !important;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  vertical-align: middle;
-  border-radius: 20px 4px 4px 20px; }
-  .gform_wrapper .gf_progressbar_percentage span {
-    display: block;
-    width: auto;
-    float: right;
-    margin-right: 5px;
-    margin-left: 5px;
-    line-height: 1.8;
-    position: relative; }
-    .gform_wrapper .gf_progressbar_percentage span::before, .gform_wrapper .gf_progressbar_percentage span::after {
-      content: " ";
-      position: absolute;
-      top: -17px;
-      left: -15px;
-      width: 58px;
-      height: 58px;
-      background-color: #439a86;
-      border-radius: 50%;
-      z-index: -1; }
-    .gform_wrapper .gf_progressbar_percentage span::after {
-      width: 68px;
-      height: 68px;
-      background-color: rgba(0, 0, 0, 0.5);
-      z-index: -2;
-      top: -22px;
-      left: -20px; }
-  .gform_wrapper .gf_progressbar_percentage.percentbar_0 span {
-    color: #959595;
-    text-shadow: none;
-    float: none !important;
-    margin-left: 12px;
-    word-wrap: normal; }
-    .gform_wrapper .gf_progressbar_percentage.percentbar_0 span::before, .gform_wrapper .gf_progressbar_percentage.percentbar_0 span::after {
-      background-color: transparent; }
-
-/* ----- Login / Password Reset -------------------- */
-#gform_fields_login .ginput_container_checkbox {
-  border: none;
-  padding: 0; }
-
-.gf_login_links a {
-  font-weight: 600;
-  font-size: 13px; }
+  background-image: url("../images/calendar-alt-light.svg");
+  background-position: calc(100% - 15px) 50%;
+  background-repeat: no-repeat;
+  background-size: 16px; }
 
 .ui-datepicker {
   background-color: #ccc;
@@ -1442,6 +1315,69 @@ img.ui-datepicker-trigger {
   position: absolute;
   bottom: 16px;
   right: 16px; }
+
+/**
+ * /assets/scss/partials/forms/forms-gravity-select.scss
+ *
+ * Let's define styles for Gravity Forms select field
+ *
+ *
+ */
+.gform_wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  background-image: url("../images/arrow-down-light.svg");
+  background-position: calc(100% - 15px) 50%;
+  background-repeat: no-repeat;
+  background-size: 16px; }
+
+/**
+ * /assets/scss/partials/forms/forms-gravity-names.scss
+ *
+ * Let's define styles for Gravity Forms name field
+ *
+ *
+ */
+.ginput_complex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .ginput_complex .name_first,
+  .ginput_complex .name_last {
+    width: 49%; }
+
+/**
+ * /assets/scss/partials/forms/forms-gravity-validation.scss
+ *
+ * Let's define styles for Gravity Forms validation
+ *
+ *
+ */
+.gform_wrapper .validation_error {
+  border: 1px solid red;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 5px; }
+
+.gfield_error > label,
+.gfield_error .validation_message {
+  color: red; }
+
+.gfield_error input,
+.gfield_error textarea,
+.gfield_error select {
+  border-color: red; }
+  .gfield_error input:focus,
+  .gfield_error textarea:focus,
+  .gfield_error select:focus {
+    border-color: #cc0000; }
+
+.gform_validation_container {
+  display: none;
+  position: absolute;
+  left: -9000px; }
 
 /* Blocks */
 /**

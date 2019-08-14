@@ -1,0 +1,93 @@
+/**
+ * /assets/scss/partials/forms/forms-gravity-checkboxradio.scss
+ *
+ * Let's define styles for Gravity Forms checkboxes and radios
+ *
+ *
+ */
+
+.ginput_container_radio,
+.ginput_container_checkbox {
+
+     ul {
+          list-style-type: none;
+          padding-left: 0;
+
+          li {
+               display: flex;
+               align-items: center;
+
+               input {
+                    margin-right: 5px;
+               }
+          }
+     }
+}
+
+.gf_list_2col,
+.two-column,
+.gf_list_3col,
+.three-column,
+.gf_list_4col,
+.four-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+
+          li {
+               width: 49%;
+               padding: 0 10px 0 0;
+
+               @media(max-width:500px) {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+.gf_list_3col,
+.three-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+               width: 32%;
+
+               @media(max-width:700px) {
+                    width: 49%;
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+               }
+          }
+     }
+}
+
+.gf_list_4col,
+.four-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+               width: 23.5%;
+
+               @media(max-width:900px) {
+                    width: 32%;
+               }
+
+               @media(max-width:700px) {
+                    width: 49%;
+               }
+
+               @media(max-width:500px) {
+                    width: 100%;
+               }
+          }
+     }
+}
