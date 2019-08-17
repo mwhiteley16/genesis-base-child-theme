@@ -90,33 +90,10 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
  * @since 1.0
  */
 function wd_base_setup() {
-
-     // Add custom image sizes
-     // add_image_size( 'size-name', 000, 000, true );
-
-     // Register additional sidebars
-     //genesis_register_sidebar(array(
-     //	'name'=>'Additional Sidebar',
-     //	'id' => 'footer-widget-1',
-     //	'description' => 'Footer widget number 1.',
-     //	'before_widget' => '<div class="widget-wrap %2$s">',
-     //	'after_widget'  => "</div>\n",
-     //	'before_title'  => '<h3 class="widget-title">',
-     //	'after_title'   => "</h3>\n"
-     //));
-
-     // Remove comment form allowed tags
-     add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
-     function wd_remove_comments_allowed_tags( $defaults ) {
-     	$defaults['comment_notes_after'] = '';
-     	return $defaults;
-     }
-
      include_once( get_stylesheet_directory() . '/inc/acf.php' );
      include_once( get_stylesheet_directory() . '/inc/genesis.php' );
      include_once( get_stylesheet_directory() . '/inc/gravityforms.php' );
      include_once( get_stylesheet_directory() . '/inc/gutenberg.php' );
      include_once( get_stylesheet_directory() . '/inc/wordpress.php' );
-
 }
 add_action( 'genesis_setup', 'wd_base_setup', 15 );

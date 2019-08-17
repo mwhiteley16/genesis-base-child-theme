@@ -27,6 +27,13 @@ function wd_admin_head() {
 	echo '<style type="text/css">'.$css.'</style>';
 }
 
+// Remove comment form allowed tags
+add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
+function wd_remove_comments_allowed_tags( $defaults ) {
+     $defaults['comment_notes_after'] = '';
+     return $defaults;
+}
+
 // Remove admin bar for non-admins
 //add_action( 'after_setup_theme', 'wd_remove_admin_bar' );
 function wd_remove_admin_bar() {
@@ -34,3 +41,6 @@ function wd_remove_admin_bar() {
   		show_admin_bar(false);
 	}
 }
+
+// Add custom image sizes
+// add_image_size( 'size-name', 000, 000, true );
