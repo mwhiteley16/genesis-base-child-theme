@@ -37,6 +37,8 @@ $form-text-color: $base-color;
 $form-required-color: red;
 $form-error: red;
 $form-border-radius: 5px;
+$form-calendar-base-color: $primary-color;
+$form-calendar-highlight-color: lighten( $form-calendar-base-color, 10% );
 
 // Blocks
 $block-margin: 30px;
@@ -45,4 +47,6 @@ $block-margin: 30px;
 // Match names to Color Palette in /functions/gutenberg.php
 $colors: ( primary-color, $primary-color ),
 	    ( secondary-color, $secondary-color ),
-	    ( accent-color-1, $accent-color-1 );
+	    ( accent-color-1, $accent-color-1 ),
+         ( white, $white ),
+         ( black, $black );

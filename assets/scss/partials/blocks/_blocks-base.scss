@@ -14,7 +14,6 @@
 
 /* ----- Block Layout Styles -------------------- */
 .entry-content > * {
-     margin: 0 0 $block-margin 0;
      max-width: 100%;
 
      &.alignwide {
@@ -67,20 +66,6 @@
      padding: 100px 43px;
 }
 
-
-/* ----- Block Wrappers (Used with AB Containers & Simple Block Wrapper) -------------------- */
-.block-wrapper,
-.entry-content .block-wrapper {
-     padding: 100px $base-margin;
-}
-
-.block-container {
-     padding: 0 calc(50vw - 462.5px); // Change to half width of main content area
-
-     @media(max-width:985px) {
-          padding: 0 30px;
-     }
-}
 
 /* ----- Common Block Customizations -------------------- */
 .wp-block-spacer,
@@ -194,6 +179,18 @@ a.wd-button--inverse {
                }
           }
      }
+}
+
+/* ----- Separators -------------------- */
+hr,
+hr.wp-block-separator {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid $base-color;
+	clear: both;
+	margin: 1em 0;
+     width: 100%;
+     max-width: 100% !important;
 }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */

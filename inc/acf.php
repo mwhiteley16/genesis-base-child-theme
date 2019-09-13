@@ -41,8 +41,8 @@ function wd_acf_show_admin( $show ) {
 add_action( 'acf/init', 'wd_acf_init' );
 function wd_acf_init() {
  	if( function_exists( 'acf_register_block' ) ) {
- 		acf_register_block(array(
- 			'name'			=> 'acf-hero-block',
+ 		acf_register_block_type(array(
+ 			'name'			=> 'acf-hero',
  			'title'			=> __( 'Hero Block' ),
  			'description'		=> __( 'A Hero Block.' ),
  			'category'		=> 'formatting',
@@ -51,8 +51,7 @@ function wd_acf_init() {
  			'keywords'		=> array( 'hero, wd, acf' ),
                'post_type'         => array( 'post', 'page' ),
                'render_callback'	=> 'wd_acf_block_render_callback',
-               //'enqueue_script'    => get_template_directory_uri() . '/blocks/js/hero.js',
-               //'enqeue_style'      => get_template_directory_uri() . '',
+               'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/hero-block.js',
  		));
  	}
 }
@@ -84,7 +83,7 @@ function wd_acf_color_palette() { ?>
 (function($) {
      acf.add_filter('color_picker_args', function( args, $field ){
           // add the hexadecimal codes here for the colors you want to appear as swatches
-          args.palettes = ['#007991', '#439a86', '#e9d985']
+          args.palettes = ['#007991', '#439a86', '#e9d985', '#ffffff', '#000000']
           // return colors
           return args;
      });

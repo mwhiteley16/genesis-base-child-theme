@@ -15,10 +15,10 @@
 $block_id = 'hero-' . $block['id'];
 
 // Block Classes
-$block_classes = 'acf-block logos-block';
+$block_classes = 'acf-block hero-block';
 
 if( ! empty( $block['align'] ) ) { // get align class if present
-     $block_classes .= ' ' . $block['align'];
+     $block_classes .= ' align' . $block['align'];
 }
 
 if( ! empty( $block['className'] ) ) { // get custom class name if present
@@ -28,5 +28,5 @@ if( ! empty( $block['className'] ) ) { // get custom class name if present
 ?>
 
 <div id="<?php echo esc_attr( $block_id ); ?>" class="<?php echo esc_attr( $block_classes ); ?>">
-
+     HERO BLOCK HERE!
 </div>

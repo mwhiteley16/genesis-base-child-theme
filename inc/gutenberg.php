@@ -37,7 +37,17 @@ add_theme_support( 'editor-color-palette', array(
 		'name'  => __( 'Accent Color 1', CHILD_THEME_SLUG ),
 		'slug'  => 'accent-color-1',
 		'color' => '#e9d985',
-       ),
+     ),
+     array(
+		'name'  => __( 'White', CHILD_THEME_SLUG ),
+		'slug'  => 'white',
+		'color' => '#ffffff',
+     ),
+     array(
+		'name'  => __( 'Black', CHILD_THEME_SLUG ),
+		'slug'  => 'black',
+		'color' => '#000000',
+     ),
 ) );
 
 //Customize Gutenberg font sizes

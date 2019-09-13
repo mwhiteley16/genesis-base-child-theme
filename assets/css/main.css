@@ -550,13 +550,6 @@ ul {
   margin: 0;
   padding: 0; }
 
-hr {
-  border: 0;
-  border-collapse: collapse;
-  border-top: 1px solid #fafafa;
-  clear: both;
-  margin: 1em 0; }
-
 b,
 strong {
   font-weight: 700; }
@@ -1146,175 +1139,151 @@ ul.gform_fields {
   background-repeat: no-repeat;
   background-size: 16px; }
 
-.ui-datepicker {
-  background-color: #ccc;
-  width: 216px;
-  height: auto;
-  margin: 5px auto 0;
-  font: 9pt Arial,sans-serif;
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5); }
-
-.ui-datepicker a {
-  text-decoration: none; }
-
-.ui-datepicker table {
-  width: 100%;
-  border-collapse: collapse; }
-
-.ui-datepicker-header {
-  background-color: #666;
-  color: #e0e0e0;
-  font-weight: 700;
-  -webkit-box-shadow: inset 0 1px 1px 0 rgba(250, 250, 250, 0.2);
-  -moz-box-shadow: inset 0 1px 1px 0 rgba(250, 250, 250, 0.2);
-  box-shadow: inset 0 1px 1px 0 rgba(250, 250, 250, 0.2);
-  text-shadow: 1px -1px 0 #000;
-  filter: dropshadow(color=#000, offx=1, offy=-1);
-  line-height: 30px;
-  min-height: 30px !important;
-  border-width: 1px 0 0;
-  border-style: solid;
-  border-color: #666; }
-
-.ui-datepicker tbody tr, .ui-datepicker thead {
-  border-bottom: 1px solid #bbb; }
-
-.ui-datepicker-title {
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 2px 0 0; }
-
-.ui-datepicker-title select {
-  margin-top: 2.5%;
-  border: none;
+body .ui-datepicker {
+  margin-top: 2px;
   padding: 0;
-  border-radius: 2px;
-  font-size: 12px;
-  width: 48%; }
-
-.ui-datepicker-next, .ui-datepicker-prev {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  cursor: pointer;
-  background-image: url(../images/arrow.png);
-  background-repeat: no-repeat;
-  line-height: 600%;
-  overflow: hidden; }
-
-.ui-datepicker-prev {
-  float: left;
-  background-position: center -30px; }
-
-.ui-datepicker-next {
-  float: right;
-  background-position: center 0; }
-
-.ui-datepicker thead {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmMWYxZjEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #f7f7f7 0, #f1f1f1 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f7f7f7), color-stop(100%, #f1f1f1));
-  background: -webkit-linear-gradient(top, #f7f7f7 0, #f1f1f1 100%);
-  background: -o-linear-gradient(top, #f7f7f7 0, #f1f1f1 100%);
-  background: -ms-linear-gradient(top, #f7f7f7 0, #f1f1f1 100%);
-  background: linear-gradient(to bottom, #f7f7f7 0, #f1f1f1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f1f1f1', GradientType=0 ); }
-
-.ui-datepicker th {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 6pt;
-  padding: 5px 0;
-  color: #666;
-  text-shadow: 1px 0 0 #fff;
-  filter: dropshadow(color=#fff, offx=1, offy=0); }
-
-.ui-datepicker tbody td {
-  padding: 0;
-  border-top: 1px solid #bbb;
-  border-right: 1px solid #bbb; }
-
-.ui-datepicker tbody td:last-child {
-  border-right: 0; }
-
-.ui-datepicker tbody tr:last-child {
-  border-bottom: 0; }
-
-.ui-datepicker td a, .ui-datepicker td span {
-  display: inline-block;
-  font-weight: 700;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  color: #666;
-  text-shadow: 1px 1px 0 #fff;
-  filter: dropshadow(color=#fff, offx=1, offy=1); }
-
-.ui-datepicker-calendar .ui-state-default {
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VkZWRlZCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNkZWRlZGUiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
-  background: -moz-linear-gradient(top, #ededed 0, #dedede 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ededed), color-stop(100%, #dedede));
-  background: -webkit-linear-gradient(top, #ededed 0, #dedede 100%);
-  background: -o-linear-gradient(top, #ededed 0, #dedede 100%);
-  background: -ms-linear-gradient(top, #ededed 0, #dedede 100%);
-  background: linear-gradient(to bottom, #ededed 0, #dedede 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#dedede', GradientType=0 );
-  -webkit-box-shadow: inset 1px 1px 0 0 rgba(250, 250, 250, 0.5);
-  -moz-box-shadow: inset 1px 1px 0 0 rgba(250, 250, 250, 0.5);
-  box-shadow: inset 1px 1px 0 0 rgba(250, 250, 250, 0.5); }
-
-.ui-datepicker-calendar .ui-state-hover {
-  background: #f7f7f7; }
-
-.ui-datepicker-calendar .ui-state-active {
-  background: #FFF2AA;
-  border: 1px solid #c19163;
-  color: #666;
-  -webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  text-shadow: 0 1px 0 #FFF;
-  filter: dropshadow(color=#FFF, offx=0, offy=1);
-  position: relative;
-  margin: -1px; }
-
-.ui-datepicker-unselectable .ui-state-default {
-  background: #f4f4f4;
-  color: #b4b3b3; }
-
-.ui-datepicker-calendar td:first-child .ui-state-active {
-  width: 29px;
-  margin-left: 0; }
-
-.ui-datepicker-calendar td:last-child .ui-state-active {
-  width: 29px;
-  margin-right: 0; }
-
-.ui-datepicker-calendar tr:last-child .ui-state-active {
-  height: 29px;
-  margin-bottom: 0; }
-
-td.ui-datepicker-unselectable.ui-state-disabled {
-  background-color: #d7d7d7; }
-
-table.ui-datepicker-calendar {
-  margin: 0 !important; }
-
-body div#ui-datepicker-div[style] {
-  z-index: 9999 !important; }
-
-.ginput_container_date {
-  position: relative; }
-
-img.ui-datepicker-trigger {
-  position: absolute;
-  bottom: 16px;
-  right: 16px; }
+  border-color: #c9f0f5;
+  background-color: #fff;
+  width: 256px;
+  border-radius: 7px 7px 0 0;
+  overflow: hidden;
+  background-color: #fafafa; }
+  body .ui-datepicker-trigger {
+    margin: 0 0 0 5px;
+    vertical-align: text-top; }
+  body .ui-datepicker-header {
+    background-color: #007991;
+    background-image: none;
+    border-radius: 0; }
+  body .ui-datepicker-title {
+    margin: 0 25px;
+    display: flex;
+    width: calc(100% - 50px);
+    padding: 10px 0;
+    justify-content: center; }
+  body .ui-datepicker-prev {
+    background-color: transparent;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAMCAYAAACulacQAAAAUklEQVQYlXWPwQnAMAwDj9IBOlpH8CjdJLNksuujFIJjC/w6WUioFBcqJ7sGEAD5Y/hpqLRghRv4YQlUjqXI3Kql2MixraGbEhVcDXcFUR/1egEHNuTBpFW0NgAAAABJRU5ErkJggg==") !important;
+    height: 12px;
+    width: 7px;
+    margin: 14px 12px;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    cursor: pointer; }
+    body .ui-datepicker-prev span {
+      display: none; }
+  body .ui-datepicker-next {
+    background-color: transparent;
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAMCAYAAABfnvydAAAAVUlEQVQYlXWQ0Q3AIAhEL07gKI7kKN2kI3Wk1w9to3KQEELucQEECOizhhTQGHFnwOdgobWx0GkZILfYBhXl0STVbPoBarbkL7ozN/F8VBBXh8uJgF5r2hrI4GHUkAAAAABJRU5ErkJggg==") !important;
+    height: 12px;
+    width: 8px;
+    margin: 14px 12px;
+    display: inline-block;
+    right: 0;
+    top: 0;
+    position: absolute;
+    text-align: center;
+    cursor: pointer; }
+    body .ui-datepicker-next span {
+      display: none; }
+  body .ui-datepicker-month {
+    border-radius: 2px;
+    background-color: #3985a0;
+    width: 110px;
+    height: 22px;
+    font-family: Arial;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    margin-right: 17px;
+    vertical-align: text-top;
+    padding: 0; }
+  body .ui-datepicker-year {
+    border-radius: 2px;
+    background-color: #3985a0;
+    width: 61px;
+    height: 22px;
+    border: none;
+    font-family: Arial;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    vertical-align: text-top; }
+  body .ui-datepicker-month option, body .ui-datepicker-year option {
+    color: #3985a0 !important;
+    background-color: #fff !important;
+    font-family: Arial !important;
+    font-size: 14px !important;
+    font-weight: 600; }
+    body .ui-datepicker-month option[selected], body .ui-datepicker-year option[selected] {
+      background-color: #e5edf0 !important; }
+  body .ui-datepicker .ui-state-hover {
+    border: 0; }
+  body .ui-datepicker .ui-state-default {
+    border-radius: 2px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    color: #707070;
+    font-size: 13px;
+    font-weight: 400;
+    display: inline-block; }
+    body .ui-datepicker .ui-state-default:hover {
+      text-decoration: none;
+      background-color: #004e5e;
+      color: #fff; }
+    body .ui-datepicker .ui-state-default.ui-state-highlight {
+      background-color: #00a4c4;
+      color: #fff; }
+    body .ui-datepicker .ui-state-default.ui-state-active {
+      background-color: #000f12;
+      color: #fff; }
+    body .ui-datepicker .ui-state-default.ui-datepicker-current {
+      float: none;
+      font-family: Arial, Arial, sans-serif;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      border-width: 0;
+      border: none;
+      vertical-align: top;
+      margin: 0;
+      background-color: transparent; }
+  body .ui-datepicker-close {
+    display: none; }
+  body .ui-datepicker-buttonpane.ui-widget-content {
+    text-align: center;
+    background-color: #007991;
+    margin: 0;
+    height: 28px;
+    padding: 0; }
+  body .ui-datepicker table {
+    width: 256px;
+    table-layout: fixed;
+    margin: 0; }
+    body .ui-datepicker table thead {
+      background-color: #f5f5f5; }
+      body .ui-datepicker table thead tr th {
+        font-family: Arial, sans-serif;
+        color: #549fa8;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 0.45em 0.3em !important;
+        text-align: center;
+        font-size: 10px; }
+    body .ui-datepicker table td {
+      width: 33px;
+      text-align: center;
+      padding: 5px;
+      vertical-align: top; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity-select.scss
@@ -1395,7 +1364,6 @@ img.ui-datepicker-trigger {
  */
 /* ----- Block Layout Styles -------------------- */
 .entry-content > * {
-  margin: 0 0 30px 0;
   max-width: 100%; }
   .entry-content > *.alignwide {
     margin: 0 calc(25% - 25vw);
@@ -1427,17 +1395,6 @@ img.ui-datepicker-trigger {
 
 .acf-block-component .block-wrapper {
   padding: 100px 43px; }
-
-/* ----- Block Wrappers (Used with AB Containers & Simple Block Wrapper) -------------------- */
-.block-wrapper,
-.entry-content .block-wrapper {
-  padding: 100px 20px; }
-
-.block-container {
-  padding: 0 calc(50vw - 462.5px); }
-  @media (max-width: 985px) {
-    .block-container {
-      padding: 0 30px; } }
 
 /* ----- Common Block Customizations -------------------- */
 .wp-block-spacer,
@@ -1517,6 +1474,38 @@ a.wd-button {
     a.wd-button.has-accent-color-1-background-color:focus {
       background-color: #e1cc5a;
       border: 2px solid #e1cc5a; }
+  .wp-block-button__link.has-white-color:hover, .wp-block-button__link.has-white-color:focus,
+  a.wd-button.has-white-color:hover,
+  a.wd-button.has-white-color:focus {
+    color: #fff; }
+  .wp-block-button__link.has-white-background-color, .wp-block-button__link.has-white-background-color,
+  a.wd-button.has-white-background-color,
+  a.wd-button.has-white-background-color {
+    background-color: #fff;
+    border: 2px solid #fff; }
+    .wp-block-button__link.has-white-background-color:hover, .wp-block-button__link.has-white-background-color:focus, .wp-block-button__link.has-white-background-color:hover, .wp-block-button__link.has-white-background-color:focus,
+    a.wd-button.has-white-background-color:hover,
+    a.wd-button.has-white-background-color:focus,
+    a.wd-button.has-white-background-color:hover,
+    a.wd-button.has-white-background-color:focus {
+      background-color: #e6e6e6;
+      border: 2px solid #e6e6e6; }
+  .wp-block-button__link.has-black-color:hover, .wp-block-button__link.has-black-color:focus,
+  a.wd-button.has-black-color:hover,
+  a.wd-button.has-black-color:focus {
+    color: #000; }
+  .wp-block-button__link.has-black-background-color, .wp-block-button__link.has-black-background-color,
+  a.wd-button.has-black-background-color,
+  a.wd-button.has-black-background-color {
+    background-color: #000;
+    border: 2px solid #000; }
+    .wp-block-button__link.has-black-background-color:hover, .wp-block-button__link.has-black-background-color:focus, .wp-block-button__link.has-black-background-color:hover, .wp-block-button__link.has-black-background-color:focus,
+    a.wd-button.has-black-background-color:hover,
+    a.wd-button.has-black-background-color:focus,
+    a.wd-button.has-black-background-color:hover,
+    a.wd-button.has-black-background-color:focus {
+      background-color: black;
+      border: 2px solid black; }
 
 .is-style-inverse .wp-block-button__link:not(.has-text-color),
 a.wd-button--inverse:not(.has-text-color) {
@@ -1606,6 +1595,65 @@ a.wd-button--inverse.has-accent-color-1-background-color {
     background-color: #e9d985 !important;
     border: 2px solid #e9d985; }
 
+.is-style-inverse .wp-block-button__link.has-white-color, .is-style-inverse .wp-block-button__link.has-white-color,
+a.wd-button--inverse.has-white-color,
+a.wd-button--inverse.has-white-color {
+  color: #fff; }
+  .is-style-inverse .wp-block-button__link.has-white-color:hover, .is-style-inverse .wp-block-button__link.has-white-color:focus, .is-style-inverse .wp-block-button__link.has-white-color:hover, .is-style-inverse .wp-block-button__link.has-white-color:focus,
+  a.wd-button--inverse.has-white-color:hover,
+  a.wd-button--inverse.has-white-color:focus,
+  a.wd-button--inverse.has-white-color:hover,
+  a.wd-button--inverse.has-white-color:focus {
+    color: #fff !important; }
+
+.is-style-inverse .wp-block-button__link.has-white-background-color, .is-style-inverse .wp-block-button__link.has-white-background-color,
+a.wd-button--inverse.has-white-background-color,
+a.wd-button--inverse.has-white-background-color {
+  background-color: transparent !important;
+  border: 2px solid #fff; }
+  .is-style-inverse .wp-block-button__link.has-white-background-color:hover, .is-style-inverse .wp-block-button__link.has-white-background-color:focus, .is-style-inverse .wp-block-button__link.has-white-background-color:hover, .is-style-inverse .wp-block-button__link.has-white-background-color:focus,
+  a.wd-button--inverse.has-white-background-color:hover,
+  a.wd-button--inverse.has-white-background-color:focus,
+  a.wd-button--inverse.has-white-background-color:hover,
+  a.wd-button--inverse.has-white-background-color:focus {
+    background-color: #fff !important;
+    border: 2px solid #fff; }
+
+.is-style-inverse .wp-block-button__link.has-black-color, .is-style-inverse .wp-block-button__link.has-black-color,
+a.wd-button--inverse.has-black-color,
+a.wd-button--inverse.has-black-color {
+  color: #000; }
+  .is-style-inverse .wp-block-button__link.has-black-color:hover, .is-style-inverse .wp-block-button__link.has-black-color:focus, .is-style-inverse .wp-block-button__link.has-black-color:hover, .is-style-inverse .wp-block-button__link.has-black-color:focus,
+  a.wd-button--inverse.has-black-color:hover,
+  a.wd-button--inverse.has-black-color:focus,
+  a.wd-button--inverse.has-black-color:hover,
+  a.wd-button--inverse.has-black-color:focus {
+    color: #fff !important; }
+
+.is-style-inverse .wp-block-button__link.has-black-background-color, .is-style-inverse .wp-block-button__link.has-black-background-color,
+a.wd-button--inverse.has-black-background-color,
+a.wd-button--inverse.has-black-background-color {
+  background-color: transparent !important;
+  border: 2px solid #000; }
+  .is-style-inverse .wp-block-button__link.has-black-background-color:hover, .is-style-inverse .wp-block-button__link.has-black-background-color:focus, .is-style-inverse .wp-block-button__link.has-black-background-color:hover, .is-style-inverse .wp-block-button__link.has-black-background-color:focus,
+  a.wd-button--inverse.has-black-background-color:hover,
+  a.wd-button--inverse.has-black-background-color:focus,
+  a.wd-button--inverse.has-black-background-color:hover,
+  a.wd-button--inverse.has-black-background-color:focus {
+    background-color: #000 !important;
+    border: 2px solid #000; }
+
+/* ----- Separators -------------------- */
+hr,
+hr.wp-block-separator {
+  border: 0;
+  border-collapse: collapse;
+  border-top: 1px solid #373737;
+  clear: both;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 100% !important; }
+
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */
 .has-primary-color-color {
   color: #007991; }
@@ -1624,6 +1672,18 @@ a.wd-button--inverse.has-accent-color-1-background-color {
 
 .has-accent-color-1-background-color {
   background-color: #e9d985; }
+
+.has-white-color {
+  color: #fff; }
+
+.has-white-background-color {
+  background-color: #fff; }
+
+.has-black-color {
+  color: #000; }
+
+.has-black-background-color {
+  background-color: #000; }
 
 /* ----- Font Sizes from Gutenberg Blocks (match with /functions/gutenberg.php font sizes) -------------------- */
 .has-small-font-size {
