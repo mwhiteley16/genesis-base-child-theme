@@ -15,6 +15,17 @@
      .gform_footer {
           width: 100%;
      }
+     
+     .hidden_label {
+
+          .gfield_label {
+               clip: rect(1px,1px,1px,1px);
+               position: absolute!important;
+               height: 1px;
+               width: 1px;
+               overflow: hidden;
+          }
+     }
 }
 
 ul.gform_fields {
