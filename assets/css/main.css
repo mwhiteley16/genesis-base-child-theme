@@ -973,6 +973,10 @@ select {
     height: 1px;
     width: 1px;
     overflow: hidden; }
+  .gform_wrapper .gfield_visibility_hidden {
+    visibility: hidden;
+    position: absolute;
+    left: -9999px; }
 
 ul.gform_fields {
   list-style-type: none;

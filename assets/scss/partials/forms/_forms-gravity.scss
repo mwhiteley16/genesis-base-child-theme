@@ -15,7 +15,7 @@
      .gform_footer {
           width: 100%;
      }
-     
+
      .hidden_label {
 
           .gfield_label {
@@ -26,6 +26,12 @@
                overflow: hidden;
           }
      }
+
+     .gfield_visibility_hidden {
+          visibility: hidden;
+          position: absolute;
+          left: -9999px;
+     }     
 }
 
 ul.gform_fields {
