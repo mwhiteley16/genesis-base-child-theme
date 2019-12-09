@@ -77,6 +77,7 @@ add_action( 'enqueue_block_editor_assets', 'wd_admin_gutenfonts' );
  *
  */
 function wd_admin_style() {
+     //wp_enqueue_style( 'fa-styles', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css' );
      wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri().'/assets/css/admin.css' );
 }
 add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
