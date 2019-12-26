@@ -509,7 +509,8 @@ img.aligncenter,
 /* ----- Lists ---------------------- */
 .entry-content ul,
 .entry-content ol {
-  padding-left: 40px; }
+  padding-left: 40px;
+  margin-bottom: 20px; }
   .entry-content ul li,
   .entry-content ol li {
     padding-bottom: 10px; }
@@ -1364,61 +1365,22 @@ body .ui-datepicker {
  *
  * Let's define our basic block styles
  *
- * - Block layouts
- * - Block Wrappers
- * - Common Block Edits
- * - Buttons
+ * - Imports
+ * - Alignwide/Alignfull
+ * - Editor Title Styles
  * - Color Palette
  * - Font Sizes
  *
  */
-/* ----- Block Layout Styles -------------------- */
-.entry-content > * {
-  max-width: 100%; }
-  .entry-content > *.alignwide {
-    margin: 0 calc(25% - 25vw);
-    max-width: 100vw;
-    width: auto; }
-  .entry-content > *.alignfull {
-    margin: 0 calc(50% - 50vw);
-    max-width: 100vw;
-    width: 100vw; }
-
-.content-sidebar .entry-content > *.alignwide, .content-sidebar .entry-content > *.alignfull,
-.sidebar-content .entry-content > *.alignwide,
-.sidebar-content .entry-content > *.alignfull {
-  margin: 30px 0;
-  max-width: 100%;
-  width: auto; }
-
-.wp-block {
-  max-width: 1200px; }
-  .wp-block[data-align="wide"] {
-    max-width: none; }
-  .wp-block[data-align="full"] {
-    max-width: none; }
-
-.editor-post-title__block.wp-block {
-  max-width: 1200px; }
-  .editor-post-title__block.wp-block .editor-post-title__input {
-    font-family: "Roboto", sans-serif; }
-
-.acf-block-component .block-wrapper {
-  padding: 100px 43px; }
-
-/* ----- Common Block Customizations -------------------- */
-.wp-block-spacer,
-.entry-content .wp-block-spacer {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-  padding-left: 0; }
-
-.wp-block-media-text.has-media-on-the-left .wp-block-media-text__content {
-  padding-right: 0; }
-
-/* ----- Buttons -------------------- */
+/* ----- Import Partials -------------------- */
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-buttons.scss
+ *
+ * Let's define our core button styles
+ *
+ *
+ */
+/* ----- Core Block Buttons -------------------- */
 .wp-block-button__link,
 a.wd-button {
   text-decoration: none; }
@@ -1653,16 +1615,138 @@ a.wd-button--inverse.has-black-background-color {
     background-color: #000 !important;
     border: 2px solid #000; }
 
-/* ----- Separators -------------------- */
-hr,
-hr.wp-block-separator {
-  border: 0;
-  border-collapse: collapse;
-  border-top: 1px solid #373737;
-  clear: both;
-  margin: 1em 0;
-  width: 100%;
-  max-width: 100% !important; }
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-columns.scss
+ *
+ * Let's define our core column styles
+ *
+ *
+ */
+/* ----- Core Block Columns -------------------- */
+@media (min-width: 600px) {
+  .wp-block-columns .wp-block-column {
+    flex-basis: calc(50% - 25px); }
+    .wp-block-columns .wp-block-column:nth-child(2n) {
+      margin-left: 50px; } }
+
+@media (min-width: 782px) {
+  .wp-block-columns .wp-block-column:not(:first-child) {
+    margin-left: 50px; } }
+
+@media (max-width: 782px) {
+  .wp-block-columns .wp-block-column {
+    margin-top: 30px; }
+    .wp-block-columns .wp-block-column:first-child, .wp-block-columns .wp-block-column:nth-child(2) {
+      margin-top: 0; } }
+
+@media (max-width: 600px) {
+  .wp-block-columns .wp-block-column:nth-child(2) {
+    margin-top: 30px; } }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-list.scss
+ *
+ * Let's define our core list styles
+ *
+ *
+ */
+/* ----- Core List Styles -------------------- */
+ul.is-style-two-column-list, ol.is-style-two-column-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  ul.is-style-two-column-list li, ol.is-style-two-column-list li {
+    width: 50%;
+    padding-right: 60px; }
+    @media (max-width: 499px) {
+      ul.is-style-two-column-list li, ol.is-style-two-column-list li {
+        width: 100%;
+        padding-right: 0; } }
+    @media (min-width: 500px) {
+      ul.is-style-two-column-list li:nth-child(even), ol.is-style-two-column-list li:nth-child(even) {
+        padding-right: 0; } }
+
+ul.is-style-three-column-list, ol.is-style-three-column-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  ul.is-style-three-column-list li, ol.is-style-three-column-list li {
+    width: 33.33%;
+    padding-right: 60px; }
+    @media (max-width: 649px) {
+      ul.is-style-three-column-list li, ol.is-style-three-column-list li {
+        width: 50%; } }
+    @media (max-width: 499px) {
+      ul.is-style-three-column-list li, ol.is-style-three-column-list li {
+        width: 100%;
+        padding-right: 0; } }
+    @media (min-width: 650px) and (max-width: 500px) {
+      ul.is-style-three-column-list li:nth-child(3n), ol.is-style-three-column-list li:nth-child(3n) {
+        padding-right: 0; } }
+    @media (min-width: 500px) and (max-width: 649px) {
+      ul.is-style-three-column-list li:nth-child(even), ol.is-style-three-column-list li:nth-child(even) {
+        padding-right: 0; } }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-media-text.scss
+ *
+ * Let's define our core media text styles
+ *
+ *
+ */
+/* ----- Core Block Media Text -------------------- */
+.wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
+  padding-left: 0; }
+
+.wp-block-media-text.has-media-on-the-left .wp-block-media-text__content {
+  padding-right: 0; }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ *
+ * Let's define our core spacer styles
+ *
+ *
+ */
+/* ----- Core Block Spacers -------------------- */
+.wp-block-spacer {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+/* ----- Alignwide/Alignfull -------------------- */
+.entry-content > * {
+  max-width: 100%; }
+  .entry-content > *.alignwide {
+    margin: 0 calc(25% - 25vw);
+    max-width: 100vw;
+    width: auto; }
+  .entry-content > *.alignfull {
+    margin: 0 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw; }
+
+.content-sidebar .entry-content > *.alignwide, .content-sidebar .entry-content > *.alignfull,
+.sidebar-content .entry-content > *.alignwide,
+.sidebar-content .entry-content > *.alignfull {
+  margin: 30px 0;
+  max-width: 100%;
+  width: auto; }
+
+.wp-block {
+  max-width: 1200px; }
+  .wp-block[data-align="wide"] {
+    max-width: none; }
+  .wp-block[data-align="full"] {
+    max-width: none; }
+
+/* ----- Editor Title Styles -------------------- */
+.editor-post-title__block.wp-block {
+  max-width: 1200px; }
+  .editor-post-title__block.wp-block .editor-post-title__input {
+    font-family: "Roboto", sans-serif; }
+
+.acf-block-component .block-wrapper {
+  padding: 100px 43px; }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */
 .has-primary-color-color {
@@ -1706,32 +1790,9 @@ hr.wp-block-separator {
   font-size: 24px; }
 
 /**
- * /assets/scss/partials/blocks/blocks-team.scss
+ * /assets/scss/partials/blocks/blocks-hero.scss
  *
- * Let's define our team block styles
+ * Let's define our hero block styles
  *
  *
  */
-.team-member {
-  width: 100%;
-  display: flex; }
-  .team-member__headshot {
-    width: 25%; }
-    .team-member__headshot img {
-      border-radius: 100px;
-      overflow: hidden; }
-  .team-member__content {
-    width: 75%;
-    padding-left: 25px; }
-  .team-member--name {
-    line-height: 26px;
-    margin-bottom: 5px; }
-  .team-member--position {
-    text-transform: uppercase;
-    color: #999;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    margin: 0 0 20px; }
-  .team-member--button {
-    display: block;
-    margin-top: 15px; }

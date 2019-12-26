@@ -3,16 +3,22 @@
  *
  * Let's define our basic block styles
  *
- * - Block layouts
- * - Block Wrappers
- * - Common Block Edits
- * - Buttons
+ * - Imports
+ * - Alignwide/Alignfull
+ * - Editor Title Styles
  * - Color Palette
  * - Font Sizes
  *
  */
 
-/* ----- Block Layout Styles -------------------- */
+/* ----- Import Partials -------------------- */
+ @import 'core/blocks-core-buttons';
+ @import 'core/blocks-core-columns';
+ @import 'core/blocks-core-lists';
+ @import 'core/blocks-core-media-text';
+ @import 'core/blocks-core-spacer';
+
+/* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
      max-width: 100%;
 
@@ -53,7 +59,7 @@
      }
 }
 
-// Set editor title to correct width and font
+/* ----- Editor Title Styles -------------------- */
 .editor-post-title__block.wp-block {
 	max-width: $base-width;
 
@@ -64,133 +70,6 @@
 
 .acf-block-component .block-wrapper {
      padding: 100px 43px;
-}
-
-
-/* ----- Common Block Customizations -------------------- */
-.wp-block-spacer,
-.entry-content .wp-block-spacer {
-     margin-top: 0;
-     margin-bottom: 0;
-}
-
-.wp-block-media-text {
-
-     &.has-media-on-the-right .wp-block-media-text__content {
-          padding-left: 0;
-     }
-
-     &.has-media-on-the-left .wp-block-media-text__content {
-          padding-right: 0;
-     }
-}
-
-/* ----- Buttons -------------------- */
-.wp-block-button__link,
-a.wd-button {
-	@extend %button-styles;
-     text-decoration: none;
-
-	&:not(.has-text-color) {
-		color: white;
-
-		&:hover {
-			color: white;
-		}
-	}
-
-	&:not(.has-background) {
-		$default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-		background-color: $default;
-
-		&:hover,
-		&:focus {
-			background-color: darken( $default, 10% );
-               border: 2px solid darken( $default, 10% );
-		}
-	}
-
-	@each $name, $color in $colors {
-
-		&.has-#{$name}-color:hover,
-		&.has-#{$name}-color:focus {
-			color: $color;
-		}
-
-          &.has-#{$name}-background-color,
-		&.has-#{$name}-background-color {
-			background-color: $color;
-               border: 2px solid $color;
-
-               &:hover,
-               &:focus {
-                    background-color: darken( $color, 10% );
-                    border: 2px solid darken( $color, 10% );
-               }
-		}
-	}
-
-}
-
-.is-style-inverse .wp-block-button__link,
-a.wd-button--inverse {
-
-     &:not(.has-text-color) {
-          $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-          color: $default;
-
-          &:hover {
-               color: white;
-          }
-     }
-
-     &:not(.has-background) {
-          $default: nth( nth( $colors, 1 ), 2 ); // first color in $colors array
-          background-color: transparent;
-
-          &:hover,
-          &:focus {
-               background-color: darken( $default, 10% );
-               border: 2px solid darken( $default, 10% );
-          }
-     }
-
-     @each $name, $color in $colors {
-
-          &.has-#{$name}-color,
-          &.has-#{$name}-color {
-               color: $color;
-
-               &:hover,
-               &:focus {
-                    color: $white !important;
-               }
-          }
-
-          &.has-#{$name}-background-color,
-          &.has-#{$name}-background-color {
-               background-color: transparent !important; // need important to override gutenberg inline styles
-               border: 2px solid $color;
-
-               &:hover,
-               &:focus {
-                    background-color: $color !important;
-                    border: 2px solid $color;
-               }
-          }
-     }
-}
-
-/* ----- Separators -------------------- */
-hr,
-hr.wp-block-separator {
-	border: 0;
-	border-collapse: collapse;
-	border-top: 1px solid $base-color;
-	clear: both;
-	margin: 1em 0;
-     width: 100%;
-     max-width: 100% !important;
 }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */

@@ -1,0 +1,44 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-columns.scss
+ *
+ * Let's define our core column styles
+ *
+ *
+ */
+
+/* ----- Core Block Columns -------------------- */
+.wp-block-columns {
+
+     .wp-block-column {
+
+          @media(min-width:600px) {
+               flex-basis: calc(50% - 25px);
+
+               &:nth-child(2n) {
+                    margin-left: 50px;
+               }
+          }
+
+          @media(min-width:782px) {
+
+               &:not(:first-child) {
+                    margin-left: 50px;
+               }
+          }
+
+          @media(max-width:782px) {
+               margin-top: 30px;
+
+               &:first-child,
+               &:nth-child(2) {
+                    margin-top: 0;
+               }
+          }
+
+          @media(max-width:600px) {
+               &:nth-child(2) {
+                    margin-top: 30px;
+               }
+          }
+     }
+}
