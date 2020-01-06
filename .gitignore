@@ -1,2 +1,3 @@
-# Ignore Codekit Config File
+# General CodeKit files to ignore
+config.codekit
 config.codekit3
