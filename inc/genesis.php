@@ -24,13 +24,17 @@ add_theme_support( 'custom-logo', array(
      'flex-width'  => true,
      'flex-height' => true,
      'header-text' => array( '.site-title', '.site-description' ),
-) );
+));
 
 // Change secondary menu to footer menu as theme doesn't use a secondary menu
 add_theme_support( 'genesis-menus', array(
      'primary' => __( 'Primary Navigation Menu', CHILD_THEME_SLUG ),
      'secondary' => __( 'Footer Menu', CHILD_THEME_SLUG )
-) );
+));
+
+// Don't load default data into empty sidebar
+remove_action( 'genesis_sidebar', 'genesis_do_sidebar' );
+add_action( 'genesis_sidebar', function() { dynamic_sidebar( 'sidebar' ); } );
 
 // Remove unused page layouts
 genesis_unregister_layout( 'content-sidebar-sidebar' );
