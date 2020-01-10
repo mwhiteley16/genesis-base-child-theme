@@ -1713,6 +1713,18 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
   margin-top: 0;
   margin-bottom: 0; }
 
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ *
+ * Let's define our core spacer styles
+ *
+ *
+ */
+/* ----- Core Block Group -------------------- */
+.wp-block-group.alignfull .wp-block-group__inner-container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
 /* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
   max-width: 100%; }

@@ -1,0 +1,22 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ *
+ * Let's define our core spacer styles
+ *
+ *
+ */
+
+ /* ----- Core Block Group -------------------- */
+.wp-block-group {
+
+     &.alignfull {
+
+          .wp-block-group {
+
+               &__inner-container {
+                    padding-left: 30px;
+                    padding-right: 30px;
+               }
+          }
+     }
+}
