@@ -16,13 +16,6 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 
 /**
- * Set up base content width based on theme
- *
- */
- if( ! isset( $content_width ) )
-     $content_width = 1140;
-
-/**
  * Set up variable with theme Google fonts
  *
  */

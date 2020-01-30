@@ -72,11 +72,3 @@ add_action( 'genesis_footer', 'wd_footer' );
 function wd_footer() {
      get_template_part( 'sections/footer' );
 }
-
-// Remove unused page templates
-add_filter( 'theme_page_templates', 'wd_remove_genesis_page_templates' );
-function wd_remove_genesis_page_templates( $page_templates ) {
-	unset( $page_templates['page_archive.php'] );
-	unset( $page_templates['page_blog.php'] );
-	return $page_templates;
-}
