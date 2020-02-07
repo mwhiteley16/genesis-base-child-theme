@@ -38,23 +38,23 @@ function wd_acf_show_admin( $show ) {
  * @uses https://www.advancedcustomfields.com/blog/acf-5-8-introducing-acf-blocks-for-gutenberg/
  *
 */
-add_action( 'acf/init', 'wd_acf_init' );
-function wd_acf_init() {
- 	if( function_exists( 'acf_register_block' ) ) {
- 		acf_register_block_type(array(
- 			'name'			=> 'acf-hero',
- 			'title'			=> __( 'Hero Block' ),
- 			'description'		=> __( 'A Hero Block.' ),
- 			'category'		=> 'formatting',
- 			'icon'			=> 'star-filled',
-               'mode'              => 'preview',
- 			'keywords'		=> array( 'hero, wd, acf' ),
-               'post_type'         => array( 'post', 'page' ),
-               'render_callback'	=> 'wd_acf_block_render_callback',
-               'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/hero-block.js',
- 		));
- 	}
-}
+// add_action( 'acf/init', 'wd_acf_init' );
+// function wd_acf_init() {
+ 	// if( function_exists( 'acf_register_block' ) ) {
+ 	// 	acf_register_block_type(array(
+ 	// 		'name'			=> 'acf-hero',
+ 	// 		'title'			=> __( 'Hero Block' ),
+ 	// 		'description'		=> __( 'A Hero Block.' ),
+ 	// 		'category'		=> 'formatting',
+ 	// 		'icon'			=> 'star-filled',
+     //           'mode'              => 'preview',
+ 	// 		'keywords'		=> array( 'hero, wd, acf' ),
+     //           'post_type'         => array( 'post', 'page' ),
+     //           'render_callback'	=> 'wd_acf_block_render_callback',
+     //           'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/hero-block.js',
+ 	// 	));
+ 	// }
+// }
 
 /**
  * ACF Gutenberg Blocks
@@ -82,9 +82,13 @@ function wd_acf_color_palette() { ?>
 <script type="text/javascript">
 (function($) {
      acf.add_filter('color_picker_args', function( args, $field ){
-          // add the hexadecimal codes here for the colors you want to appear as swatches
-          args.palettes = ['#007991', '#439a86', '#e9d985', '#ffffff', '#000000']
-          // return colors
+          args.palettes = [
+               '#007991',
+               '#439a86',
+               '#e9d985',
+               '#ffffff',
+               '#000000'
+          ]
           return args;
      });
 })(jQuery);
