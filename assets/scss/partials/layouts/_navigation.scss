@@ -13,6 +13,7 @@
 
      @media(max-width:1000px) {
           display: none;
+          width: 100%;
      }
 
      .wrap {
@@ -21,38 +22,48 @@
      }
 
      ul {
-          float: left;
-	}
 
-	.menu-item {
-		float: left;
-		list-style: none;
+     	.menu-item {
+     		float: left;
+     		list-style: none;
 
-		a {
-			border: none;
-			color: $base-color;
-			display: block;
-			font-size: 16px;
-			padding: 15px;
-			position: relative;
-		}
+     		a {
+     			border: none;
+     			color: $base-color;
+     			display: block;
+     			font-size: 16px;
+     			padding: 15px;
+     			position: relative;
+     		}
 
-		&:hover > a,
-		&.current-menu-item > a,
-		&.current-menu-ancestor > a {
-			color: $primary-color;
-               text-decoration: none;
-		}
+     		&:hover > a,
+     		&.current-menu-item > a,
+     		&.current-menu-ancestor > a {
+     			color: $primary-color;
+                    text-decoration: none;
+     		}
 
-		&:hover {
-			position: static;
+     		&:hover {
+     			position: static;
 
-			& > .sub-menu {
-				left: auto;
-				opacity: 1;
-			}
-		}
-	}
+     			& > .sub-menu {
+     				left: auto;
+     				opacity: 1;
+     			}
+     		}
+     	}
+
+          @media(max-width:1000px) {
+               width: calc(100% + 60px);
+               margin: 30px -30px 0;
+               display: flex;
+               flex-direction: column;
+
+               .menu-item {
+                    width: 100%;
+               }
+          }
+     }
 
 	.sub-menu {
 		background: $grey-medium;
