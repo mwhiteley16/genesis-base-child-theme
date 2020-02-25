@@ -1734,6 +1734,24 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
   padding-left: 30px;
   padding-right: 30px; }
 
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-separators.scss
+ *
+ * Let's define our core separator styles
+ *
+ *
+ */
+/* ----- Core Block Separators -------------------- */
+hr,
+hr.wp-block-separator {
+  border: 0;
+  border-collapse: collapse;
+  border-top: 1px solid #373737;
+  clear: both;
+  margin: 50px 0;
+  width: 100%;
+  max-width: 100% !important; }
+
 /* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
   max-width: 100%; }
