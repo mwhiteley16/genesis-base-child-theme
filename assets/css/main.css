@@ -649,7 +649,7 @@ h3,
 h4,
 h5,
 h6,
-.editor-post-title__block .editor-post-title__input {
+.editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input {
   color: #373737;
   font-family: "Roboto", sans-serif;
   margin: 0 0 20px 0;
@@ -661,7 +661,7 @@ h6,
   h4 a,
   h5 a,
   h6 a,
-  .editor-post-title__block .editor-post-title__input a {
+  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input a {
     color: #373737; }
     h1 a:hover,
     h2 a:hover,
@@ -669,7 +669,7 @@ h6,
     h4 a:hover,
     h5 a:hover,
     h6 a:hover,
-    .editor-post-title__block .editor-post-title__input a:hover {
+    .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input a:hover {
       color: #007991;
       text-decoration: none; }
   h1:focus,
@@ -678,7 +678,7 @@ h6,
   h4:focus,
   h5:focus,
   h6:focus,
-  .editor-post-title__block .editor-post-title__input:focus {
+  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input:focus {
     outline: none; }
 
 h1,
@@ -1009,6 +1009,9 @@ ul.gform_fields {
       ul.gform_fields > li > label .gfield_required {
         color: red;
         padding-left: 4px; }
+    ul.gform_fields > li.field_admin_only {
+      margin-bottom: 0;
+      padding-bottom: 0; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity-address.scss

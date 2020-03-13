@@ -31,7 +31,7 @@
           visibility: hidden;
           position: absolute;
           left: -9999px;
-     }     
+     }
 }
 
 ul.gform_fields {
@@ -71,6 +71,11 @@ ul.gform_fields {
                     color: $form-required-color;
                     padding-left: 4px;
                }
+          }
+
+          &.field_admin_only {
+               margin-bottom: 0;
+               padding-bottom: 0;
           }
      }
 }
