@@ -320,7 +320,7 @@ input {
   height: auto;
   min-height: auto; }
 
-a.wd-button,
+.wp-block-button__link, a.wd-button,
 input[type="button"],
 input[type="button"][disabled]:hover,
 input[type="button"][disabled]:focus,
@@ -330,7 +330,7 @@ input[type="reset"][disabled]:focus,
 input[type="submit"],
 input[type="submit"][disabled]:hover,
 input[type="submit"][disabled]:focus,
-.claim-search button, .wp-block-button__link {
+.claim-search button {
   border: 2px solid #007991;
   background: #007991;
   color: #fff;
@@ -340,26 +340,26 @@ input[type="submit"][disabled]:focus,
   display: inline-block;
   height: auto;
   border-radius: 3px; }
-  a.wd-button:hover,
+  .wp-block-button__link:hover, a.wd-button:hover,
   input[type="button"]:hover,
   input[type="button"][disabled]:hover,
   input[type="reset"]:hover,
   input[type="reset"][disabled]:hover,
   input[type="submit"]:hover,
   input[type="submit"][disabled]:hover,
-  .claim-search button:hover, .wp-block-button__link:hover, a.wd-button:focus,
+  .claim-search button:hover, .wp-block-button__link:focus, a.wd-button:focus,
   input[type="button"]:focus,
   input[type="button"][disabled]:focus,
   input[type="reset"]:focus,
   input[type="reset"][disabled]:focus,
   input[type="submit"]:focus,
   input[type="submit"][disabled]:focus,
-  .claim-search button:focus, .wp-block-button__link:focus {
+  .claim-search button:focus {
     border-color: #004e5e;
     background: #004e5e;
     color: #fff;
     text-decoration: none; }
-  a.button--inverse.wd-button,
+  .button--inverse.wp-block-button__link, a.button--inverse.wd-button,
   input.button--inverse[type="button"],
   input.button--inverse[type="button"][disabled]:hover,
   input.button--inverse[type="button"][disabled]:focus,
@@ -369,30 +369,30 @@ input[type="submit"][disabled]:focus,
   input.button--inverse[type="submit"],
   input.button--inverse[type="submit"][disabled]:hover,
   input.button--inverse[type="submit"][disabled]:focus,
-  .claim-search button.button--inverse, .button--inverse.wp-block-button__link {
+  .claim-search button.button--inverse {
     background-color: transparent;
     color: #007991; }
-    a.button--inverse.wd-button:hover,
+    .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
     input.button--inverse[type="button"]:hover,
     input.button--inverse[type="reset"]:hover,
     input.button--inverse[type="submit"]:hover,
-    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:focus,
+    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
     input.button--inverse[type="button"]:focus,
     input.button--inverse[type="reset"]:focus,
     input.button--inverse[type="submit"]:focus,
-    .claim-search button.button--inverse:focus, .button--inverse.wp-block-button__link:focus {
+    .claim-search button.button--inverse:focus {
       background-color: #007991;
       color: #fff;
       border-color: #007991; }
 
-button,
+.mobile-navigation-icon span, .mobile-navigation-icon, a, button,
 input:focus,
 input[type="button"],
 input[type="reset"],
 input[type="submit"],
 textarea:focus,
 .button,
-.gallery img, a, .mobile-navigation-icon, .mobile-navigation-icon span {
+.gallery img {
   transition: all 0.2s ease-in-out; }
 
 /**
@@ -780,9 +780,7 @@ h6 {
     font-size: 16px;
     padding: 15px;
     position: relative; }
-  .nav-primary ul .menu-item:hover > a,
-  .nav-primary ul .menu-item.current-menu-item > a,
-  .nav-primary ul .menu-item.current-menu-ancestor > a {
+  .nav-primary ul .menu-item:hover > a, .nav-primary ul .menu-item.current-menu-item > a, .nav-primary ul .menu-item.current-menu-ancestor > a {
     color: #007991;
     text-decoration: none; }
   .nav-primary ul .menu-item:hover {
@@ -860,7 +858,6 @@ h6 {
   @media (max-width: 1000px) {
     .mobile-navigation-icon {
       display: block; } }
-
 /**
  * /assets/scss/partials/layouts/footer.scss
  *
@@ -1105,7 +1102,6 @@ ul.gform_fields {
       .four-column .gfield_radio li,
       .four-column .gfield_checkbox li {
         width: 100%; } }
-
 .gf_list_3col .gfield_radio li,
 .gf_list_3col .gfield_checkbox li,
 .three-column .gfield_radio li,
@@ -1123,7 +1119,6 @@ ul.gform_fields {
     .three-column .gfield_radio li,
     .three-column .gfield_checkbox li {
       width: 100%; } }
-
 .gf_list_4col .gfield_radio li,
 .gf_list_4col .gfield_checkbox li,
 .four-column .gfield_radio li,
@@ -1147,7 +1142,6 @@ ul.gform_fields {
     .four-column .gfield_radio li,
     .four-column .gfield_checkbox li {
       width: 100%; } }
-
 /**
  * /assets/scss/partials/forms/forms-gravity-datepicker.scss
  *
@@ -1637,7 +1631,7 @@ a.wd-button--inverse.has-black-background-color {
 /* ----- Core Block Columns -------------------- */
 @media (min-width: 600px) {
   .wp-block-columns .wp-block-column {
-    flex-basis: calc(50% - 25px); }
+    flex-basis: calc(50% - 25px) !important; }
     .wp-block-columns .wp-block-column:nth-child(2n) {
       margin-left: 50px; } }
 
@@ -1677,7 +1671,6 @@ ul.is-style-two-column-list, ol.is-style-two-column-list {
     @media (min-width: 500px) {
       ul.is-style-two-column-list li:nth-child(even), ol.is-style-two-column-list li:nth-child(even) {
         padding-right: 0; } }
-
 ul.is-style-three-column-list, ol.is-style-three-column-list {
   display: flex;
   flex-wrap: wrap;
@@ -1698,7 +1691,6 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
     @media (min-width: 500px) and (max-width: 649px) {
       ul.is-style-three-column-list li:nth-child(even), ol.is-style-three-column-list li:nth-child(even) {
         padding-right: 0; } }
-
 /**
  * /assets/scss/partials/blocks/core/blocks-core-media-text.scss
  *
@@ -1749,8 +1741,8 @@ hr,
 hr.wp-block-separator {
   border: 0;
   border-collapse: collapse;
-  border-top: 1px solid #373737;
   clear: both;
+  height: 2px;
   margin: 50px 0;
   width: 100%;
   max-width: 100% !important; }
