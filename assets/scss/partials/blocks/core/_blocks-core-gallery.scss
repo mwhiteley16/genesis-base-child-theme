@@ -1,0 +1,17 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
+ *
+ * Let's define our core gallery styles
+ *
+ *
+ */
+
+ /* ----- Core Block Spacers -------------------- */
+.wp-block-gallery,
+.entry-contente .wp-block-gallery {
+
+     ul {
+          padding-left: 0;
+          margin-bottom: 30px;
+     }
+}

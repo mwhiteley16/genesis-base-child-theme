@@ -1747,6 +1747,32 @@ hr.wp-block-separator {
   width: 100%;
   max-width: 100% !important; }
 
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-image.scss
+ *
+ * Let's define our core image styles
+ *
+ *
+ */
+/* ----- Core Block Spacers -------------------- */
+figure.wp-block-image {
+  margin: 0 0 30px 0; }
+  figure.wp-block-image.is-style-no-bottom-margin {
+    margin-bottom: 0; }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
+ *
+ * Let's define our core gallery styles
+ *
+ *
+ */
+/* ----- Core Block Spacers -------------------- */
+.wp-block-gallery ul,
+.entry-contente .wp-block-gallery ul {
+  padding-left: 0;
+  margin-bottom: 30px; }
+
 /* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
   max-width: 100%; }

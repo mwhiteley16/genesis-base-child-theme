@@ -1,0 +1,16 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-image.scss
+ *
+ * Let's define our core image styles
+ *
+ *
+ */
+
+ /* ----- Core Block Spacers -------------------- */
+figure.wp-block-image {
+     margin: 0 0 30px 0;
+
+     &.is-style-no-bottom-margin {
+          margin-bottom: 0;
+     }
+}

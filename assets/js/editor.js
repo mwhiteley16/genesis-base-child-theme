@@ -38,4 +38,16 @@ wp.domReady( () => {
 		label: 'Three-Columns',
 	});
 
+     // add custom image styles
+     wp.blocks.registerBlockStyle( 'core/image', {
+          name: 'default',
+          label: 'Default',
+          isDefault: true,
+     });
+
+     wp.blocks.registerBlockStyle( 'core/image', {
+          name: 'no-bottom-margin',
+          label: 'No Bottom Margin',
+     });
+
 } );
