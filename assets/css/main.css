@@ -902,6 +902,58 @@ h6 {
     width: auto;
     height: 125px; }
 
+/**
+ * /assets/scss/partials/layouts/pagination.scss
+ *
+ * Let's define our pagination styles
+ *
+ *
+ */
+.pagination {
+  width: 100%;
+  padding-top: 25px;
+  border-top: 3px solid #fafafa; }
+  .pagination .alignleft {
+    float: left; }
+  .pagination .alignright {
+    float: right; }
+  .pagination a {
+    color: #007991;
+    font-weight: 600; }
+    .pagination a:hover {
+      text-decoration: none;
+      color: #373737; }
+  .pagination ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    @media (max-width: 500px) {
+      .pagination ul {
+        flex-wrap: wrap; } }
+    .pagination ul li {
+      display: inline-block;
+      margin: 0 2px; }
+      .pagination ul li a {
+        padding: 2px 11px;
+        border-radius: 3px;
+        color: #373737;
+        font-size: 16px;
+        line-height: 26px;
+        display: inline-block; }
+      .pagination ul li.active a, .pagination ul li:hover a {
+        background-color: #007991;
+        color: #fff; }
+      @media (max-width: 500px) {
+        .pagination ul li.pagination-previous, .pagination ul li.pagination-next {
+          display: block;
+          width: 100%;
+          margin-bottom: 15px;
+          text-align: center; }
+        .pagination ul li.pagination-next {
+          margin-bottom: 0;
+          margin-top: 15px; } }
 /* Forms */
 /**
  * /assets/scss/partials/forms/forms-base.scss
