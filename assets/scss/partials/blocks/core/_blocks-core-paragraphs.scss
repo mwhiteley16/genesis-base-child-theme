@@ -1,0 +1,29 @@
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-paragraphs.scss
+ *
+ * Let's define our core paragraph text styles
+ *
+ *
+ */
+
+/* ----- Core Block Paragraphs -------------------- */
+p { // Match these sizes to the font sizes in functions/gutenberg.php
+	margin: 0 0 $base-margin;
+	padding: 0;
+
+     &.has-larger-font-size {
+          font-size: 24px;
+     }
+
+	&.has-large-font-size {
+         	font-size: 20px;
+	}
+
+	&.has-regular-font-size {
+		font-size: 16px;
+	}
+
+	&.has-small-font-size {
+	    font-size: 12px;
+	}
+}

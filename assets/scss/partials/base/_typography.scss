@@ -5,30 +5,6 @@
  *
  */
 
-p { // Match these sizes to the font sizes in functions/gutenberg.php
-	margin: 0 0 $base-margin;
-	padding: 0;
-
-     &.larger,
-     &.has-larger-font-size {
-          font-size: 24px;
-     }
-
-	&.large,
-	&.has-large-font-size {
-         	font-size: 20px;
-	}
-
-	&.has-regular-font-size {
-		font-size: 16px;
-	}
-
-	&.small,
-	&.has-small-font-size {
-	    font-size: 12px;
-	}
-}
-
 button,
 input:focus,
 input[type="button"],

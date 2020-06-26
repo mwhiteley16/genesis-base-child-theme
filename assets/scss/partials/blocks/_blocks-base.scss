@@ -12,15 +12,16 @@
  */
 
 /* ----- Import Partials -------------------- */
- @import 'core/blocks-core-buttons';
- @import 'core/blocks-core-columns';
- @import 'core/blocks-core-lists';
- @import 'core/blocks-core-media-text';
- @import 'core/blocks-core-spacer';
- @import 'core/blocks-core-group';
- @import 'core/blocks-core-separators';
- @import 'core/blocks-core-images';
- @import 'core/blocks-core-gallery';
+@import 'core/blocks-core-buttons';
+@import 'core/blocks-core-columns';
+@import 'core/blocks-core-gallery';
+@import 'core/blocks-core-group';
+@import 'core/blocks-core-images';
+@import 'core/blocks-core-lists';
+@import 'core/blocks-core-media-text';
+@import 'core/blocks-core-paragraphs';
+@import 'core/blocks-core-separators';
+@import 'core/blocks-core-spacer';
 
 /* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
@@ -86,17 +87,4 @@
 	.has-#{$name}-background-color {
 		background-color: $color;
 	}
-}
-
-/* ----- Font Sizes from Gutenberg Blocks (match with /functions/gutenberg.php font sizes) -------------------- */
-.has-small-font-size {
-     font-size: 12px;
-}
-
-.has-large-font-size {
-     font-size: 20px;
-}
-
-.has-larger-font-size {
-     font-size: 24px;
 }

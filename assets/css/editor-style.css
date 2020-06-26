@@ -519,6 +519,44 @@ a.wd-button--inverse.has-black-background-color {
     margin-top: 30px; } }
 
 /**
+ * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
+ *
+ * Let's define our core gallery styles
+ *
+ *
+ */
+/* ----- Core Block Spacers -------------------- */
+.wp-block-gallery ul,
+.entry-contente .wp-block-gallery ul {
+  padding-left: 0;
+  margin-bottom: 30px; }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ *
+ * Let's define our core spacer styles
+ *
+ *
+ */
+/* ----- Core Block Group -------------------- */
+.wp-block-group.alignfull .wp-block-group__inner-container {
+  padding-left: 30px;
+  padding-right: 30px; }
+
+/**
+ * /assets/scss/partials/blocks/core/blocks-core-image.scss
+ *
+ * Let's define our core image styles
+ *
+ *
+ */
+/* ----- Core Block Spacers -------------------- */
+figure.wp-block-image {
+  margin: 0 0 30px 0; }
+  figure.wp-block-image.is-style-no-bottom-margin {
+    margin-bottom: 0; }
+
+/**
  * /assets/scss/partials/blocks/core/blocks-core-list.scss
  *
  * Let's define our core list styles
@@ -575,28 +613,24 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
   padding-right: 0; }
 
 /**
- * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ * /assets/scss/partials/blocks/core/blocks-core-paragraphs.scss
  *
- * Let's define our core spacer styles
- *
- *
- */
-/* ----- Core Block Spacers -------------------- */
-.wp-block-spacer {
-  margin-top: 0;
-  margin-bottom: 0; }
-
-/**
- * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
- *
- * Let's define our core spacer styles
+ * Let's define our core paragraph text styles
  *
  *
  */
-/* ----- Core Block Group -------------------- */
-.wp-block-group.alignfull .wp-block-group__inner-container {
-  padding-left: 30px;
-  padding-right: 30px; }
+/* ----- Core Block Paragraphs -------------------- */
+p {
+  margin: 0 0 20px;
+  padding: 0; }
+  p.has-larger-font-size {
+    font-size: 24px; }
+  p.has-large-font-size {
+    font-size: 20px; }
+  p.has-regular-font-size {
+    font-size: 16px; }
+  p.has-small-font-size {
+    font-size: 12px; }
 
 /**
  * /assets/scss/partials/blocks/core/blocks-core-separators.scss
@@ -617,30 +651,16 @@ hr.wp-block-separator {
   max-width: 100% !important; }
 
 /**
- * /assets/scss/partials/blocks/core/blocks-core-image.scss
+ * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
  *
- * Let's define our core image styles
- *
- *
- */
-/* ----- Core Block Spacers -------------------- */
-figure.wp-block-image {
-  margin: 0 0 30px 0; }
-  figure.wp-block-image.is-style-no-bottom-margin {
-    margin-bottom: 0; }
-
-/**
- * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
- *
- * Let's define our core gallery styles
+ * Let's define our core spacer styles
  *
  *
  */
 /* ----- Core Block Spacers -------------------- */
-.wp-block-gallery ul,
-.entry-contente .wp-block-gallery ul {
-  padding-left: 0;
-  margin-bottom: 30px; }
+.wp-block-spacer {
+  margin-top: 0;
+  margin-bottom: 0; }
 
 /* ----- Alignwide/Alignfull -------------------- */
 .entry-content > * {
@@ -707,16 +727,6 @@ figure.wp-block-image {
 
 .has-black-background-color {
   background-color: #000; }
-
-/* ----- Font Sizes from Gutenberg Blocks (match with /functions/gutenberg.php font sizes) -------------------- */
-.has-small-font-size {
-  font-size: 12px; }
-
-.has-large-font-size {
-  font-size: 20px; }
-
-.has-larger-font-size {
-  font-size: 24px; }
 
 /**
  * /assets/scss/partials/blocks/blocks-hero.scss
