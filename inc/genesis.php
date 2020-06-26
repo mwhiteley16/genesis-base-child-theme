@@ -72,3 +72,33 @@ add_action( 'genesis_footer', 'wd_footer' );
 function wd_footer() {
      get_template_part( 'sections/footer' );
 }
+
+// custom loop
+function wd_custom_loop() {
+
+     if ( have_posts() ) {
+
+          do_action( 'genesis_before_while' );
+          echo '<div class="loop-wrapper">';
+
+               while ( have_posts() ) {
+
+                    the_post();
+
+                    do_action( 'genesis_before_entry' );
+                         if( is_search() ) {
+                              get_template_part( 'sections/search-loop-item' );
+                         } else {
+                              get_template_part( 'sections/loop-item' );
+                         }
+     			do_action( 'genesis_after_entry' );
+
+               }
+
+          echo '</div>';
+          do_action( 'genesis_after_endwhile' );
+
+     } else {
+     	do_action( 'genesis_loop_else' );
+     }
+}
