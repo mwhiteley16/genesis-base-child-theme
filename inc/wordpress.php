@@ -34,14 +34,6 @@ function wd_remove_comments_allowed_tags( $defaults ) {
      return $defaults;
 }
 
-// Remove admin bar for non-admins
-//add_action( 'after_setup_theme', 'wd_remove_admin_bar' );
-function wd_remove_admin_bar() {
-	if ( !current_user_can( 'administrator' ) && !is_admin() ) {
-  		show_admin_bar(false);
-	}
-}
-
 // Clean up menu classes
 function wd_clean_nav_menu_classes( $classes ) {
 	if( ! is_array( $classes ) )

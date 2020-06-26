@@ -34,6 +34,13 @@ iframe {
      max-width: 100%;
 }
 
+figure {
+     margin-block-start: 0;
+     margin-block-end: 0;
+     margin-inline-start: 0;
+     margin-inline-end: 0;
+}
+
 /* ----- Box Sizing -------------------- */
 html,
 input[type="search"] {
@@ -49,30 +56,6 @@ input[type="search"] {
 }
 
 /* ----- Common Classes -------------------- */
-img.alignleft,
-.wp-caption.alignleft {
-     float: left;
-     padding: 0 15px 15px 0;
-}
-
-img.alignright,
-.wp-caption.alignright {
-     float: right;
-     padding: 0 0 15px 15px;
-}
-
-img.aligncenter,
-.wp-caption.aligncenter {
-     clear: both;
-     margin-left: auto;
-     margin-right: auto;
-     display: block;
-}
-
-.wp-caption.alignnone {
-     max-width: 100%;
-}
-
 .align-left {
      text-align: left;
 }

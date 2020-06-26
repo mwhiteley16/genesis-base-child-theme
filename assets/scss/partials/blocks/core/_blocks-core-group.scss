@@ -10,12 +10,13 @@
 .wp-block-group {
 
      &.alignfull {
+          padding: 0 30px;
 
           .wp-block-group {
 
                &__inner-container {
-                    padding-left: 30px;
-                    padding-right: 30px;
+                    max-width: $base-width;
+                    margin: 0 auto;
                }
           }
      }

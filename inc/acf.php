@@ -7,7 +7,7 @@
  * @license      GPL-2.0+
 **/
 
-// Add Theme Options tab
+// add theme options tab
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Theme Options',
@@ -20,7 +20,7 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-// Hide ACF Custom Fields tab from other users
+// hide ACF custom fields tab from other users
 add_filter( 'acf/settings/show_admin', 'wd_acf_show_admin' );
 function wd_acf_show_admin( $show ) {
      $current_user = wp_get_current_user();

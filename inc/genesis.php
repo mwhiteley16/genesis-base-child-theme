@@ -26,10 +26,9 @@ add_theme_support( 'custom-logo', array(
      'header-text' => array( '.site-title', '.site-description' ),
 ));
 
-// Change secondary menu to footer menu as theme doesn't use a secondary menu
+// remove secondary menu
 add_theme_support( 'genesis-menus', array(
      'primary' => __( 'Primary Navigation Menu', CHILD_THEME_SLUG ),
-     'secondary' => __( 'Footer Menu', CHILD_THEME_SLUG )
 ));
 
 // Don't load default data into empty sidebar

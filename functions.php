@@ -16,7 +16,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 
 /**
- * Set up variable with theme Google fonts
+ * set up theme fonts (if using fonts.google.com)
  *
  */
 function wd_theme_fonts() {
@@ -30,9 +30,8 @@ function wd_theme_fonts() {
 }
 
 /**
- * Global enqueues
+ * global enqueues
  *
- * @since  1.0.0
  *
  */
 function wd_global_enqueues() {
@@ -52,25 +51,24 @@ function wd_global_enqueues() {
 add_action( 'wp_enqueue_scripts', 'wd_global_enqueues' );
 
 /**
- * Block editor scripts & styles
+ * block editor admin scripts & styles
  *
- * @since  1.0.0
  *
  */
-function wd_admin_gutenfonts() {
+function wd_admin_enqueues() {
      wp_enqueue_style( 'wd-fonts', wd_theme_fonts() );
+     //wp_enqueue_script('wd-flickity-admin', get_stylesheet_directory_uri() . '/assets/js/flickity.pkgd.min.js' );
+     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' ); // modify with updated Font Awesome kit
      wp_enqueue_script('wd-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
 }
-add_action( 'enqueue_block_editor_assets', 'wd_admin_gutenfonts' );
+add_action( 'enqueue_block_editor_assets', 'wd_admin_enqueues' );
 
 /**
- * Admin CSS used outside of block editor
+ * admin CSS used outside of block editor
  *
- * @since  1.0.0
  *
  */
 function wd_admin_style() {
-     //wp_enqueue_style( 'fa-styles', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css' );
      wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri().'/assets/css/admin.css' );
 }
 add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
@@ -81,7 +79,6 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
  * Replace default "Start Engine" functionality
  * Setup site functions to correct hooks and filters
  *
- * @since 1.0
  */
 function wd_base_setup() {
      include_once( get_stylesheet_directory() . '/inc/acf.php' );
