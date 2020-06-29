@@ -19,5 +19,15 @@
                     margin: 0 auto;
                }
           }
+
+          &.is-style-full-inner-width {
+
+               .wp-block-group {
+
+                    &__inner-container {
+                         max-width: none;
+                    }
+               }
+          }
      }
 }
