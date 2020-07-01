@@ -40,7 +40,7 @@ function wd_global_enqueues() {
      wp_enqueue_style( 'wd-fonts', wd_theme_fonts() );
 
      // javascript
-     //wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
+     wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
 
      // append datestamp to stylesheet to cache bust when styles are changed
      $version = defined( 'CHILD_THEME_VERSION' ) && CHILD_THEME_VERSION ? CHILD_THEME_VERSION : PARENT_THEME_VERSION;

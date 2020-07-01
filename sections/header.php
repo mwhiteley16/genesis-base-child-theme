@@ -9,12 +9,3 @@
      <span></span>
      <span></span>
 </div>
-
-<script>
-jQuery(document).ready(function() {
-     jQuery('.mobile-navigation-icon').click(function() {
-          jQuery(this).toggleClass('open');
-          jQuery('.nav-primary').slideToggle();
-     });
-})
-</script>
