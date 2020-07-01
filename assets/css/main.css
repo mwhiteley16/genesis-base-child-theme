@@ -1041,6 +1041,8 @@ select {
 .gform_wrapper {
   width: 100%;
   margin-bottom: 30px; }
+  .gform_wrapper ul {
+    margin-bottom: 0; }
   .gform_wrapper form,
   .gform_wrapper .gform_body,
   .gform_wrapper .gform_footer {
@@ -1067,8 +1069,14 @@ ul.gform_fields {
     width: 100%; }
     ul.gform_fields > li.gf_left_half, ul.gform_fields > li.left-side, ul.gform_fields > li.gf_right_half, ul.gform_fields > li.right-side {
       width: 49%; }
+      @media (max-width: 600px) {
+        ul.gform_fields > li.gf_left_half, ul.gform_fields > li.left-side, ul.gform_fields > li.gf_right_half, ul.gform_fields > li.right-side {
+          width: 100%; } }
     ul.gform_fields > li.gf_left_third, ul.gform_fields > li.gf_middle_third, ul.gform_fields > li.gf_right_third, ul.gform_fields > li.left-third, ul.gform_fields > li.middle-third, ul.gform_fields > li.right-third {
       width: 32%; }
+      @media (max-width: 700px) {
+        ul.gform_fields > li.gf_left_third, ul.gform_fields > li.gf_middle_third, ul.gform_fields > li.gf_right_third, ul.gform_fields > li.left-third, ul.gform_fields > li.middle-third, ul.gform_fields > li.right-third {
+          width: 100%; } }
     ul.gform_fields > li > label {
       display: block;
       width: 100%;
