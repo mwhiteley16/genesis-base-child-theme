@@ -50,6 +50,11 @@ wp.domReady( () => {
           label: 'No Bottom Margin',
      });
 
+     wp.blocks.registerBlockStyle( 'core/image', {
+          name: 'half-bottom-margin',
+          label: 'Half Bottom Margin',
+     });
+
      // add custom spacer styles
      wp.blocks.registerBlockStyle( 'core/spacer', {
           name: 'responsive-small',
