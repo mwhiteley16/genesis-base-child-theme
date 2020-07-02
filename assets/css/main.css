@@ -1702,9 +1702,9 @@ a.wd-button--inverse.has-black-background-color {
   margin-bottom: 30px; }
 
 /**
- * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ * /assets/scss/partials/blocks/core/blocks-core-group.scss
  *
- * Let's define our core spacer styles
+ * Let's define our core group styles
  *
  *
  */
@@ -1825,7 +1825,7 @@ hr.wp-block-separator {
   max-width: 100% !important; }
 
 /**
- * /assets/scss/partials/blocks/core/blocks-core-spacerss.scss
+ * /assets/scss/partials/blocks/core/blocks-core-spacer.scss
  *
  * Let's define our core spacer styles
  *
