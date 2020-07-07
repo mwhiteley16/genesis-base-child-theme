@@ -17,6 +17,7 @@
 @import 'partials/layouts/pagination';
 @import 'partials/layouts/blog';
 @import 'partials/layouts/search';
+@import 'partials/layouts/flickity';
 
 /* Forms */
 @import 'partials/forms/forms-base';
@@ -24,4 +25,4 @@
 
 /* Blocks */
 @import 'partials/blocks/blocks-base';
-@import 'partials/blocks/blocks-hero';
+@import 'partials/blocks/blocks-slideshow';

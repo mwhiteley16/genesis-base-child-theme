@@ -38,23 +38,23 @@ function wd_acf_show_admin( $show ) {
  * @uses https://www.advancedcustomfields.com/blog/acf-5-8-introducing-acf-blocks-for-gutenberg/
  *
 */
-// add_action( 'acf/init', 'wd_acf_init' );
-// function wd_acf_init() {
- 	// if( function_exists( 'acf_register_block' ) ) {
- 	// 	acf_register_block_type(array(
- 	// 		'name'			=> 'acf-hero',
- 	// 		'title'			=> __( 'Hero Block' ),
- 	// 		'description'		=> __( 'A Hero Block.' ),
- 	// 		'category'		=> 'formatting',
- 	// 		'icon'			=> 'star-filled',
-     //           'mode'              => 'preview',
- 	// 		'keywords'		=> array( 'hero, wd, acf' ),
-     //           'post_type'         => array( 'post', 'page' ),
-     //           'render_callback'	=> 'wd_acf_block_render_callback',
-     //           'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/hero-block.js',
- 	// 	));
- 	// }
-// }
+add_action( 'acf/init', 'wd_acf_init' );
+function wd_acf_init() {
+ 	if( function_exists( 'acf_register_block' ) ) {
+ 		acf_register_block_type(array(
+ 			'name'			=> 'acf-slideshow',
+ 			'title'			=> __( 'Slideshow Block' ),
+ 			'description'		=> __( 'A simple slideshow lock.' ),
+ 			'category'		=> 'formatting',
+ 			'icon'			=> 'star-filled',
+               'mode'              => 'preview',
+ 			'keywords'		=> array( 'slideshow, wd, acf' ),
+               'post_type'         => array( 'post', 'page' ),
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/block-slideshow.js',
+ 		));
+ 	}
+}
 
 /**
  * ACF Gutenberg Blocks
