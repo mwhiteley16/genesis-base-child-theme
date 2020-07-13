@@ -44,7 +44,7 @@ function wd_acf_init() {
  		acf_register_block_type(array(
  			'name'			=> 'acf-slideshow',
  			'title'			=> __( 'Slideshow Block' ),
- 			'description'		=> __( 'A simple slideshow lock.' ),
+ 			'description'		=> __( 'A simple slideshow block.' ),
  			'category'		=> 'formatting',
  			'icon'			=> 'star-filled',
                'mode'              => 'preview',
@@ -52,6 +52,18 @@ function wd_acf_init() {
                'post_type'         => array( 'post', 'page' ),
                'render_callback'	=> 'wd_acf_block_render_callback',
                'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/block-slideshow.js',
+ 		));
+ 		acf_register_block_type(array(
+ 			'name'			=> 'acf-tabs',
+ 			'title'			=> __( 'Tabs Block' ),
+ 			'description'		=> __( 'A simple tabs block.' ),
+ 			'category'		=> 'formatting',
+ 			'icon'			=> 'star-filled',
+               'mode'              => 'preview',
+ 			'keywords'		=> array( 'tabs, wd, acf' ),
+               'post_type'         => array( 'post', 'page' ),
+               'render_callback'	=> 'wd_acf_block_render_callback',
+               'enqueue_script'    => get_stylesheet_directory_uri() . '/blocks/js/block-tabs.js',
  		));
  	}
 }
