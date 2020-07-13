@@ -4,6 +4,7 @@
 
      $(document).ready(function(){
 
+          // mobile menu
           $('.mobile-navigation-icon').click(function() {
                $(this).toggleClass('open');
                $('.nav-primary').slideToggle();

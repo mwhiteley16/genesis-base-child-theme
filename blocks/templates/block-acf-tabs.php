@@ -33,7 +33,7 @@ if( ! empty( $block['className'] ) ) { // get custom class name if present
 
           <?php if ( have_rows( 'wd_block_tabs' ) ) : ?>
 
-               <ul role="tablist">
+               <ul class="acf-tabs-block__tablist" role="tablist">
 
                     <?php
                     $tablist_count = 0; // set initial tab count
@@ -53,7 +53,7 @@ if( ! empty( $block['className'] ) ) { // get custom class name if present
 
                </ul>
 
-               <main>
+               <main class="acf-tabs-block__tabpanels">
 
                     <?php
                     $tabpanel_count = 0; // set initial tab count
@@ -70,6 +70,7 @@ if( ! empty( $block['className'] ) ) { // get custom class name if present
                          $tabpanel_aria_state = 'false'; ?>
 
                     <?php endwhile; ?>
+
                </main>
 
           <?php endif; ?>
