@@ -6,12 +6,13 @@
  *
  */
 
-.gform_wrapper select {
+.gform_wrapper select,
+select {
      appearance: none;
      -webkit-appearance: none;
      -moz-appearance: none;
      position: relative;
-     background-image: url('../images/arrow-down-light.svg');
+     background-image: url('../images/arrow-select.svg');
      background-position: calc(100% - #{$form-padding}) 50%;
      background-repeat: no-repeat;
      background-size: 16px;

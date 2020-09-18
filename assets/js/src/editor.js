@@ -25,7 +25,7 @@ wp.domReady( () => {
 
      // separator styles
      wp.blocks.unregisterBlockStyle(
-     	'core/button',
+     	'core/separator',
      	[ 'default', 'dots', 'wide' ]
      );
 

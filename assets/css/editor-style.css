@@ -591,6 +591,18 @@ a.wd-button--inverse.has-black-background-color {
     .wp-block-columns .wp-block-column:nth-child(2) {
       margin-top: 30px; } }
 /**
+ * /assets/scss/partials/blocks/core/blocks-core-cover.scss
+ *
+ * Let's define our core cover styles
+ *
+ *
+ */
+/* ----- Core Block Cover -------------------- */
+.wp-block-cover__inner-container {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+/**
  * /assets/scss/partials/blocks/core/blocks-core-gallery.scss
  *
  * Let's define our core gallery styles

@@ -26,6 +26,7 @@ function wd_theme_fonts() {
 		'subset' => 'latin,latin-ext',
 	);
 	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+     $fonts_url = $fonts_url . '&display=swap';
 	return esc_url_raw( $fonts_url );
 }
 
@@ -42,6 +43,9 @@ function wd_global_enqueues() {
      // javascript
      wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
 
+     // font awesome
+     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' );
+
      // append datestamp to stylesheet to cache bust when styles are changed
      $version = defined( 'CHILD_THEME_VERSION' ) && CHILD_THEME_VERSION ? CHILD_THEME_VERSION : PARENT_THEME_VERSION;
      $version .= '.' . date ( "njYHi", filemtime( get_stylesheet_directory() . '/assets/css/main.css' ) );
@@ -56,10 +60,18 @@ add_action( 'wp_enqueue_scripts', 'wd_global_enqueues' );
  *
  */
 function wd_admin_enqueues() {
+
+     // custom fonts
      wp_enqueue_style( 'wd-fonts', wd_theme_fonts() );
-     //wp_enqueue_script('wd-flickity-admin', get_stylesheet_directory_uri() . '/assets/js/flickity.pkgd.min.js' );
-     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' ); // modify with updated Font Awesome kit
-     wp_enqueue_script('wd-editor', get_stylesheet_directory_uri() . '/assets/js/editor.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor.js' ), true );
+
+     // flickity
+     wp_enqueue_script('wd-flickity-admin', get_stylesheet_directory_uri() . '/assets/js/src/flickity.pkgd.min.js' );
+
+     // font awesome
+     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' );
+
+     // custom block styles
+     wp_enqueue_script('wd-editor', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ), true );
 }
 add_action( 'enqueue_block_editor_assets', 'wd_admin_enqueues' );
 
