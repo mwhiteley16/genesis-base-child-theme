@@ -2,3 +2,70 @@
     margin: 0;
     background-color: rgba(255,255,255,0.3);
 }
+
+/*----- ACF Radio Button Color Picker ---------------*/
+.wp-admin .acf-block-component {
+
+     ul.acf-radio-list {
+          display: flex;
+          flex-wrap: wrap;
+          padding-left: 0;
+          margin-left: 0;
+
+          li {
+               margin-right: 0;
+               display: flex;
+
+               label {
+                    width: 28px;
+                    height: 28px;
+                    position: relative;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    color: $white;
+
+                    input[type="radio"] {
+                         position: absolute;
+                         top: 0;
+                         left: 0;
+                         width: 28px;
+                         height: 28px;
+
+                         &:checked {
+
+                              &::before {
+                                   content: "\f15e";
+                                   font-family: dashicons;
+                                   width: 20px;
+                                   height: 20px;
+                                   background-color: transparent;
+                                   font-size: 20px;
+                                   margin: 1px;
+                                   color: $white;
+                              }
+                         }
+
+                         // override light colors with a black checkmark when checked (default is white)
+                         &[value="white"],
+                         &[value="grey-light"],
+                         &[value="grey-medium"] {
+
+                              &:checked {
+
+                                   &::before {
+                                        color: $black;
+                                   }
+                              }
+                         }
+
+                         @each $name, $color in $colors {
+
+                         	&[value="#{$name}"] {
+                         		background-color: $color;
+                         	}
+                         }
+                    }
+               }
+          }
+     }
+}

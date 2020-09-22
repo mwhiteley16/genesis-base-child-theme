@@ -33,6 +33,21 @@ add_theme_support( 'editor-color-palette', array(
 		'slug'  => 'secondary-color',
 		'color' => '#439a86',
 	),
+	array(
+		'name'  => __( 'Grey Light', CHILD_THEME_SLUG ),
+		'slug'  => 'grey-light',
+		'color' => '#fafafa',
+	),
+	array(
+		'name'  => __( 'Grey Medium', CHILD_THEME_SLUG ),
+		'slug'  => 'grey-medium',
+		'color' => '#e0e0e0',
+	),
+	array(
+		'name'  => __( 'Grey Dark', CHILD_THEME_SLUG ),
+		'slug'  => 'grey-dark',
+		'color' => '#424242',
+	),
      array(
 		'name'  => __( 'White', CHILD_THEME_SLUG ),
 		'slug'  => 'white',

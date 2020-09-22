@@ -45,5 +45,8 @@ $block-margin: 30px;
 // Match names to Color Palette in /functions/gutenberg.php
 $colors: ( primary-color, $primary-color ),
 	    ( secondary-color, $secondary-color ),
+         ( grey-light, $grey-light ),
+         ( grey-medium, $grey-medium ),
+         ( grey-dark, $grey-dark ),
          ( white, $white ),
          ( black, $black );
