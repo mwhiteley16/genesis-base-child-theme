@@ -1,5 +1,6 @@
-// Add custom button styles
 wp.domReady( () => {
+
+     // ADD CUSTOM BLOCK STYLES
 
      // button styles
      wp.blocks.unregisterBlockStyle(
@@ -120,4 +121,27 @@ wp.domReady( () => {
                }
           ]
      );
+
+
+     // REMOVE CORE BLOCKS THAT AREN'T NEEDED
+
+     // formatting
+     wp.blocks.unregisterBlockType( 'core/verse' );
+     wp.blocks.unregisterBlockType( 'core/preformatted' );
+     wp.blocks.unregisterBlockType( 'core/pullquote' );
+
+     // layouts
+     wp.blocks.unregisterBlockType( 'core/more' );
+     wp.blocks.unregisterBlockType( 'core/nextpage' );
+
+     // widgets
+     wp.blocks.unregisterBlockType( 'core/archives' );
+     wp.blocks.unregisterBlockType( 'core/categories' );
+     wp.blocks.unregisterBlockType( 'core/latest-comments' );
+     wp.blocks.unregisterBlockType( 'core/latest-posts' );
+     wp.blocks.unregisterBlockType( 'core/calendar' );
+     wp.blocks.unregisterBlockType( 'core/rss' );
+     wp.blocks.unregisterBlockType( 'core/search' );
+     wp.blocks.unregisterBlockType( 'core/tag-cloud' );
+
 } );
