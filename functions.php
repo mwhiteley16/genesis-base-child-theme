@@ -93,7 +93,6 @@ add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
  *
  */
 function wd_base_setup() {
-     include_once( get_stylesheet_directory() . '/inc/acf.php' );
      include_once( get_stylesheet_directory() . '/inc/genesis.php' );
      include_once( get_stylesheet_directory() . '/inc/gravityforms.php' );
      include_once( get_stylesheet_directory() . '/inc/gutenberg.php' );
