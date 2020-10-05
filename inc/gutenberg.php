@@ -17,6 +17,10 @@ add_theme_support( 'editor-styles' );
 // Disable Custom Colors
 add_theme_support( 'disable-custom-colors' );
 
+// Disable gradient color options
+add_theme_support( 'editor-gradient-presets', [] );
+add_theme_support( 'disable-custom-gradients', true );
+
 // Responsive embeds
 add_theme_support( 'responsive-embeds' );
 
