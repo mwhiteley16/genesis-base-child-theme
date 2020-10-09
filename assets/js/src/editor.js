@@ -83,13 +83,6 @@ wp.domReady( () => {
      );
 
 
-     // separator styles
-     wp.blocks.unregisterBlockStyle(
-     	'core/separator',
-     	[ 'default', 'dots', 'wide' ]
-     );
-
-
      // spacer styles
      wp.blocks.registerBlockStyle(
           'core/spacer',
@@ -124,6 +117,9 @@ wp.domReady( () => {
 
 
      // REMOVE CORE BLOCKS THAT AREN'T NEEDED
+
+     // design
+     wp.blocks.unregisterBlockType( 'core/separator' );
 
      // formatting
      wp.blocks.unregisterBlockType( 'core/preformatted' );
