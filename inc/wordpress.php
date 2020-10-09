@@ -13,26 +13,47 @@ function wd_load_scripts() {
 	wp_enqueue_script( 'jquery' );
 }
 
-// Allow SVG uploads to the media uploads
-add_filter( 'upload_mimes', 'wd_mime_types' );
-function wd_mime_types($mimes) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-
-add_action( 'admin_head', 'wd_admin_head' );
-function wd_admin_head() {
-	$css = '';
-	$css = 'td.media-icon img[src$=".svg"] { width: 100% !important; height: auto !important; }';
-	echo '<style type="text/css">'.$css.'</style>';
-}
-
 // Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
 function wd_remove_comments_allowed_tags( $defaults ) {
      $defaults['comment_notes_after'] = '';
      return $defaults;
 }
+
+// Allow SVG Uploads
+add_filter( 'wp_check_filetype_and_ext', function( $data, $file, $filename, $mimes ) {
+
+     global $wp_version;
+     if ( $wp_version !== '4.7.1' ) {
+          return $data;
+     }
+
+     $filetype = wp_check_filetype( $filename, $mimes );
+
+     return [
+          'ext'             => $filetype['ext'],
+          'type'            => $filetype['type'],
+          'proper_filename' => $data['proper_filename']
+     ];
+
+}, 10, 4 );
+
+function cc_mime_types( $mimes ){
+     $mimes['svg'] = 'image/svg+xml';
+     return $mimes;
+}
+add_filter( 'upload_mimes', 'cc_mime_types' );
+
+
+function fix_svg() {
+     echo '<style type="text/css">
+          .attachment-266x266, .thumbnail img {
+               width: 100% !important;
+               height: auto !important;
+          }
+          </style>';
+}
+add_action( 'admin_head', 'fix_svg' );
 
 // Clean up menu classes
 function wd_clean_nav_menu_classes( $classes ) {

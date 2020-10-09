@@ -24,10 +24,41 @@ wp.domReady( () => {
      );
 
 
-     // separator styles
-     wp.blocks.unregisterBlockStyle(
-     	'core/separator',
-     	[ 'default', 'dots', 'wide' ]
+     // group styles
+     wp.blocks.registerBlockStyle(
+          'core/group',
+          [
+               {
+                    name: 'default',
+                    label: 'Default',
+                    isDefault: true,
+               },
+               {
+                    name: 'full-inner-width',
+                    label: 'Full Inner Width',
+               }
+          ]
+     );
+
+
+     // image styles
+     wp.blocks.registerBlockStyle(
+          'core/image',
+          [
+               {
+                    name: 'default',
+                    label: 'Default',
+                    isDefault: true,
+               },
+               {
+                    name: 'no-bottom-margin',
+                    label: 'No Bottom Margin',
+               },
+               {
+                    name: 'half-bottom-margin',
+                    label: 'Half Bottom Margin',
+               }
+          ]
      );
 
 
@@ -52,24 +83,10 @@ wp.domReady( () => {
      );
 
 
-     // image styles
-     wp.blocks.registerBlockStyle(
-          'core/image',
-          [
-               {
-                    name: 'default',
-                    label: 'Default',
-                    isDefault: true,
-               },
-               {
-                    name: 'no-bottom-margin',
-                    label: 'No Bottom Margin',
-               },
-               {
-                    name: 'half-bottom-margin',
-                    label: 'Half Bottom Margin',
-               }
-          ]
+     // separator styles
+     wp.blocks.unregisterBlockStyle(
+     	'core/separator',
+     	[ 'default', 'dots', 'wide' ]
      );
 
 
@@ -106,29 +123,12 @@ wp.domReady( () => {
      );
 
 
-     // group styles
-     wp.blocks.registerBlockStyle(
-          'core/group',
-          [
-               {
-                    name: 'default',
-                    label: 'Default',
-                    isDefault: true,
-               },
-               {
-                    name: 'full-inner-width',
-                    label: 'Full Inner Width',
-               }
-          ]
-     );
-
-
      // REMOVE CORE BLOCKS THAT AREN'T NEEDED
 
      // formatting
-     wp.blocks.unregisterBlockType( 'core/verse' );
      wp.blocks.unregisterBlockType( 'core/preformatted' );
      wp.blocks.unregisterBlockType( 'core/pullquote' );
+     wp.blocks.unregisterBlockType( 'core/verse' );
 
      // layouts
      wp.blocks.unregisterBlockType( 'core/more' );
@@ -136,10 +136,10 @@ wp.domReady( () => {
 
      // widgets
      wp.blocks.unregisterBlockType( 'core/archives' );
+     wp.blocks.unregisterBlockType( 'core/calendar' );
      wp.blocks.unregisterBlockType( 'core/categories' );
      wp.blocks.unregisterBlockType( 'core/latest-comments' );
      wp.blocks.unregisterBlockType( 'core/latest-posts' );
-     wp.blocks.unregisterBlockType( 'core/calendar' );
      wp.blocks.unregisterBlockType( 'core/rss' );
      wp.blocks.unregisterBlockType( 'core/search' );
      wp.blocks.unregisterBlockType( 'core/tag-cloud' );
