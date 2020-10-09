@@ -31,6 +31,10 @@ h6,
 	&:focus {
 		outline: none;
 	}
+
+     &.is-style-no-margin-bottom {
+          margin-bottom: 0;
+     }
 }
 
 h1,

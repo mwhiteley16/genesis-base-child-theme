@@ -26,4 +26,12 @@ p { // Match these sizes to the font sizes in functions/gutenberg.php
 	&.has-small-font-size {
 	    font-size: 12px;
 	}
+
+     &.is-style-no-margin-bottom {
+          margin-bottom: 0;
+     }
+
+     &.is-style-half-margin-bottom {
+          margin-bottom: 10px;
+     }
 }

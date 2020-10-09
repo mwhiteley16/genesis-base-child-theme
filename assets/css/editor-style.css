@@ -200,6 +200,14 @@ h6,
   h6:focus,
   .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input:focus {
     outline: none; }
+  h1.is-style-no-margin-bottom,
+  h2.is-style-no-margin-bottom,
+  h3.is-style-no-margin-bottom,
+  h4.is-style-no-margin-bottom,
+  h5.is-style-no-margin-bottom,
+  h6.is-style-no-margin-bottom,
+  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-margin-bottom {
+    margin-bottom: 0; }
 
 h1,
 .editor-post-title__block .editor-post-title__input {
@@ -841,6 +849,10 @@ p {
     font-size: 16px; }
   p.has-small-font-size {
     font-size: 12px; }
+  p.is-style-no-margin-bottom {
+    margin-bottom: 0; }
+  p.is-style-half-margin-bottom {
+    margin-bottom: 10px; }
 
 /**
  * /assets/scss/partials/blocks/core/blocks-core-separators.scss
