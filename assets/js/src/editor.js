@@ -53,6 +53,10 @@ wp.domReady( () => {
                {
                     name: 'no-bottom-margin',
                     label: 'No Bottom Margin',
+               },
+               {
+                    name: 'half-bottom-margin',
+                    label: 'Half Bottom Margin',
                }
           ]
      );

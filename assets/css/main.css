@@ -654,14 +654,22 @@ h6,
   h6:focus,
   .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input:focus {
     outline: none; }
-  h1.is-style-no-margin-bottom,
-  h2.is-style-no-margin-bottom,
-  h3.is-style-no-margin-bottom,
-  h4.is-style-no-margin-bottom,
-  h5.is-style-no-margin-bottom,
-  h6.is-style-no-margin-bottom,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-margin-bottom {
+  h1.is-style-no-bottom-margin,
+  h2.is-style-no-bottom-margin,
+  h3.is-style-no-bottom-margin,
+  h4.is-style-no-bottom-margin,
+  h5.is-style-no-bottom-margin,
+  h6.is-style-no-bottom-margin,
+  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-bottom-margin {
     margin-bottom: 0; }
+  h1.is-style-half-bottom-margin,
+  h2.is-style-half-bottom-margin,
+  h3.is-style-half-bottom-margin,
+  h4.is-style-half-bottom-margin,
+  h5.is-style-half-bottom-margin,
+  h6.is-style-half-bottom-margin,
+  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-half-bottom-margin {
+    margin-bottom: 10px; }
 
 h1,
 .editor-post-title__block .editor-post-title__input {

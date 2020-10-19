@@ -32,8 +32,12 @@ h6,
 		outline: none;
 	}
 
-     &.is-style-no-margin-bottom {
+     &.is-style-no-bottom-margin {
           margin-bottom: 0;
+     }
+
+     &.is-style-half-bottom-margin {
+          margin-bottom: 10px;
      }
 }
 
