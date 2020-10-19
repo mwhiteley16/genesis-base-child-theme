@@ -857,9 +857,9 @@ p {
     font-size: 16px; }
   p.has-small-font-size {
     font-size: 12px; }
-  p.is-style-no-margin-bottom {
+  p.is-style-no-bottom-margin {
     margin-bottom: 0; }
-  p.is-style-half-margin-bottom {
+  p.is-style-half-bottom-margin {
     margin-bottom: 10px; }
 
 /**

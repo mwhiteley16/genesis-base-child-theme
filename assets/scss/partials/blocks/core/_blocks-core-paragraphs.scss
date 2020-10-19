@@ -27,11 +27,11 @@ p { // Match these sizes to the font sizes in functions/gutenberg.php
 	    font-size: 12px;
 	}
 
-     &.is-style-no-margin-bottom {
+     &.is-style-no-bottom-margin {
           margin-bottom: 0;
      }
 
-     &.is-style-half-margin-bottom {
+     &.is-style-half-bottom-margin {
           margin-bottom: 10px;
      }
 }
