@@ -190,14 +190,14 @@ wp.domReady( () => {
      wp.blocks.unregisterBlockType( 'core-embed/crowdsignal' );
      wp.blocks.unregisterBlockType( 'core-embed/dailymotion' );
      wp.blocks.unregisterBlockType( 'core-embed/flickr' );
-     wp.blocks.unregisterBlockType( 'core-embed/funnyordie' );
-     wp.blocks.unregisterBlockType( 'core-embed/hulu' );
+     //wp.blocks.unregisterBlockType( 'core-embed/funnyordie' );
+     //wp.blocks.unregisterBlockType( 'core-embed/hulu' );
      wp.blocks.unregisterBlockType( 'core-embed/imgur' );
      wp.blocks.unregisterBlockType( 'core-embed/issuu' );
      wp.blocks.unregisterBlockType( 'core-embed/kickstarter' );
      wp.blocks.unregisterBlockType( 'core-embed/meetup-com' );
      wp.blocks.unregisterBlockType( 'core-embed/mixcloud' );
-     wp.blocks.unregisterBlockType( 'core-embed/photobucket' );
+     //wp.blocks.unregisterBlockType( 'core-embed/photobucket' );
      wp.blocks.unregisterBlockType( 'core-embed/polldaddy' );
      wp.blocks.unregisterBlockType( 'core-embed/reddit' );
      wp.blocks.unregisterBlockType( 'core-embed/reverbnation' );
