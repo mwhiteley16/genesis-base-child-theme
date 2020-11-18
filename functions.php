@@ -20,7 +20,7 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
  *
  */
 function wd_theme_fonts() {
-	$font_families = apply_filters( 'ea_theme_fonts', array( 'Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' ) );
+	$font_families = apply_filters( 'wd_theme_fonts', array( 'Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' ) );
 	$query_args = array(
 		'family' => implode( '|', $font_families ),
 		'subset' => 'latin,latin-ext',

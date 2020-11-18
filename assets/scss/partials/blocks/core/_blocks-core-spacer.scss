@@ -7,6 +7,11 @@
  */
 
  /* ----- Core Block Spacers -------------------- */
+.block-editor-block-list__block[data-type="core/spacer"] {
+     margin-bottom: 0;
+     margin-top: 0;
+}
+
 .wp-block-spacer {
      margin-top: 0;
      margin-bottom: 0;
