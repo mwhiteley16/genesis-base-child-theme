@@ -61,16 +61,15 @@ wp.domReady( () => {
           ]
      );
 
-
      // image styles
+     wp.blocks.unregisterBlockStyle(
+     	'core/image',
+     	[ 'rounded' ]
+     );
+
      wp.blocks.registerBlockStyle(
           'core/image',
           [
-               {
-                    name: 'default',
-                    label: 'Default',
-                    isDefault: true,
-               },
                {
                     name: 'no-bottom-margin',
                     label: 'No Bottom Margin',
@@ -99,6 +98,27 @@ wp.domReady( () => {
                {
                     name: 'two-three-list',
                     label: 'Three Columns',
+               }
+          ]
+     );
+
+
+     // media text styles
+     wp.blocks.registerBlockStyle(
+          'core/media-text',
+          [
+               {
+                    name: 'default',
+                    label: 'Default',
+                    isDefault: true,
+               },
+               {
+                    name: 'wide-break',
+                    label: 'Wide Break',
+               },
+               {
+                    name: 'mobile-image-top',
+                    label: 'Mobile Image Top',
                }
           ]
      );

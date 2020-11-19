@@ -7,14 +7,18 @@
  */
 
  /* ----- Core Block Spacers -------------------- */
-figure.wp-block-image {
+.wp-block-image {
      margin: 0 0 $base-margin 0;
+
+     img {
+          display: block;
+     }
 
      &.is-style-no-bottom-margin {
           margin-bottom: 0;
      }
 
      &.is-style-half-bottom-margin {
-          margin-bottom: calc($base-margin / 2);
+          margin-bottom: $base-margin-half;
      }
 }

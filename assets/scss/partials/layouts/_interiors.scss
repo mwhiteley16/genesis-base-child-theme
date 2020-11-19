@@ -9,32 +9,14 @@
 .site-inner {
      width: 100%;
      overflow: hidden;
-     padding: 0 $block-margin;
+     padding: 0 $base-margin;
 
      .content {
-          float: left;
+          display: flex;
+          flex-wrap: wrap;
           padding: 75px 0;
-          width: $content-width;
+          width: 100%;
      }
-
-     .sidebar {
-          float: right;
-          padding: 75px 0;
-          width: $sidebar-width;
-     }
-
-}
-
-.sidebar-content .site-inner .wrap .content {
-     float: right;
-}
-
-.sidebar-content .site-inner .wrap .sidebar-primary {
-     float: left;
-}
-
-.full-width-content .content {
-     width: 100%;
 }
 
 .wrap {

@@ -5,9 +5,9 @@
  *
  * - Imports
  * - Alignwide/Alignfull
+ * - Block Editor Interior Widths
  * - Editor Title Styles
  * - Color Palette
- * - Font Sizes
  *
  */
 
@@ -25,34 +25,19 @@
 @import 'core/blocks-core-spacer';
 
 /* ----- Alignwide/Alignfull -------------------- */
-.entry-content > * {
-     max-width: 100%;
-
-     &.alignwide {
-          margin: 0 calc(25% - 25vw);
-          max-width: 100vw;
-          width: auto;
-     }
-
-     &.alignfull {
-          margin: 0 calc(50% - 50vw);
-          max-width: 100vw;
-          width: 100vw;
-     }
+.alignwide {
+     margin: 0 calc(25% - 25vw);
+     max-width: 100vw;
+     width: auto;
 }
 
-.content-sidebar .entry-content > *,
-.sidebar-content .entry-content > * {
-
-     &.alignwide,
-     &.alignfull {
-          margin: $block-margin 0;
-          max-width: 100%;
-          width: auto;
-     }
-
+.alignfull {
+     margin: 0 calc(50% - 50vw);
+     max-width: 100vw;
+     width: 100vw;
 }
 
+/* ----- Block Editor Interior Width -------------------- */
 .wp-block {
      max-width: $base-width;
 
@@ -72,10 +57,6 @@
 	.editor-post-title__input {
           font-family: $font-stack-main;
 	}
-}
-
-.acf-block-component .block-wrapper {
-     padding: 100px 43px;
 }
 
 /* ----- Front End Colors to Match Color Picker in Block Editor -------------------- */

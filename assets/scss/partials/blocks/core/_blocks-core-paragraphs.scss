@@ -32,6 +32,6 @@ p { // Match these sizes to the font sizes in functions/gutenberg.php
      }
 
      &.is-style-half-bottom-margin {
-          margin-bottom: 10px;
+          margin-bottom: $base-margin-half;
      }
 }

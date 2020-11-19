@@ -41,6 +41,8 @@
           background-color: #007991; }
         .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="secondary-color"] {
           background-color: #439a86; }
+        .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="base-color"] {
+          background-color: #373737; }
         .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-light"] {
           background-color: #fafafa; }
         .wp-admin .acf-block-component ul.acf-radio-list li label input[type="radio"][value="grey-medium"] {
