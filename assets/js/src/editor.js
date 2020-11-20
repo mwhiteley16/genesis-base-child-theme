@@ -167,8 +167,12 @@ wp.domReady( () => {
                     label: 'Responsive Large (140px-100px)',
                },
                {
-                    name: 'responsive-hide',
-                    label: 'Responsive Hidden',
+                    name: 'tablet-hide',
+                    label: 'Tablet Hidden',
+               },
+               {
+                    name: 'mobile-hide',
+                    label: 'Mobile Hidden',
                },
                {
                     name: 'desktop-hide',

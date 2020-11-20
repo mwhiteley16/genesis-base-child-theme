@@ -49,16 +49,23 @@
           }
      }
 
-     &.is-style-responsive-hide {
+     &.is-style-tablet-hide {
 
           @media(max-width:1000px) {
                display: none;
           }
      }
 
+     &.is-style-mobile-hide {
+
+          @media(max-width:600px) {
+               display: none;
+          }
+     }
+
      &.is-style-desktop-hide {
 
-          @media(min-width:600px) {
+          @media(min-width:601px) {
                display: none;
           }
      }

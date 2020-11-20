@@ -3012,9 +3012,12 @@ hr.wp-block-separator {
     .wp-block-spacer.is-style-responsive-large {
       max-height: 100px; } }
   @media (max-width: 1000px) {
-    .wp-block-spacer.is-style-responsive-hide {
+    .wp-block-spacer.is-style-tablet-hide {
       display: none; } }
-  @media (min-width: 600px) {
+  @media (max-width: 600px) {
+    .wp-block-spacer.is-style-mobile-hide {
+      display: none; } }
+  @media (min-width: 601px) {
     .wp-block-spacer.is-style-desktop-hide {
       display: none; } }
 /* ----- Alignwide/Alignfull -------------------- */
