@@ -23,6 +23,34 @@ wp.domReady( () => {
           ]
      );
 
+     // column styles
+     wp.blocks.registerBlockStyle(
+          'core/columns',
+          [
+               {
+                    name: 'default',
+                    label: 'Default',
+                    isDefault: true,
+               },
+               {
+                    name: 'three-column',
+                    label: 'Three Column',
+               },
+               {
+                    name: 'four-column',
+                    label: 'Four Column',
+               },
+               {
+                    name: 'five-column',
+                    label: 'Five Column',
+               },
+               {
+                    name: 'wide-break',
+                    label: 'Wide Break',
+               }
+          ]
+     );
+
 
      // group styles
      wp.blocks.registerBlockStyle(

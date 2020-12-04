@@ -16,6 +16,10 @@
           flex-wrap: wrap;
           padding: 75px 0;
           width: 100%;
+
+          > article {
+               width: 100%;
+          }
      }
 }
 
