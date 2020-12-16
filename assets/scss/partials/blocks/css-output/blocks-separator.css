@@ -9,6 +9,8 @@
   display: flex;
   width: 100%;
   justify-content: flex-start; }
+  .acf-separator-block.alignfull {
+    width: 100vw; }
   .acf-separator-block.no-margin hr {
     margin: 0; }
   .acf-separator-block.center-align {

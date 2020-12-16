@@ -8,6 +8,7 @@
 
  /* ----- Core Block Cover -------------------- */
 .wp-block-cover {
+     padding: $base-margin;
 
      &__inner-container {
           max-width: $base-width;

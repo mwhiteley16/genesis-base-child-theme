@@ -6,12 +6,15 @@
  *
  */
 
- /* ----- Core Block Spacers -------------------- */
-.wp-block-gallery,
-.entry-content .wp-block-gallery {
+ /* ----- Core Block Gallery -------------------- */
+.wp-block-gallery {
 
      ul {
           padding-left: 0;
-          margin-bottom: 30px;
+          margin-bottom: 0;
+
+          .blocks-gallery-item {
+               margin: 0;
+          }
      }
 }

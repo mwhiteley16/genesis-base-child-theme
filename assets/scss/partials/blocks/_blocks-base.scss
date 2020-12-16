@@ -47,6 +47,40 @@
 
      &[data-align="full"] {
      	max-width: none;
+
+          .wp-block-group {
+
+               &__inner-container {
+                    max-width: $base-width;
+                    margin: 0 auto;
+               }
+          }
+     }
+}
+
+/* ----- Block Editor Margins -------------------- */
+.block-editor-block-list {
+
+     &__block {
+
+          // remove to and bottom margins in the editor for layout blocks & acf blocks
+          &[data-type^="acf"],
+          &[data-type="core/columns"],
+          &[data-type="core/cover"],
+          &[data-type="core/gallery"],
+          &[data-type="core/group"],
+          &[data-type="core/media-text"],
+          &[data-type="core/spacer"] {
+               margin-top: 0;
+               margin-bottom: 0;
+          }
+
+          // remove top margin only
+          &[data-type="core/embed"],
+          &[data-type="core/list"] {
+               margin-top: 0;
+               margin-bottom: $base-margin;
+          }
      }
 }
 
