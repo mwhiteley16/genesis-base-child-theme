@@ -11,13 +11,15 @@
      padding: $form-padding;
      margin-bottom: $form-spacing;
      border-radius: $form-border-radius;
+     display: none;
 }
 
  .gfield_error {
 
- 	> label,
  	.validation_message {
  		color: $form-error;
+          font-size: 12px;
+          font-style: italic;
  	}
 
  	input,

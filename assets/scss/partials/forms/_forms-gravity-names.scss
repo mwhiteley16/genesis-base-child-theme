@@ -14,5 +14,20 @@
      .name_first,
      .name_last {
           width: 49%;
+
+          @media(max-width:600px) {
+               width: 100%;
+          }
+
+          label {
+               font-size: 14px;
+          }
+     }
+
+     .name_last {
+
+          @media(max-width:600px) {
+               margin-top: 15px;
+          }
      }
 }

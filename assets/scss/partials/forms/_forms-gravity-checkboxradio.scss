@@ -16,9 +16,112 @@
           li {
                display: flex;
                align-items: center;
+               padding-bottom: 10px;
 
                input {
                     margin-right: 5px;
+               }
+          }
+     }
+}
+
+// if using styled radios & checkboxes
+.ginput_container_checkbox,
+.ginput_container_radio {
+
+     ul {
+
+          li {
+               position: relative;
+               width: auto;
+
+               @media(max-width:1000px) {
+                    justify-content: flex-start;
+                    text-align: left;
+               }
+
+               label {
+                    padding-left: 34px;
+                    position: relative;
+                    z-index: 100;
+                    cursor: pointer;
+               }
+
+               input[type="checkbox"] {
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    cursor: pointer;
+               }
+
+               &::before {
+                    display: inline-block;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    content: "\f00c";
+                    font-weight: 600;
+                    font-family: "Font Awesome 5 Pro";
+                    left: 4px;
+                    position: absolute;
+                    color: $primary-color;
+                    z-index: 10;
+                    top: 3px;
+                    background: $primary-color;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    opacity: 0;
+                    line-height: 20px;
+               }
+
+               &::after {
+                    content: " ";
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 2px;
+                    border: 2px solid $grey-medium;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+               }
+
+               &.active {
+
+                    &::before {
+                         opacity: 1;
+                    }
+               }
+          }
+     }
+}
+
+.ginput_container_radio {
+
+     ul {
+
+          li {
+
+               input[type="radio"] {
+                    position: absolute;
+                    left: 0;
+                    top: 2px;
+                    opacity: 0;
+                    height: 0;
+                    width: 0;
+                    cursor: pointer;
+               }
+
+               &::before {
+                    content: "\f111";
+                    top: 2px;
+               }
+
+               &::after {
+                    border-radius: 100px;
                }
           }
      }
@@ -40,9 +143,33 @@
           li {
                width: 49%;
                padding: 0 10px 0 0;
+               margin: 10px 0 0 0;
+
+               &:first-child {
+                    margin-top: 0;
+               }
 
                @media(max-width:500px) {
                     width: 100%;
+                    padding-right: 0;
+               }
+          }
+     }
+}
+
+.gf_list_2col,
+.two-column {
+
+     .gfield_radio,
+     .gfield_checkbox {
+
+          li {
+
+               @media(min-width:501px) {
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
                }
           }
      }
@@ -57,8 +184,20 @@
           li {
                width: 32%;
 
-               @media(max-width:700px) {
+               @media(min-width:701px) {
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:700px) and (min-width:501px) {
                     width: 49%;
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
                }
 
                @media(max-width:500px) {
@@ -77,12 +216,30 @@
           li {
                width: 23.5%;
 
-               @media(max-width:900px) {
-                    width: 32%;
+               @media(min-width:901px) {
+
+                    &:nth-child(2),
+                    &:nth-child(3),
+                    &:nth-child(4) {
+                         margin-top: 0;
+                    }
                }
 
-               @media(max-width:700px) {
+               @media(max-width:900px) and (min-width:701px) {
+                    width: 32%;
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                         margin-top: 0;
+                    }
+               }
+
+               @media(max-width:700px) and (min-width:501px) {
                     width: 49%;
+
+                    &:nth-child(2) {
+                         margin-top: 0;
+                    }
                }
 
                @media(max-width:500px) {
