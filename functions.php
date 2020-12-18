@@ -44,7 +44,7 @@ function wd_global_enqueues() {
      wp_enqueue_script( 'wd-scripts', get_stylesheet_directory_uri() . '/assets/js/main-js-min.js' );
 
      // font awesome
-     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' );
+     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/7bb1dd36e7.js' );
 
      // append datestamp to stylesheet to cache bust when styles are changed
      $version = defined( 'CHILD_THEME_VERSION' ) && CHILD_THEME_VERSION ? CHILD_THEME_VERSION : PARENT_THEME_VERSION;
@@ -68,7 +68,7 @@ function wd_admin_enqueues() {
      wp_enqueue_script('wd-flickity-admin', get_stylesheet_directory_uri() . '/assets/js/src/flickity.pkgd.min.js' );
 
      // font awesome
-     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/1583cf8440.js' );
+     //wp_enqueue_script( 'wd-fontawesome', 'https://kit.fontawesome.com/7bb1dd36e7.js' );
 
      // custom block styles
      wp_enqueue_script('wd-editor', get_stylesheet_directory_uri() . '/assets/js/editor-min.js', array( 'wp-blocks', 'wp-dom' ), filemtime( get_stylesheet_directory() . '/assets/js/editor-min.js' ), true );
