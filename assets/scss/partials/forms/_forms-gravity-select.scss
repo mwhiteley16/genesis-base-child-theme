@@ -6,14 +6,20 @@
  *
  */
 
+.editor-styles-wrapper .gform_wrapper select,
 .gform_wrapper select,
 select {
      appearance: none;
      -webkit-appearance: none;
      -moz-appearance: none;
      position: relative;
+     background: none;
      background-image: url('../images/arrow-select.svg');
      background-position: calc(100% - #{$form-padding}) 50%;
      background-repeat: no-repeat;
      background-size: 16px;
+     border-color: $form-border-color;
+     border-radius: $form-border-radius;
+     padding: $form-padding;
+     max-width: 100%;
 }

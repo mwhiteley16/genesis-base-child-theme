@@ -320,7 +320,7 @@ input {
   height: auto;
   min-height: auto; }
 
-.wp-block-button__link, a.wd-button,
+.wp-block-button__link, .editor-styles-wrapper .gform_footer .button, a.wd-button,
 input[type="button"],
 input[type="button"][disabled]:hover,
 input[type="button"][disabled]:focus,
@@ -340,14 +340,14 @@ input[type="submit"][disabled]:focus,
   display: inline-block;
   height: auto;
   border-radius: 3px; }
-  .wp-block-button__link:hover, a.wd-button:hover,
+  .wp-block-button__link:hover, .editor-styles-wrapper .gform_footer .button:hover, a.wd-button:hover,
   input[type="button"]:hover,
   input[type="button"][disabled]:hover,
   input[type="reset"]:hover,
   input[type="reset"][disabled]:hover,
   input[type="submit"]:hover,
   input[type="submit"][disabled]:hover,
-  .claim-search button:hover, .wp-block-button__link:focus, a.wd-button:focus,
+  .claim-search button:hover, .wp-block-button__link:focus, .editor-styles-wrapper .gform_footer .button:focus, a.wd-button:focus,
   input[type="button"]:focus,
   input[type="button"][disabled]:focus,
   input[type="reset"]:focus,
@@ -359,7 +359,7 @@ input[type="submit"][disabled]:focus,
     background: #004e5e;
     color: #fff;
     text-decoration: none; }
-  .button--inverse.wp-block-button__link, a.button--inverse.wd-button,
+  .button--inverse.wp-block-button__link, .editor-styles-wrapper .gform_footer .button--inverse.button, a.button--inverse.wd-button,
   input.button--inverse[type="button"],
   input.button--inverse[type="button"][disabled]:hover,
   input.button--inverse[type="button"][disabled]:focus,
@@ -372,11 +372,11 @@ input[type="submit"][disabled]:focus,
   .claim-search button.button--inverse {
     background-color: transparent;
     color: #007991; }
-    .button--inverse.wp-block-button__link:hover, a.button--inverse.wd-button:hover,
+    .button--inverse.wp-block-button__link:hover, .editor-styles-wrapper .gform_footer .button--inverse.button:hover, a.button--inverse.wd-button:hover,
     input.button--inverse[type="button"]:hover,
     input.button--inverse[type="reset"]:hover,
     input.button--inverse[type="submit"]:hover,
-    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, a.button--inverse.wd-button:focus,
+    .claim-search button.button--inverse:hover, .button--inverse.wp-block-button__link:focus, .editor-styles-wrapper .gform_footer .button--inverse.button:focus, a.button--inverse.wd-button:focus,
     input.button--inverse[type="button"]:focus,
     input.button--inverse[type="reset"]:focus,
     input.button--inverse[type="submit"]:focus,
@@ -1192,37 +1192,70 @@ select {
     position: absolute;
     left: -9999px; }
 
+.editor-styles-wrapper ul.gform_fields,
 ul.gform_fields {
   list-style-type: none;
   padding-left: 0;
+  margin-left: 0;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  .editor-styles-wrapper ul.gform_fields > li,
   ul.gform_fields > li {
     margin-bottom: 30px;
     padding-bottom: 0;
     width: 100%; }
-    ul.gform_fields > li.gf_left_half, ul.gform_fields > li.left-side, ul.gform_fields > li.gf_right_half, ul.gform_fields > li.right-side {
+    .editor-styles-wrapper ul.gform_fields > li.gf_left_half, .editor-styles-wrapper ul.gform_fields > li.left-side, .editor-styles-wrapper ul.gform_fields > li.gf_right_half, .editor-styles-wrapper ul.gform_fields > li.right-side,
+    ul.gform_fields > li.gf_left_half,
+    ul.gform_fields > li.left-side,
+    ul.gform_fields > li.gf_right_half,
+    ul.gform_fields > li.right-side {
       width: 49%; }
       @media (max-width: 600px) {
-        ul.gform_fields > li.gf_left_half, ul.gform_fields > li.left-side, ul.gform_fields > li.gf_right_half, ul.gform_fields > li.right-side {
+        .editor-styles-wrapper ul.gform_fields > li.gf_left_half, .editor-styles-wrapper ul.gform_fields > li.left-side, .editor-styles-wrapper ul.gform_fields > li.gf_right_half, .editor-styles-wrapper ul.gform_fields > li.right-side,
+        ul.gform_fields > li.gf_left_half,
+        ul.gform_fields > li.left-side,
+        ul.gform_fields > li.gf_right_half,
+        ul.gform_fields > li.right-side {
           width: 100%; } }
-    ul.gform_fields > li.gf_left_third, ul.gform_fields > li.gf_middle_third, ul.gform_fields > li.gf_right_third, ul.gform_fields > li.left-third, ul.gform_fields > li.middle-third, ul.gform_fields > li.right-third {
+    .editor-styles-wrapper ul.gform_fields > li.gf_left_third, .editor-styles-wrapper ul.gform_fields > li.gf_middle_third, .editor-styles-wrapper ul.gform_fields > li.gf_right_third, .editor-styles-wrapper ul.gform_fields > li.left-third, .editor-styles-wrapper ul.gform_fields > li.middle-third, .editor-styles-wrapper ul.gform_fields > li.right-third,
+    ul.gform_fields > li.gf_left_third,
+    ul.gform_fields > li.gf_middle_third,
+    ul.gform_fields > li.gf_right_third,
+    ul.gform_fields > li.left-third,
+    ul.gform_fields > li.middle-third,
+    ul.gform_fields > li.right-third {
       width: 32%; }
       @media (max-width: 700px) {
-        ul.gform_fields > li.gf_left_third, ul.gform_fields > li.gf_middle_third, ul.gform_fields > li.gf_right_third, ul.gform_fields > li.left-third, ul.gform_fields > li.middle-third, ul.gform_fields > li.right-third {
+        .editor-styles-wrapper ul.gform_fields > li.gf_left_third, .editor-styles-wrapper ul.gform_fields > li.gf_middle_third, .editor-styles-wrapper ul.gform_fields > li.gf_right_third, .editor-styles-wrapper ul.gform_fields > li.left-third, .editor-styles-wrapper ul.gform_fields > li.middle-third, .editor-styles-wrapper ul.gform_fields > li.right-third,
+        ul.gform_fields > li.gf_left_third,
+        ul.gform_fields > li.gf_middle_third,
+        ul.gform_fields > li.gf_right_third,
+        ul.gform_fields > li.left-third,
+        ul.gform_fields > li.middle-third,
+        ul.gform_fields > li.right-third {
           width: 100%; } }
+    .editor-styles-wrapper ul.gform_fields > li > label,
     ul.gform_fields > li > label {
       display: block;
       width: 100%;
       margin-bottom: 5px;
       font-weight: 600; }
+      .editor-styles-wrapper ul.gform_fields > li > label .gfield_required,
       ul.gform_fields > li > label .gfield_required {
         color: red;
         padding-left: 4px; }
+    .editor-styles-wrapper ul.gform_fields > li.field_admin_only,
     ul.gform_fields > li.field_admin_only {
       margin-bottom: 0;
       padding-bottom: 0; }
+  .editor-styles-wrapper ul.gform_fields ul,
+  ul.gform_fields ul {
+    padding-left: 0;
+    margin-left: 0; }
+
+.editor-styles-wrapper .gform_footer .button {
+  line-height: normal; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity-address.scss
@@ -2457,16 +2490,22 @@ ul.gform_fields {
  *
  *
  */
+.editor-styles-wrapper .gform_wrapper select,
 .gform_wrapper select,
 select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   position: relative;
+  background: none;
   background-image: url("../images/arrow-select.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
-  background-size: 16px; }
+  background-size: 16px;
+  border-color: #e0e0e0;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 100%; }
 
 /**
  * /assets/scss/partials/forms/forms-gravity-names.scss
@@ -3225,7 +3264,20 @@ hr.wp-block-separator {
       display: none; } }
   @media (min-width: 601px) {
     .wp-block-spacer.is-style-desktop-hide {
-      display: none; } }
+      display: none; }
+      .wp-block-spacer.is-style-desktop-hide.wp-block {
+        display: block !important;
+        border: 1px solid rgba(255, 0, 0, 0.1);
+        position: relative; }
+        .wp-block-spacer.is-style-desktop-hide.wp-block:before {
+          content: "This is hidden on desktop and this message only shows in the admin area as a visual reminder of this hidden spacer block.";
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 100%;
+          padding: 5px;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.3); } }
 /* ----- Alignwide/Alignfull -------------------- */
 .alignwide {
   margin: 0 calc(25% - 25vw);

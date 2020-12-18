@@ -38,9 +38,11 @@
      }
 }
 
+.editor-styles-wrapper ul.gform_fields,
 ul.gform_fields {
      list-style-type: none;
      padding-left: 0;
+     margin-left: 0;
      display: flex;
      justify-content: space-between;
      flex-wrap: wrap;
@@ -91,6 +93,16 @@ ul.gform_fields {
                padding-bottom: 0;
           }
      }
+
+     ul {
+          padding-left: 0;
+          margin-left: 0;
+     }
+}
+
+.editor-styles-wrapper .gform_footer .button {
+     @extend %button-styles;
+     line-height: normal;
 }
 
 @import 'forms-gravity-address';

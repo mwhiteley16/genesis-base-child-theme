@@ -1064,7 +1064,20 @@ hr.wp-block-separator {
       display: none; } }
   @media (min-width: 601px) {
     .wp-block-spacer.is-style-desktop-hide {
-      display: none; } }
+      display: none; }
+      .wp-block-spacer.is-style-desktop-hide.wp-block {
+        display: block !important;
+        border: 1px solid rgba(255, 0, 0, 0.1);
+        position: relative; }
+        .wp-block-spacer.is-style-desktop-hide.wp-block:before {
+          content: "This is hidden on desktop and this message only shows in the admin area as a visual reminder of this hidden spacer block.";
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 100%;
+          padding: 5px;
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.3); } }
 /* ----- Alignwide/Alignfull -------------------- */
 .alignwide {
   margin: 0 calc(25% - 25vw);

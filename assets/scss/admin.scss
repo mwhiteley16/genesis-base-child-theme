@@ -1,8 +1,13 @@
 /* Author Dependencies */
 @import 'partials/base/variables';
+@import 'partials/base/mixins';
 
 /* Admin CSS */
 @import 'partials/admin/admin-base';
 
 /* Admin ACF CSS */
 @import 'partials/blocks/blocks-acf';
+
+/* Admin Gravity Forms */
+@import 'partials/forms/forms-gravity';
+@import 'partials/forms/forms-base';
