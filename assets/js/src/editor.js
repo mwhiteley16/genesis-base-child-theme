@@ -48,6 +48,10 @@ wp.domReady( () => {
                {
                     name: 'wide-break',
                     label: 'Wide Break',
+               },
+               {
+                    name: 'no-col-gap',
+                    label: 'No Column Gap',
                }
           ]
      );

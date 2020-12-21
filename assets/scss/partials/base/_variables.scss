@@ -33,6 +33,10 @@ $form-required-color: red;
 $form-error: red;
 $form-border-radius: 5px;
 
+// column spacing
+$column-gap: 50px;
+$column-gap-half: $column-gap * 0.5;
+
 // block Coloring
 // match names to Color Palette in /functions/gutenberg.php
 $colors: ( primary-color, $primary-color ),

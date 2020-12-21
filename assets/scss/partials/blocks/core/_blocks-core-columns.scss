@@ -9,11 +9,12 @@
 /* ----- Core Block Columns -------------------- */
 .wp-block-columns {
      margin-bottom: 0;
+     justify-content: center;
 
      .wp-block-column {
 
           &:not(:first-child) {
-               margin-left: 50px;
+               margin-left: $column-gap;
 
                @media(max-width:599px) {
                     margin-left: 0;
@@ -22,7 +23,7 @@
           }
 
           @media(min-width:600px) {
-               flex-basis: calc(50% - 25px) !important;
+               flex-basis: calc(50% - #{$column-gap-half}) !important;
           }
      }
 
@@ -100,7 +101,7 @@
                @media(max-width:950px) and (min-width:600px) {
                     margin-top: 30px;
                     flex-grow: 0;
-                    flex-basis: calc(calc(100% - 100px) / 3) !important;
+                    flex-basis: calc(calc(100% - calc(#{$column-gap} * 2)) / 3) !important;
 
                     &:first-child,
                     &:nth-child(4) {
@@ -135,6 +136,20 @@
                     &:not(:first-child) {
                          margin-top: 30px;
                     }
+               }
+          }
+     }
+
+     &.is-style-no-col-gap {
+
+          .wp-block-column {
+
+               &:not(:first-child) {
+                    margin-left: 0;
+               }
+
+               @media(min-width:600px) {
+                    flex-basis: 50% !important;
                }
           }
      }
