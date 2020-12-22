@@ -10,6 +10,12 @@
  *
  */
 
+ /*
+ BEFORE MODIFYING THIS THEME:
+ Please read the instructions here:  https://github.com/mwhiteley16/genesis-base-child-theme/wiki
+ For access contact matt@whiteleydesigns.com
+ */
+
 define( 'CHILD_THEME_NAME', 'Base Genesis Child Theme' );
 define( 'CHILD_THEME_SLUG', 'base-genesis-child' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
