@@ -96,5 +96,29 @@ function wd_clean_post_classes( $classes ) {
 }
 add_filter( 'post_class', 'wd_clean_post_classes', 5 );
 
+/*
+ * Remove un-neccessary site health checks
+ *
+ * Tutorial - https://wearnhardt.com/2019/05/how-to-disable-tests-in-the-wordpress-site-health-check-tool/
+ * Core File - https://github.com/WordPress/WordPress/blob/5.2/wp-admin/includes/class-wp-site-health.php#L1726-L1846
+ *
+ */
+function wd_remove_site_health_checks( $tests ) {
+     unset( $tests['direct']['wordpress_version'] );
+     unset( $tests['direct']['theme_version'] );
+     unset( $tests['direct']['php_version'] );
+     unset( $tests['direct']['php_extensions'] );
+     unset( $tests['direct']['scheduled_events'] );
+     unset( $tests['async']['background_updates'] );
+     return $tests;
+}
+add_filter( 'site_status_tests', 'wd_remove_site_health_checks' );
+
+// remove site health dashboard widget
+add_action('wp_dashboard_setup', 'wd_remove_site_health_dashboard_widget');
+function wd_remove_site_health_dashboard_widget() {
+     remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
+}
+
 // Add custom image sizes
 // add_image_size( 'size-name', 000, 000, true );
