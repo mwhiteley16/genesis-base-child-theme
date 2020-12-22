@@ -11,6 +11,7 @@
           });
      });
 
+     // run after Gravity Forms renders
      $(document).bind('gform_post_render', function() {
 
           // set active classes for checkboxes

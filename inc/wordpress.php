@@ -13,12 +13,14 @@ function wd_load_scripts() {
 	wp_enqueue_script( 'jquery' );
 }
 
+
 // Remove comment form allowed tags
 add_filter( 'comment_form_defaults', 'wd_remove_comments_allowed_tags' );
 function wd_remove_comments_allowed_tags( $defaults ) {
      $defaults['comment_notes_after'] = '';
      return $defaults;
 }
+
 
 // Allow SVG Uploads
 add_filter( 'wp_check_filetype_and_ext', function( $data, $file, $filename, $mimes ) {
@@ -55,6 +57,7 @@ function fix_svg() {
 }
 add_action( 'admin_head', 'fix_svg' );
 
+
 // Clean up menu classes
 function wd_clean_nav_menu_classes( $classes ) {
 	if( ! is_array( $classes ) )
@@ -84,6 +87,7 @@ function wd_clean_nav_menu_classes( $classes ) {
 }
 add_filter( 'nav_menu_css_class', 'wd_clean_nav_menu_classes', 5 );
 
+
 // Clean up post classes
 function wd_clean_post_classes( $classes ) {
 	if( ! is_array( $classes ) )
@@ -95,6 +99,7 @@ function wd_clean_post_classes( $classes ) {
 	return array_intersect( $classes, $allowed_classes );
 }
 add_filter( 'post_class', 'wd_clean_post_classes', 5 );
+
 
 /*
  * Remove un-neccessary site health checks
@@ -114,11 +119,13 @@ function wd_remove_site_health_checks( $tests ) {
 }
 add_filter( 'site_status_tests', 'wd_remove_site_health_checks' );
 
+
 // remove site health dashboard widget
 add_action('wp_dashboard_setup', 'wd_remove_site_health_dashboard_widget');
 function wd_remove_site_health_dashboard_widget() {
      remove_meta_box('dashboard_site_health', 'dashboard', 'normal');
 }
+
 
 // Add custom image sizes
 // add_image_size( 'size-name', 000, 000, true );

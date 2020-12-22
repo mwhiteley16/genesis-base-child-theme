@@ -21,10 +21,7 @@ define( 'CHILD_THEME_SLUG', 'base-genesis-child' );
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 
-/**
- * set up theme fonts (if using fonts.google.com)
- *
- */
+// setup theme fonts
 function wd_theme_fonts() {
 	$font_families = apply_filters( 'wd_theme_fonts', array( 'Roboto:300,300i,400,400i,500,500i,700,700i,900,900i' ) );
 	$query_args = array(
@@ -36,11 +33,8 @@ function wd_theme_fonts() {
 	return esc_url_raw( $fonts_url );
 }
 
-/**
- * global enqueues
- *
- *
- */
+
+// global enqueues (frontend)
 function wd_global_enqueues() {
 
      // fonts
@@ -60,11 +54,8 @@ function wd_global_enqueues() {
 }
 add_action( 'wp_enqueue_scripts', 'wd_global_enqueues' );
 
-/**
- * block editor admin scripts & styles
- *
- *
- */
+
+// global enqueues (admin and block editor)
 function wd_admin_enqueues() {
 
      // custom fonts
@@ -81,15 +72,13 @@ function wd_admin_enqueues() {
 }
 add_action( 'enqueue_block_editor_assets', 'wd_admin_enqueues' );
 
-/**
- * admin CSS used outside of block editor
- *
- *
- */
+
+// admin CSS (outside block editor)
 function wd_admin_style() {
      wp_enqueue_style( 'admin-styles', get_stylesheet_directory_uri().'/assets/css/admin.css' );
 }
 add_action( 'admin_enqueue_scripts', 'wd_admin_style' );
+
 
 /**
  * Theme Setup

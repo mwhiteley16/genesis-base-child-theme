@@ -10,22 +10,31 @@
 // Add support for wide blocks
 add_theme_support( 'align-wide' );
 
+
 // Enable block editor styles
 add_editor_style( 'assets/css/editor-style.css' );
 add_theme_support( 'editor-styles' );
 
+
 // Disable Custom Colors
 add_theme_support( 'disable-custom-colors' );
+
 
 // Disable gradient color options
 add_theme_support( 'editor-gradient-presets', [] );
 add_theme_support( 'disable-custom-gradients', true );
 
+
 // Responsive embeds
 add_theme_support( 'responsive-embeds' );
 
-// Customize Gutenberg color palette
-// Match these colors to the variables set up in /assets/scss/partials/base/variables.scss
+
+/*
+ * Customize Gutenberg Color Palette
+ *
+ * Match colors with variables set in /assets/scss/partials/base/variables.scss
+ *
+ */
 add_theme_support( 'editor-color-palette', array(
 	array(
 		'name'  => __( 'Primary Color', CHILD_THEME_SLUG ),
@@ -64,8 +73,13 @@ add_theme_support( 'editor-color-palette', array(
      ),
 ) );
 
-//Customize Gutenberg font sizes
-//Match with /assets/scss/partials/blocks/blocks-base.scss
+
+/*
+ * Customize Gutenberg Font Sizes
+ *
+ * Match font sizes with sizes set in /assets/scss/partials/blocks/core/paragraphs.scss
+ *
+ */
 add_theme_support( 'editor-font-sizes', array(
 	array(
 		'name'      => __( 'Small', CHILD_THEME_SLUG ),
@@ -93,8 +107,10 @@ add_theme_support( 'editor-font-sizes', array(
 	)
 ) );
 
+
 /**
- * Reusable Blocks accessible in backend
+ * Show Reusable Blocks UI in WordPress admin
+ *
  * @link https://www.billerickson.net/reusable-blocks-accessible-in-wordpress-admin-area
  *
  */
