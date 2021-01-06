@@ -3147,7 +3147,7 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
  */
 /* ----- Core Block Media Text -------------------- */
 .wp-block-media-text .wp-block-media-text__content {
-  padding: 0 50px; }
+  padding: 0 0 0 50px; }
   @media (max-width: 600px) {
     .wp-block-media-text .wp-block-media-text__content {
       padding: 0; } }
