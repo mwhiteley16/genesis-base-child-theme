@@ -960,7 +960,8 @@ ul.is-style-three-column-list, ol.is-style-three-column-list {
     padding: 0 30px; } }
 
 .wp-block-media-text.has-media-on-the-right .wp-block-media-text__content {
-  padding-left: 0; }
+  padding-left: 0;
+  padding-right: 50px; }
 
 .wp-block-media-text.has-media-on-the-left .wp-block-media-text__content {
   padding-right: 0; }
