@@ -35,7 +35,7 @@
           </div>
 
           <div class="loop-item__readmore">
-               <a href="<?php the_title(); ?>">Continue Reading</a>
+               <a href="<?php the_permalink(); ?>">Continue Reading</a>
           </div>
 
      </div>
