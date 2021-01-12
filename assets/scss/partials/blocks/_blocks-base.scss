@@ -24,6 +24,10 @@
 @import 'core/blocks-core-separators';
 @import 'core/blocks-core-spacer';
 
+/* ----- Import ACF Block Partials -------------------- */
+@import 'acf/blocks-separator.scss';
+@import 'acf/blocks-max-width.scss';
+
 /* ----- Alignwide/Alignfull -------------------- */
 .alignwide {
      margin: 0 calc(25% - 25vw);

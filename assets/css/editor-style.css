@@ -1085,6 +1085,44 @@ hr.wp-block-separator {
           padding: 5px;
           font-size: 12px;
           color: rgba(0, 0, 0, 0.3); } }
+/* ----- Import ACF Block Partials -------------------- */
+/**
+ * /assets/scss/partials/blocks/blocks-separator.scss
+ *
+ * Let's define our separator block styles
+ *
+ *
+ */
+.acf-separator-block {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start; }
+  .acf-separator-block.alignfull {
+    width: 100vw; }
+  .acf-separator-block.no-margin hr {
+    margin: 0; }
+  .acf-separator-block.center-align {
+    justify-content: center; }
+  .acf-separator-block.right-align {
+    justify-content: flex-end; }
+
+/**
+ * /assets/scss/partials/blocks/blocks-max-width.scss
+ *
+ * Let's define our max-width block styles
+ *
+ *
+ */
+.max-width-block {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+  .max-width-block.has-text-align-center {
+    justify-content: center; }
+  .max-width-block.has-text-align-right {
+    justify-content: flex-end; }
+
 /* ----- Alignwide/Alignfull -------------------- */
 .alignwide {
   margin: 0 calc(25% - 25vw);
