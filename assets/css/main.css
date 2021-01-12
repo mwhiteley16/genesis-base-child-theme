@@ -3287,7 +3287,7 @@ hr.wp-block-separator {
           color: rgba(0, 0, 0, 0.3); } }
 /* ----- Import ACF Block Partials -------------------- */
 /**
- * /assets/scss/partials/blocks/blocks-separator.scss
+ * /assets/scss/partials/blocks/acf/blocks-separator.scss
  *
  * Let's define our separator block styles
  *
@@ -3307,7 +3307,7 @@ hr.wp-block-separator {
     justify-content: flex-end; }
 
 /**
- * /assets/scss/partials/blocks/blocks-max-width.scss
+ * /assets/scss/partials/blocks/acf/blocks-max-width.scss
  *
  * Let's define our max-width block styles
  *
