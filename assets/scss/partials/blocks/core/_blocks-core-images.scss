@@ -6,9 +6,9 @@
  *
  */
 
- /* ----- Core Block Spacers -------------------- */
-.wp-block-image {
-     margin: 0 0 $base-margin 0;
+ /* ----- Core Block Images -------------------- */
+figure.wp-block-image {
+     margin-bottom: $base-margin;
 
      img {
           display: block;

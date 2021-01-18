@@ -10,6 +10,19 @@
   margin: 0;
   background-color: rgba(255, 255, 255, 0.3); }
 
+/*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
+.is-sidebar-opened .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 281px);
+  margin: 0 calc(50% - calc(50vw - 140px)); }
+
+body:not(.is-fullscreen-mode) .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 160px);
+  margin: 0 calc(50% - calc(50vw - 80px)); }
+
+body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper .alignfull {
+  max-width: calc(100vw - 440px);
+  margin: 0 calc(50% - calc(50vw - 220px)); }
+
 /*----- ACF Radio Button Color Picker ---------------*/
 .wp-admin .acf-block-component ul.acf-radio-list {
   display: flex;

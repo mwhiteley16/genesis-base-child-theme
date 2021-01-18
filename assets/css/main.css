@@ -3086,14 +3086,14 @@ a.wd-button--inverse.has-black-background-color {
  *
  *
  */
-/* ----- Core Block Spacers -------------------- */
-.wp-block-image {
-  margin: 0 0 30px 0; }
-  .wp-block-image img {
+/* ----- Core Block Images -------------------- */
+figure.wp-block-image {
+  margin-bottom: 30px; }
+  figure.wp-block-image img {
     display: block; }
-  .wp-block-image.is-style-no-bottom-margin {
+  figure.wp-block-image.is-style-no-bottom-margin {
     margin-bottom: 0; }
-  .wp-block-image.is-style-half-bottom-margin {
+  figure.wp-block-image.is-style-half-bottom-margin {
     margin-bottom: 15px; }
 
 /**
