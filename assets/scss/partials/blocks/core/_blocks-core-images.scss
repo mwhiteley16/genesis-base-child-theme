@@ -7,18 +7,55 @@
  */
 
  /* ----- Core Block Images -------------------- */
-figure.wp-block-image {
-     margin-bottom: $base-margin;
+.wp-block-image {
+     margin-bottom: 0;
 
      img {
           display: block;
+          margin-bottom: $base-margin;
      }
 
+     .alignleft,
+     .wp-block[data-align="left"] > & {
+		float: left;
+		margin: 0 $base-margin $base-margin 0;
+
+          img {
+               margin-bottom: 0;
+          }
+	}
+
+	.alignright,
+     .wp-block[data-align="right"] > & {
+		float: right;
+		margin: 0 0 $base-margin $base-margin;
+
+          img {
+               margin-bottom: 0;
+          }
+	}
+
+	.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
      &.is-style-no-bottom-margin {
-          margin-bottom: 0;
+
+          img,
+          figure {
+               margin-bottom: 0;
+          }
      }
 
      &.is-style-half-bottom-margin {
-          margin-bottom: $base-margin-half;
+
+          figure {
+               margin-bottom: 0;
+          }
+
+          img {
+               margin-bottom: $base-margin-half;
+          }
      }
 }

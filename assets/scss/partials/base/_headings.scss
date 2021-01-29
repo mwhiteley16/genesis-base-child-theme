@@ -32,6 +32,15 @@ h6,
 		outline: none;
 	}
 
+     &.has-background {
+          padding: 30px;
+     }
+
+     &.alignwide,
+     &.alignfull {
+          margin-bottom: $base-margin;
+     }
+
      &.is-style-no-bottom-margin {
           margin-bottom: 0;
      }

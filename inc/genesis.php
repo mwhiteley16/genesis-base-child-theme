@@ -44,6 +44,7 @@ add_action( 'genesis_sidebar', function() { dynamic_sidebar( 'sidebar' ); } );
 genesis_unregister_layout( 'content-sidebar-sidebar' );
 genesis_unregister_layout( 'sidebar-sidebar-content' );
 genesis_unregister_layout( 'sidebar-content-sidebar' );
+genesis_register_layout( 'thin-layout', [ 'label' => __( 'Thin Layout', CHILD_THEME_SLUG ) ] );
 
 
 // Remove unused widget areas

@@ -9,7 +9,8 @@
  /* ----- Core Block Group -------------------- */
 .wp-block-group {
 
-     &.alignfull {
+     &.alignfull,
+     .wp-block[data-align="full"] & {
           padding: 0 $base-margin;
 
           .wp-block-group {
@@ -26,6 +27,10 @@
 
                     &__inner-container {
                          max-width: none;
+
+                         > .wp-block {
+                              max-width: none;
+                         }
                     }
                }
           }

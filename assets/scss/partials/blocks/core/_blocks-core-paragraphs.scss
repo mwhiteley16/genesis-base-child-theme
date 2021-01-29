@@ -11,6 +11,10 @@ p { // Match these sizes to the font sizes in functions/gutenberg.php
 	margin: 0 0 $base-margin;
 	padding: 0;
 
+     &.has-background {
+          padding: 15px;
+     }
+
      &.has-larger-font-size {
           font-size: 24px;
      }

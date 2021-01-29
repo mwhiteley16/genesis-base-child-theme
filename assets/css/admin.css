@@ -10,6 +10,10 @@
   margin: 0;
   background-color: rgba(255, 255, 255, 0.3); }
 
+/* ----- block editor --------------- */
+body .editor-styles-wrapper {
+  padding: 0 30px; }
+
 /*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
 .is-sidebar-opened .editor-styles-wrapper .alignfull {
   max-width: calc(100vw - 281px);
@@ -22,6 +26,27 @@ body:not(.is-fullscreen-mode) .editor-styles-wrapper .alignfull {
 body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper .alignfull {
   max-width: calc(100vw - 440px);
   margin: 0 calc(50% - calc(50vw - 220px)); }
+
+/* ----- block editor content width for pages with sidebars --------------- */
+.content-sidebar .editor-styles-wrapper .editor-post-title__block.wp-block,
+.content-sidebar .editor-styles-wrapper .wp-block,
+.content-sidebar .editor-styles-wrapper .wp-block[data-align="full"],
+.content-sidebar .editor-styles-wrapper .wp-block[data-align="wide"],
+.content-sidebar .editor-styles-wrapper .alignfull,
+.sidebar-content .editor-styles-wrapper .editor-post-title__block.wp-block,
+.sidebar-content .editor-styles-wrapper .wp-block,
+.sidebar-content .editor-styles-wrapper .wp-block[data-align="full"],
+.sidebar-content .editor-styles-wrapper .wp-block[data-align="wide"],
+.sidebar-content .editor-styles-wrapper .alignfull {
+  max-width: 768px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
+
+.thin-layout .editor-styles-wrapper .editor-post-title__block.wp-block,
+.thin-layout .editor-styles-wrapper .wp-block {
+  max-width: 768px;
+  margin-left: auto !important;
+  margin-right: auto !important; }
 
 /*----- ACF Radio Button Color Picker ---------------*/
 .wp-admin .acf-block-component ul.acf-radio-list {

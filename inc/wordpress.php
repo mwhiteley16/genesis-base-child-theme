@@ -127,5 +127,49 @@ function wd_remove_site_health_dashboard_widget() {
 }
 
 
+/**
+ * Editor layout class
+ *
+ * @param string $classes Admin classes.
+ * @return string
+ */
+function wd_editor_layout_class( $classes ) {
+
+     // check if current page uses the block editor
+	$screen = get_current_screen();
+	if ( ! method_exists( $screen, 'is_block_editor' ) || ! $screen->is_block_editor() ) {
+		return $classes;
+	}
+
+     // get the current post ID
+     $post_id = isset( $_GET['post'] ) ? intval( $_GET['post'] ) : false;
+
+     // check if we're on the block area CPT
+     if ( ! empty( $post_id ) && 'block_area' === get_post_type( $post_id ) ) {
+
+          // if yes add block area slug to body classes
+          $classes .= ' wd-block-area-' . get_post( $post_id )->post_name . ' ';
+
+     } else {
+
+          // add genesis page layout to body classes
+          $layout = genesis_get_custom_field( '_genesis_layout', $post_id );
+          $classes .= ' ' . $layout;
+
+     }
+
+     // add page template slug to body classes
+     $template_slug = get_page_template_slug( $post_id );
+     if( $template_slug ) {
+
+          $template_slug_trimmed = str_replace( '.php', '', $template_slug );
+          $classes .= ' page-template-' . $template_slug_trimmed;
+     }
+
+	return $classes;
+}
+add_filter( 'admin_body_class', 'wd_editor_layout_class' );
+
+
 // Add custom image sizes
 // add_image_size( 'size-name', 000, 000, true );

@@ -2,6 +2,10 @@
     margin: 0;
     background-color: rgba(255,255,255,0.3);
 }
+/* ----- block editor --------------- */
+body .editor-styles-wrapper {
+     padding: 0 $base-margin;
+}
 
 /*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
 .is-sidebar-opened .editor-styles-wrapper {
@@ -25,6 +29,37 @@ body:not(.is-fullscreen-mode) .is-sidebar-opened .editor-styles-wrapper {
      .alignfull {
           max-width: calc(100vw - 440px);
           margin: 0 calc(50% - calc(50vw - 220px));
+     }
+}
+
+/* ----- block editor content width for pages with sidebars --------------- */
+.content-sidebar,
+.sidebar-content {
+
+	.editor-styles-wrapper {
+
+          .editor-post-title__block.wp-block,
+          .wp-block,
+          .wp-block[data-align="full"],
+          .wp-block[data-align="wide"],
+          .alignfull {
+               max-width: $base-content-width;
+               margin-left: auto !important;
+               margin-right: auto !important;
+          }
+     }
+}
+
+.thin-layout {
+
+     .editor-styles-wrapper {
+
+          .editor-post-title__block.wp-block,
+          .wp-block{
+               max-width: $base-content-width;
+               margin-left: auto !important;
+               margin-right: auto !important;
+          }
      }
 }
 
