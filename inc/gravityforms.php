@@ -25,7 +25,3 @@ function wd_gravityforms_domain( $notification, $form, $entry ) {
 	return $notification;
 }
 add_filter( 'gform_notification', 'wd_gravityforms_domain', 10, 3 );
-
-
-// Add option to hide label in a accessible friendly way
-add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );

@@ -623,7 +623,7 @@ h3,
 h4,
 h5,
 h6,
-.editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input {
+.edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input {
   color: #373737;
   font-family: "Roboto", sans-serif;
   margin: 0 0 30px 0;
@@ -635,7 +635,7 @@ h6,
   h4 a,
   h5 a,
   h6 a,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input a {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input a {
     color: #373737; }
     h1 a:hover,
     h2 a:hover,
@@ -643,7 +643,7 @@ h6,
     h4 a:hover,
     h5 a:hover,
     h6 a:hover,
-    .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input a:hover {
+    .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input a:hover {
       color: #007991;
       text-decoration: none; }
   h1:focus,
@@ -652,7 +652,7 @@ h6,
   h4:focus,
   h5:focus,
   h6:focus,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input:focus {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input:focus {
     outline: none; }
   h1.has-background,
   h2.has-background,
@@ -660,7 +660,7 @@ h6,
   h4.has-background,
   h5.has-background,
   h6.has-background,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.has-background {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.has-background {
     padding: 30px; }
   h1.alignwide, h1.alignfull,
   h2.alignwide,
@@ -673,8 +673,8 @@ h6,
   h5.alignfull,
   h6.alignwide,
   h6.alignfull,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.alignwide,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.alignfull {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.alignwide,
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.alignfull {
     margin-bottom: 30px; }
   h1.is-style-no-bottom-margin,
   h2.is-style-no-bottom-margin,
@@ -682,7 +682,7 @@ h6,
   h4.is-style-no-bottom-margin,
   h5.is-style-no-bottom-margin,
   h6.is-style-no-bottom-margin,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-bottom-margin {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.is-style-no-bottom-margin {
     margin-bottom: 0; }
   h1.is-style-half-bottom-margin,
   h2.is-style-half-bottom-margin,
@@ -690,7 +690,7 @@ h6,
   h4.is-style-half-bottom-margin,
   h5.is-style-half-bottom-margin,
   h6.is-style-half-bottom-margin,
-  .editor-writing-flow .editor-post-title__block.wp-block .editor-post-title__input.is-style-half-bottom-margin {
+  .edit-post-visual-editor__post-title-wrapper .editor-post-title__block.wp-block .editor-post-title__input.is-style-half-bottom-margin {
     margin-bottom: 15px; }
 
 h1,
