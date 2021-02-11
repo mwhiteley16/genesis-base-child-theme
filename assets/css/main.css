@@ -1588,7 +1588,7 @@ ul.gform_fields {
  */
 .ginput_container_date input {
   position: relative;
-  background-image: url("../images/calendar-alt-light.svg");
+  background-image: url("../images/forms/calendar-alt-light.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
   background-size: 16px; }
@@ -2546,7 +2546,7 @@ select {
   -moz-appearance: none;
   position: relative;
   background: none;
-  background-image: url("../images/arrow-select.svg");
+  background-image: url("../images/forms/arrow-select.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
   background-size: 16px;
