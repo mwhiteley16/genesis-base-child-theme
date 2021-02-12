@@ -561,12 +561,6 @@ code {
   background-color: #e0e0e0;
   padding: 0.125em 0.25em; }
 
-mark, ins {
-  background: #fafafa;
-  color: #fff;
-  padding: 0.125em 0.25em;
-  text-decoration: none; }
-
 pre {
   border: 1px solid #e0e0e0;
   line-height: 1.3125;
