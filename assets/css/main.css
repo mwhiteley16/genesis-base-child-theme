@@ -1387,24 +1387,15 @@ ul.gform_fields {
     cursor: pointer; }
   .ginput_container_checkbox ul li::before,
   .ginput_container_radio ul li::before {
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    content: "\f00c";
-    font-weight: 600;
-    font-family: "Font Awesome 5 Pro";
+    content: "";
+    background-image: url("../images/form-icons/check-solid-dark.svg");
     left: 4px;
+    top: 4px;
     position: absolute;
-    color: #007991;
     z-index: 10;
-    top: 3px;
-    background: #007991;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     opacity: 0;
-    line-height: 20px; }
+    height: 17px;
+    width: 17px; }
   .ginput_container_checkbox ul li::after,
   .ginput_container_radio ul li::after {
     content: " ";
@@ -1429,8 +1420,13 @@ ul.gform_fields {
   cursor: pointer; }
 
 .ginput_container_radio ul li::before {
-  content: "\f111";
-  top: 2px; }
+  content: "";
+  background-color: #373737;
+  top: 4px;
+  background-image: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 16px; }
 
 .ginput_container_radio ul li::after {
   border-radius: 100px; }
@@ -2546,7 +2542,7 @@ select {
   -moz-appearance: none;
   position: relative;
   background: none;
-  background-image: url("../images/forms/arrow-select.svg");
+  background-image: url("../images/form-icons/caret-down-dark.svg");
   background-position: calc(100% - 15px) 50%;
   background-repeat: no-repeat;
   background-size: 16px;

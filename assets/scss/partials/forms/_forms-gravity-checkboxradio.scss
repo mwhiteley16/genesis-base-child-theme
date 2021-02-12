@@ -58,24 +58,15 @@
                }
 
                &::before {
-                    display: inline-block;
-                    font-style: normal;
-                    font-variant: normal;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    content: "\f00c";
-                    font-weight: 600;
-                    font-family: "Font Awesome 5 Pro";
+                    content: "";
+                    background-image: url('../images/form-icons/check-solid-dark.svg');
                     left: 4px;
+                    top: 4px;
                     position: absolute;
-                    color: $primary-color;
                     z-index: 10;
-                    top: 3px;
-                    background: $primary-color;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                     opacity: 0;
-                    line-height: 20px;
+                    height: 17px;
+                    width: 17px;
                }
 
                &::after {
@@ -116,8 +107,13 @@
                }
 
                &::before {
-                    content: "\f111";
-                    top: 2px;
+                    content: "";
+                    background-color: $base-color;
+                    top: 4px;
+                    background-image: none;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 16px;
                }
 
                &::after {

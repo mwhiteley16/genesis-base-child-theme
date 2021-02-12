@@ -14,8 +14,8 @@ select {
      -moz-appearance: none;
      position: relative;
      background: none;
-     background-image: url('../images/forms/arrow-select.svg');
-     background-position: calc(100% - #{$form-padding}) 50%;
+     background-image: url('../images/form-icons/caret-down-dark.svg');
+     background-position: calc(100% - 15px) 50%;
      background-repeat: no-repeat;
      background-size: 16px;
      border-color: $form-border-color;
