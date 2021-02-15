@@ -24,7 +24,7 @@
           });
 
           // set active class for radios
-          $('.ginput_container_radio ul li:first-child').addClass('active');
+          $('.ginput_container_radio ul li input[type="radio"]:checked').closest('li').addClass('active');
           $('.ginput_container_radio input[type="radio"]').change( function(){
                $(this).closest('li').siblings('li').removeClass('active');
                $(this).closest('li').addClass('active');
