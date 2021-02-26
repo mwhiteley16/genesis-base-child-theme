@@ -50,3 +50,8 @@
 %transition {
      transition: all 0.2s ease-in-out;
 }
+
+@mixin rgba-background( $hexcolor, $opacity ) {
+     background-color: $hexcolor;
+     background-color: rgba( $hexcolor, $opacity );
+}
