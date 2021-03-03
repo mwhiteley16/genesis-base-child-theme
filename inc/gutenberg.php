@@ -88,10 +88,10 @@ add_theme_support( 'editor-font-sizes', array(
 		'slug'      => 'small'
 	),
 	array(
-		'name'      => __( 'Normal', CHILD_THEME_SLUG ),
+		'name'      => __( 'Regular', CHILD_THEME_SLUG ),
 		'shortName' => __( 'M', CHILD_THEME_SLUG ),
 		'size'      => 16,
-		'slug'      => 'normal'
+		'slug'      => 'regular'
 	),
 	array(
 		'name'      => __( 'Large', CHILD_THEME_SLUG ),
