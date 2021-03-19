@@ -17,13 +17,13 @@ textarea:focus,
 }
 
 a {
-     color: $primary-color;
+     color: $link_color;
      background-color: transparent;
      text-decoration: none;
      @extend %transition;
 
      &:hover {
-          color: $primary-color-hover;
+          color: darken( $link_color, 10% );
           text-decoration: underline;
      }
 

@@ -1,10 +1,25 @@
+/* ----- menu separators --------------- */
 #adminmenu li.wp-menu-separator {
     margin: 0;
     background-color: rgba(255,255,255,0.3);
 }
+
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
      padding: 0 $base-margin;
+
+     a {
+          color: $link_color;
+
+          &:hover {
+               color: darken( $link_color, 10% );
+          }
+
+          &[href^="tel"],
+          &[href^="tel"]:hover {
+               color: $base-color;
+          }
+     }
 }
 
 /*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */

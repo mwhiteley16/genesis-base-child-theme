@@ -6,6 +6,7 @@
  *
  */
 /* Admin CSS */
+/* ----- menu separators --------------- */
 #adminmenu li.wp-menu-separator {
   margin: 0;
   background-color: rgba(255, 255, 255, 0.3); }
@@ -13,6 +14,12 @@
 /* ----- block editor --------------- */
 body .editor-styles-wrapper {
   padding: 0 30px; }
+  body .editor-styles-wrapper a {
+    color: #007991; }
+    body .editor-styles-wrapper a:hover {
+      color: #004e5e; }
+    body .editor-styles-wrapper a[href^="tel"], body .editor-styles-wrapper a[href^="tel"]:hover {
+      color: #373737; }
 
 /*----- alignfull widths when editing with sidebar and/or WordPress menus --------------- */
 .is-sidebar-opened .editor-styles-wrapper .alignfull {
