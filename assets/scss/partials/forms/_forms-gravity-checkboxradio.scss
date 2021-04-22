@@ -25,99 +25,109 @@
      }
 }
 
-// if using styled radios & checkboxes
-.ginput_container_checkbox,
-.ginput_container_radio {
+.ginput_container ul.gfield_checkbox,
+.ginput_container ul.gfield_radio {
+     padding-left: 0 !important;
 
-     ul {
+     li {
+          padding: 5px 0;
+          position: relative;
 
-          li {
+          > label {
                position: relative;
-               width: auto;
+               padding: 0 0 0 30px;
+               line-height: 26px;
+          }
 
-               @media(max-width:1000px) {
-                    justify-content: flex-start;
-                    text-align: left;
-               }
+          > input[type="radio"] {
+               position: absolute;
+               left: 0;
+               top: 2px;
+               opacity: 0;
+               height: 0;
+               width: 0;
+               cursor: pointer;
 
-               label {
-                    padding-left: 34px;
-                    position: relative;
-                    z-index: 100;
-                    cursor: pointer;
-               }
-
-               input[type="checkbox"] {
-                    position: absolute;
-                    left: 0;
-                    top: 2px;
-                    opacity: 0;
-                    height: 0;
-                    width: 0;
-                    cursor: pointer;
-               }
-
-               &::before {
+               + *::before {
                     content: "";
-                    background-image: url('../images/form-icons/check-solid-dark.svg');
-                    left: 4px;
-                    top: 4px;
                     position: absolute;
-                    z-index: 10;
-                    opacity: 0;
-                    height: 17px;
-                    width: 17px;
-               }
-
-               &::after {
-                    content: " ";
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 2px;
-                    border: 2px solid $grey-medium;
-                    position: absolute;
+                    top: 3px;
                     left: 0;
-                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: #ebe7e7;
+                    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
                }
 
-               &.active {
+               + *::after {
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background-color: $white;
+                    position: absolute;
+                    top: 8px;
+                    left: 5px;
+                    border-radius: 10px;
+                    opacity: 0;
+               }
 
-                    &::before {
+               &:checked {
+
+                    + *::before {
+                         background-color: $primary-color;
+                         box-shadow: none;
+                    }
+
+                    + *::after {
                          opacity: 1;
                     }
                }
           }
-     }
-}
 
-.ginput_container_radio {
+          > input[type="checkbox"] {
+               position: absolute;
+               left: 0;
+               top: 2px;
+               opacity: 0;
+               height: 0;
+               width: 0;
+               cursor: pointer;
 
-     ul {
-
-          li {
-
-               input[type="radio"] {
-                    position: absolute;
-                    left: 0;
-                    top: 2px;
-                    opacity: 0;
-                    height: 0;
-                    width: 0;
-                    cursor: pointer;
-               }
-
-               &::before {
+               + *::before {
                     content: "";
-                    background-color: $base-color;
-                    top: 4px;
-                    background-image: none;
-                    width: 16px;
-                    height: 16px;
-                    border-radius: 16px;
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 2px;
+                    background-color: #ebe7e7;
+                    box-shadow: inset 2px 2px 4px rgba(0,0,0,0.15);
                }
 
-               &::after {
-                    border-radius: 100px;
+               + *::after {
+                    content: "";
+                    background-image: url('../images/form-icons/check-solid-light.svg');
+                    background-size: cover;
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: 7px;
+                    left: 4px;
+                    opacity: 0;
+               }
+
+               &:checked {
+
+                    + *::before {
+                         background-color: $primary-color;
+                         box-shadow: none;
+                    }
+
+                    + *::after {
+                         opacity: 1;
+                    }
                }
           }
      }

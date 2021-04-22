@@ -1356,75 +1356,94 @@ ul.gform_fields {
     .ginput_container_checkbox ul li input {
       margin-right: 5px; }
 
-.ginput_container_checkbox ul li,
-.ginput_container_radio ul li {
-  position: relative;
-  width: auto; }
-  @media (max-width: 1000px) {
-    .ginput_container_checkbox ul li,
-    .ginput_container_radio ul li {
-      justify-content: flex-start;
-      text-align: left; } }
-  .ginput_container_checkbox ul li label,
-  .ginput_container_radio ul li label {
-    padding-left: 34px;
-    position: relative;
-    z-index: 100;
-    cursor: pointer; }
-  .ginput_container_checkbox ul li input[type="checkbox"],
-  .ginput_container_radio ul li input[type="checkbox"] {
-    position: absolute;
-    left: 0;
-    top: 2px;
-    opacity: 0;
-    height: 0;
-    width: 0;
-    cursor: pointer; }
-  .ginput_container_checkbox ul li::before,
-  .ginput_container_radio ul li::before {
-    content: "";
-    background-image: url("../images/form-icons/check-solid-dark.svg");
-    left: 4px;
-    top: 4px;
-    position: absolute;
-    z-index: 10;
-    opacity: 0;
-    height: 17px;
-    width: 17px; }
-  .ginput_container_checkbox ul li::after,
-  .ginput_container_radio ul li::after {
-    content: " ";
-    width: 24px;
-    height: 24px;
-    border-radius: 2px;
-    border: 2px solid #e0e0e0;
-    position: absolute;
-    left: 0;
-    top: 0; }
-  .ginput_container_checkbox ul li.active::before,
-  .ginput_container_radio ul li.active::before {
-    opacity: 1; }
-
-.ginput_container_radio ul li input[type="radio"] {
-  position: absolute;
-  left: 0;
-  top: 2px;
-  opacity: 0;
-  height: 0;
-  width: 0;
-  cursor: pointer; }
-
-.ginput_container_radio ul li::before {
-  content: "";
-  background-color: #373737;
-  top: 4px;
-  background-image: none;
-  width: 16px;
-  height: 16px;
-  border-radius: 16px; }
-
-.ginput_container_radio ul li::after {
-  border-radius: 100px; }
+.ginput_container ul.gfield_checkbox,
+.ginput_container ul.gfield_radio {
+  padding-left: 0 !important; }
+  .ginput_container ul.gfield_checkbox li,
+  .ginput_container ul.gfield_radio li {
+    padding: 5px 0;
+    position: relative; }
+    .ginput_container ul.gfield_checkbox li > label,
+    .ginput_container ul.gfield_radio li > label {
+      position: relative;
+      padding: 0 0 0 30px;
+      line-height: 26px; }
+    .ginput_container ul.gfield_checkbox li > input[type="radio"],
+    .ginput_container ul.gfield_radio li > input[type="radio"] {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      cursor: pointer; }
+      .ginput_container ul.gfield_checkbox li > input[type="radio"] + *::before,
+      .ginput_container ul.gfield_radio li > input[type="radio"] + *::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #ebe7e7;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
+      .ginput_container ul.gfield_checkbox li > input[type="radio"] + *::after,
+      .ginput_container ul.gfield_radio li > input[type="radio"] + *::after {
+        content: "";
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        border-radius: 10px;
+        opacity: 0; }
+      .ginput_container ul.gfield_checkbox li > input[type="radio"]:checked + *::before,
+      .ginput_container ul.gfield_radio li > input[type="radio"]:checked + *::before {
+        background-color: #007991;
+        box-shadow: none; }
+      .ginput_container ul.gfield_checkbox li > input[type="radio"]:checked + *::after,
+      .ginput_container ul.gfield_radio li > input[type="radio"]:checked + *::after {
+        opacity: 1; }
+    .ginput_container ul.gfield_checkbox li > input[type="checkbox"],
+    .ginput_container ul.gfield_radio li > input[type="checkbox"] {
+      position: absolute;
+      left: 0;
+      top: 2px;
+      opacity: 0;
+      height: 0;
+      width: 0;
+      cursor: pointer; }
+      .ginput_container ul.gfield_checkbox li > input[type="checkbox"] + *::before,
+      .ginput_container ul.gfield_radio li > input[type="checkbox"] + *::before {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        background-color: #ebe7e7;
+        box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.15); }
+      .ginput_container ul.gfield_checkbox li > input[type="checkbox"] + *::after,
+      .ginput_container ul.gfield_radio li > input[type="checkbox"] + *::after {
+        content: "";
+        background-image: url("../images/form-icons/check-solid-light.svg");
+        background-size: cover;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 7px;
+        left: 4px;
+        opacity: 0; }
+      .ginput_container ul.gfield_checkbox li > input[type="checkbox"]:checked + *::before,
+      .ginput_container ul.gfield_radio li > input[type="checkbox"]:checked + *::before {
+        background-color: #007991;
+        box-shadow: none; }
+      .ginput_container ul.gfield_checkbox li > input[type="checkbox"]:checked + *::after,
+      .ginput_container ul.gfield_radio li > input[type="checkbox"]:checked + *::after {
+        opacity: 1; }
 
 .gf_list_2col .gfield_radio,
 .gf_list_2col .gfield_checkbox,
