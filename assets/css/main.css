@@ -385,7 +385,7 @@ input[type="submit"][disabled]:focus,
       color: #fff;
       border-color: #007991; }
 
-.mobile-navigation-icon span, .mobile-navigation-icon, a, button,
+.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop, .mobile-navigation-icon span, .mobile-navigation-icon, a, button,
 input:focus,
 input[type="button"],
 input[type="reset"],
@@ -990,7 +990,8 @@ h6 {
 /* ----- Loop Item -------------------- */
 .loop-wrapper {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  width: 100%; }
 
 .loop-item {
   width: calc(calc(100% / 3) - 20px);
@@ -3142,7 +3143,7 @@ a.wd-button--inverse.has-black-background-color {
     margin: 0 0 30px 30px; }
     .wp-block-image .alignright img, .wp-block[data-align="right"] > .wp-block-image img {
       margin-bottom: 0; }
-  .wp-block-image .aligncenter {
+  .wp-block-image .aligncenter, .wp-block[data-align="center"] > .wp-block-image {
     margin-left: auto;
     margin-right: auto; }
   .wp-block-image.is-style-no-bottom-margin img,
@@ -3152,6 +3153,28 @@ a.wd-button--inverse.has-black-background-color {
     margin-bottom: 0; }
   .wp-block-image.is-style-half-bottom-margin img {
     margin-bottom: 15px; }
+  @media (min-width: 601px) {
+    .wp-block-image.is-style-hide-desktop {
+      display: none; } }
+  @media (max-width: 600px) {
+    .wp-block-image.is-style-hide-mobile {
+      display: none; } }
+.block-editor-block-list__layout .wp-block-image.is-style-hide-desktop {
+  display: block;
+  opacity: 0.5;
+  padding-top: 55px; }
+  .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop:hover, .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop.is-selected {
+    opacity: 1; }
+  .block-editor-block-list__layout .wp-block-image.is-style-hide-desktop::before {
+    content: "The image below will be hidden on desktop but will remain visit within the editor for editing purposes.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border: 1px solid red;
+    padding: 10px;
+    z-index: 10;
+    font-size: 14px; }
 
 /**
  * /assets/scss/partials/blocks/core/blocks-core-list.scss

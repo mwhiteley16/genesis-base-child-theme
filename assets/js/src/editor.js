@@ -111,6 +111,14 @@ wp.domReady( () => {
                {
                     name: 'half-bottom-margin',
                     label: 'Half Bottom Margin',
+               },
+               {
+                    name: 'hide-mobile',
+                    label: 'Hide Mobile',
+               },
+               {
+                    name: 'hide-desktop',
+                    label: 'Hide Desktop',
                }
           ]
      );
