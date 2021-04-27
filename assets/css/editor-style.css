@@ -1234,6 +1234,8 @@ hr.wp-block-separator {
   width: 100%;
   flex-wrap: wrap;
   justify-content: flex-start; }
+  .max-width-block__interior {
+    width: 100%; }
   .max-width-block.has-text-align-center {
     justify-content: center; }
   .max-width-block.has-text-align-right {

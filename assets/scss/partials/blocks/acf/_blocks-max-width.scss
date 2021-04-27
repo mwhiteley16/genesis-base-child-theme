@@ -12,6 +12,10 @@
      flex-wrap: wrap;
      justify-content: flex-start;
 
+     &__interior {
+          width: 100%;
+     }
+
      &.has-text-align-center {
           justify-content: center;
      }
